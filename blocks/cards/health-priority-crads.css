@@ -1,14 +1,10 @@
-.card-wrapper-bg {
-    background-color: #f3f9ff;
-}
-
-.cards.health-priority-crads ul {
+.cards.health-priority-card ul {
     display: flex;
     justify-content: center;
     column-gap: 20px;
 }
 
-.cards.health-priority-crads ul li {
+.cards.health-priority-card ul li {
     width: 20%;
     padding: 23px;
     border-radius: 5px;
@@ -22,12 +18,12 @@
     cursor: pointer;
 }
 
-.cards.health-priority-crads ul li .cards-card-image img {
+.cards.health-priority-card ul li .cards-card-image img {
     height: 114.09px;
     width: unset;
 }
 
-.cards.health-priority-crads ul li .cards-card-body {
+.cards.health-priority-card ul li .cards-card-body {
     font-family: "robotoregular";
     font-size: 20px;
     font-weight: 400;
@@ -36,20 +32,20 @@
     padding-top: 10px;
 }
 
-.section.health-priority-crads>div:last-child {
+.section.health-priority-card>div:last-child {
     display: flex;
     justify-content: center;
     align-items: center;
     padding: 32px 0 78px 0;
 }
 
-.section.health-priority-crads>div:first-child {
+.section.health-priority-card>div:first-child {
     text-align: center;
     padding-bottom: 40px;
     padding-top: 60px;
 }
 
-.section.health-priority-crads>div:first-child h1 {
+.section.health-priority-card>div:first-child h1 {
     font-family: "robotolight";
     font-size: 48px;
     font-weight: 300;
@@ -58,22 +54,22 @@
     margin-bottom: 0;
 }
 
-.section.health-priority-crads>div:first-child h1 strong{
+.section.health-priority-card>div:first-child h1 strong{
     color: var(--brand-primary)
 }
 
-.section.health-priority-crads>div:first-child p {
+.section.health-priority-card>div:first-child p {
     color: #6f7072;
     font-size: 20px;
     line-height: 24px;
     margin-top: 20px;
 }
 
-.section.health-priority-crads>div:first-child p a {
+.section.health-priority-card>div:first-child p a {
     color: var(--brand-primary);
 }
 
-.section.health-priority-crads .default-content-wrapper .button-container {
+.section.health-priority-card .default-content-wrapper .button-container {
     width: 100%;
     max-width: 220px;
     height: 40px;
@@ -89,46 +85,41 @@
 }
 
 
-.section.health-priority-crads .default-content-wrapper .button-container a {
+.section.health-priority-card .default-content-wrapper .button-container a {
     color: var(--primary-white);
 }
 
-.active {
-    border: 1px solid var(--brand-primary);
-}
-
-
 @media screen and (max-width: 767.99px) {
-    .section.health-priority-crads>div:first-child h1 {
+    .section.health-priority-card>div:first-child h1 {
         font-size: 28px;
         line-height: 36px;
     }
 
-    .section.health-priority-crads>div:first-child {
+    .section.health-priority-card>div:first-child {
         padding-bottom: 24px;
         padding-top: 33px;
     }
 
-    .section.health-priority-crads>div:first-child p {
+    .section.health-priority-card>div:first-child p {
         font-size: 14px;
         line-height: 19px;
     }
 
-    .cards.health-priority-crads ul {
+    .cards.health-priority-card ul {
         flex-wrap: wrap;
         gap: 20px;
     }
 
-    .cards.health-priority-crads ul li {
+    .cards.health-priority-card ul li {
         width: 46%;
     }
 
-    .cards.health-priority-crads ul li .cards-card-image img {
+    .cards.health-priority-card ul li .cards-card-image img {
         width: 85px;
         height: 80px;
     }
 
-    .cards.health-priority-crads ul li .cards-card-body {
+    .cards.health-priority-card ul li .cards-card-body {
         font-family: "robotoregular";
         font-size: 14px;
         font-weight: 400;
@@ -136,7 +127,7 @@
         text-align: center;
     }
 
-    .section.health-priority-crads>div:last-child {
+    .section.health-priority-card>div:last-child {
         padding-bottom: 40px;
     }
 }

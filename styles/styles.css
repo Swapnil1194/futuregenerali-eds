@@ -26,6 +26,7 @@
   --primary-white: #FFFFFF;
   --brand-primary: #C21B17;
   --primary-black: black;
+  --light-blue:#f3f9ff;
 
   /* fonts */
   --body-font-family: roboto, roboto-fallback;
@@ -56,12 +57,19 @@
   src: local('Arial');
 }
  */
+
+
+ /* Common Start  */
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
+
+.light-blue-bg {
+  background-color: var(--light-blue);
+}
 .section.red-btn .button-container {
   padding: 12px 38px;
   border-radius: 5px;
@@ -104,19 +112,7 @@ a {
   display: none;
 }
 
-.disabled {
-  width: 100%;
-  max-width: 220px;
-  height: 40px;
-  margin: 10px;
-  border-radius: 5px;
-  background: var(--brand-primary);
-  border: none;
-  cursor: no-drop;
-  padding: 12px 0;
-  pointer-events: none;
-  opacity: 0.5;
-}
+
 
 @media screen and (max-width: 767.99px) {
   .mb-d {
@@ -171,3 +167,5 @@ a {
 .hero-banner {
   display: none;
 }
+
+ /* Common End  */
