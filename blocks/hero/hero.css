@@ -1,4 +1,6 @@
-main .hero-container > div {
+@import url("./featured-products.css");
+@import url("./about-us.css");
+/* main .hero-container > div {
   max-width: unset;
 }
 
@@ -31,4 +33,4 @@ main .hero-container {
   object-fit: cover;
   width: 100%;
   height: 100%;
-}
+} */

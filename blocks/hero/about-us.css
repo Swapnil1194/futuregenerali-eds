@@ -1,0 +1,42 @@
+.section.about-us-container > div:first-child {
+  display: none;
+}
+.section.about-us-container > div:nth-of-type(2) .hero.about-us > div {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  -moz-column-gap: 40px;
+       column-gap: 40px;
+}
+.section.about-us-container > div:nth-of-type(2) .hero.about-us > div > div:nth-last-of-type(1) {
+  width: 36.2%;
+}
+.section.about-us-container > div:nth-of-type(2) .hero.about-us > div > div:nth-last-of-type(1) h2 {
+  font-family: "robotolight";
+  font-size: 48px;
+  font-weight: 300;
+  line-height: 60px;
+  text-align: left;
+  margin: auto;
+}
+.section.about-us-container > div:nth-of-type(2) .hero.about-us > div > div:nth-last-of-type(1) h2 strong {
+  color: var(--brand-primary);
+}
+.section.about-us-container > div:nth-of-type(2) .hero.about-us > div > div:nth-last-of-type(1) > p {
+  margin-top: 20px;
+  font-family: "robotolight";
+  font-size: 20px;
+  font-weight: 300;
+  line-height: 23.44px;
+  text-align: left;
+  color: #6F7072;
+}
+.section.about-us-container > div:nth-of-type(2) .hero.about-us > div > div:nth-last-of-type(1) .button-container {
+  max-width: 190px;
+  width: 100%;
+  margin-top: 32px;
+  padding: 12px 38px;
+  border-radius: 5px;
+  text-align: center;
+  border: none;
+}/*# sourceMappingURL=about-us.css.map */
