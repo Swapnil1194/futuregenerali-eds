@@ -1,52 +1,117 @@
 .section.about-us-container {
+    margin: 60px 0 70px 0;
+
     >div:first-child {
         display: none;
     }
+}
 
-    >div:nth-of-type(2) {
-        .hero.about-us {
-            >div {
-                display: flex;
-                justify-content: center;
-                align-items: center;
-                column-gap: 40px;
 
-                >div:first-child {}
+.hero.about-us {
+    >div {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        column-gap: 40px;
 
-                >div:nth-last-of-type(1) {
-                    width: 36.2%;
+        >div:nth-of-type(2) {
+            width: 36.2%;
 
-                    h2 {
-                        font-family: "robotolight";
-                        font-size: 48px;
-                        font-weight: 300;
-                        line-height: 60px;
-                        text-align: left;
-                        margin: auto;
+            h2 {
+                font-family: "robotolight";
+                font-size: 48px;
+                font-weight: 300;
+                line-height: 60px;
 
-                        strong {
-                            color: var(--brand-primary);
-                        }
-                    }
+                strong {
+                    color: var(--brand-primary);
+                }
+            }
 
-                    >p{
-                        margin-top: 20px;
-                        font-family: "robotolight";
-                        font-size: 20px;
-                        font-weight: 300;
-                        line-height: 23.44px;
-                        text-align: left;
-                        color: #6F7072;
-                    }
+            >p {
+                margin-top: 20px;
+                font-family: "robotolight";
+                font-size: 20px;
+                font-weight: 300;
+                line-height: 23.44px;
+                text-align: left;
+                color: var(--dim-gray);
+            }
 
-                    .button-container {
-                        max-width: 190px;
-                        width: 100%;
-                        margin-top: 32px;
-                        padding: 12px 38px;
-                        border-radius: 5px;
+            .button-container {
+                max-width: 190px;
+                width: 100%;
+                margin-top: 32px;
+                border-radius: 5px;
+                text-align: center;
+                border: none;
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 767.99px) {
+    .section.about-us-container {
+        margin: 60px 0 40px 0;
+
+        >div:first-child {
+            display: block;
+
+            >h2 {
+                font-family: "robotolight";
+                font-size: 28px;
+                font-weight: 300;
+                line-height: 36px;
+                letter-spacing: -0.02em;
+                text-align: center;
+                padding-bottom: 24px;
+
+                strong {
+                    color: var(--brand-primary);
+                }
+            }
+        }
+    }
+
+    .hero.about-us {
+        >div {
+            flex-direction: column;
+
+            >div:first-child img {
+                width: 238px;
+                height: 238px;
+                margin: 0 auto;
+            }
+
+            >div:nth-of-type(2) {
+                width: unset;
+
+                h2 {
+                    display: none;
+                }
+
+                >p:nth-of-type(1) {
+                    font-family: "robotoregular";
+                    font-size: 16px;
+                    font-weight: 400;
+                    line-height: 20.8px;
+                    text-align: center;
+                    padding-bottom: 20px;
+                }
+
+                .button-container {
+                    max-width: 190px;
+                    width: 100%;
+                    border-radius: 5px;
+                    text-align: center;
+                    margin: 0 auto;
+
+                    a {
+                        font-family: "robotobold";
+                        font-size: 14px;
+                        font-weight: 800;
+                        line-height: 16.41px;
                         text-align: center;
-                        border: none;
                     }
                 }
             }

@@ -15,39 +15,30 @@
 
 :root {
   /* colors */
-  --link-color: #035fe6;
-  --link-hover-color: #136ff6;
-  --background-color: white;
-  --light-color: #eee;
-  --dark-color: #ccc;
-
-
-
   --primary-white: #FFFFFF;
   --brand-primary: #C21B17;
   --primary-black: black;
   --light-blue:#f3f9ff;
+  --dim-gray:#6f7072;
+
 
   /* fonts */
-  --body-font-family: roboto, roboto-fallback;
+/*   --body-font-family: roboto, roboto-fallback;
   --heading-font-family: var(--body-font-family);
-  --fixed-font-family: 'Roboto Mono', menlo, consolas, 'Liberation Mono', monospace;
+  --fixed-font-family: 'Roboto Mono', menlo, consolas, 'Liberation Mono', monospace; */
 
   /* body sizes */
-  --body-font-size-m: 22px;
+/*   --body-font-size-m: 22px;
   --body-font-size-s: 18px;
-  --body-font-size-xs: 16px;
+  --body-font-size-xs: 16px; */
 
   /* heading sizes */
-  --heading-font-size-xxl: 48px;
+ /*  --heading-font-size-xxl: 48px;
   --heading-font-size-xl: 40px;
   --heading-font-size-l: 32px;
   --heading-font-size-m: 24px;
   --heading-font-size-s: 20px;
-  --heading-font-size-xs: 18px;
-
-  /* nav height */
-  --nav-height: 64px;
+  --heading-font-size-xs: 18px; */
 }
 
 /* @font-face {
@@ -59,7 +50,7 @@
  */
 
 
- /* Common Start  */
+ /* Common CSS Start */
 * {
   margin: 0;
   padding: 0;
@@ -108,22 +99,6 @@ a {
   margin-left: auto
 }
 
-.de-d {
-  display: none;
-}
-
-
-
-@media screen and (max-width: 767.99px) {
-  .mb-d {
-    display: none;
-  }
-
-  .de-d {
-    display: block;
-  }
-}
-
 @media (min-width:576px) {
 
   .fg-container,
@@ -133,7 +108,6 @@ a {
 }
 
 @media (min-width:768px) {
-
   .fg-container,
   .section>div {
     max-width: 720px
@@ -141,7 +115,6 @@ a {
 }
 
 @media (min-width:992px) {
-
   .fg-container,
   .section>div {
     max-width: 960px
@@ -149,7 +122,6 @@ a {
 }
 
 @media (min-width:1200px) {
-
   .fg-container,
   .section>div {
     max-width: 1140px
@@ -157,15 +129,10 @@ a {
 }
 
 @media (min-width:1400px) {
-
   .fg-container,
   .section>div {
     max-width: 1320px
   }
 }
 
-.hero-banner {
-  display: none;
-}
-
- /* Common End  */
+/* Common CSS End  */
