@@ -64,9 +64,11 @@
   margin-bottom: -6px;
 }
 
+.section.featured-product-container {
+  padding: 60px 0;
+}
 .section.featured-product-container > div:first-child {
   padding-bottom: 40px;
-  padding-top: 60px;
 }
 .section.featured-product-container > div:first-child > p {
   font-family: "robotolight";

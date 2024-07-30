@@ -1,0 +1,70 @@
+.section.social-media-photos-container {
+    padding: 40px 0 70px;
+
+    >div {
+        >p {
+            font-family: "robotolight";
+            text-align: center;
+            color: var(--primary-white);
+            font-size: 48px;
+            line-height: 60px;
+        }
+
+        padding-bottom: 40px
+    }
+}
+
+
+.glider.future-generali-social-media-photos {
+    [data-glider-container="glider-container"] {
+        >div {
+            justify-content: center;
+            column-gap: 24px;
+
+            >div {
+                width: 31.1% !important;
+
+                [data-cloumn-wrapper="cloumn-wrapper"] {
+                    background-color: var(--primary-white);
+                    border-radius: 6px;
+                    overflow: hidden;
+                    padding: 16px;
+                    height: 100%;
+
+
+                    [data-cloumn-index="cloumn-0"] {
+                        >p {
+                            display: flex;
+                            justify-content: space-between;
+                            align-items: center;
+                        }
+                    }
+
+
+                    [data-cloumn-index="cloumn-1"] {
+                        img {
+                            object-fit: fill;
+                            width: 100%;
+                        }
+                    }
+
+                    [data-cloumn-index="cloumn-2"] {
+                        padding-top: 4px;
+
+                        >p {
+                            color: #20252b;
+                            font-size: 10px;
+                            line-height: 16px;
+                            font-family: "Roboto-Light";
+                        }
+                    }
+                }
+            }
+
+        }
+    }
+
+    .glider-dots {
+        margin-top: 20px;
+    }
+}
