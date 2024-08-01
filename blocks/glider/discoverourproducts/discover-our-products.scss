@@ -46,11 +46,33 @@
                     text-align: end;
                 }
 
-                [data-cloumn-index="cloumn-1"] {
-                    
-                }
+                [data-cloumn-index="cloumn-1"] {}
 
-                [data-cloumn-index="cloumn-2"]{
+                [data-cloumn-index="cloumn-2"] {
+                    >h3 {
+                        font-family: "robotoregular";
+                        font-size: 22px;
+                        font-weight: 400;
+                        line-height: 30.8px;
+                        text-align: center;
+                    }
+
+                    >p {
+                        font-family: "robotolight";
+                        font-size: 14px;
+                        font-weight: 300;
+                        line-height: 19.6px;
+                        text-align: center;
+                        color: #20252b;
+
+                        >em {
+                            font-family: "robotomedium";
+                            font-size: 14px;
+                            font-weight: 500;
+                            line-height: 19.6px;
+                            text-align: center;
+                        }
+                    }
 
                 }
             }

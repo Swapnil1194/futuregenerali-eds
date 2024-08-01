@@ -12,7 +12,8 @@ export default function decorate(block) {
     });
     data.push(childProps);
   });
-  console.log(data);
+  // console.log(block.children, "block");
+  // console.log(data);
   block.innerHTML = `
     <div class="glider-contain">
         <div class="glider">

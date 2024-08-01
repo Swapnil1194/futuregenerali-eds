@@ -114,6 +114,7 @@
 a {
   text-decoration: unset;
   cursor: pointer;
+  color: unset;
 }
 
 .fg-container,

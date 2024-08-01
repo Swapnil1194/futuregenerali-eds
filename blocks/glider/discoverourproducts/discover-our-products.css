@@ -90,4 +90,26 @@
 }
 .glider.discover-our-products-card [data-glider-container=glider-container] .glider-slide [data-cloumn-wrapper=cloumn-wrapper] [data-cloumn-index=cloumn-0] {
   text-align: end;
+}
+.glider.discover-our-products-card [data-glider-container=glider-container] .glider-slide [data-cloumn-wrapper=cloumn-wrapper] [data-cloumn-index=cloumn-2] > h3 {
+  font-family: "robotoregular";
+  font-size: 22px;
+  font-weight: 400;
+  line-height: 30.8px;
+  text-align: center;
+}
+.glider.discover-our-products-card [data-glider-container=glider-container] .glider-slide [data-cloumn-wrapper=cloumn-wrapper] [data-cloumn-index=cloumn-2] > p {
+  font-family: "robotolight";
+  font-size: 14px;
+  font-weight: 300;
+  line-height: 19.6px;
+  text-align: center;
+  color: #20252b;
+}
+.glider.discover-our-products-card [data-glider-container=glider-container] .glider-slide [data-cloumn-wrapper=cloumn-wrapper] [data-cloumn-index=cloumn-2] > p > em {
+  font-family: "robotomedium";
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 19.6px;
+  text-align: center;
 }/*# sourceMappingURL=discover-our-products.css.map */
