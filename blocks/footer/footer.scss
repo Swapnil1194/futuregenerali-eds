@@ -24,7 +24,7 @@
       >li:nth-of-type(1) {
         font-size: 18px;
         line-height: 24px;
-        color: #ccc;
+        color: var(--silver);
         font-weight: 600;
         text-transform: uppercase;
         font-family: "Roboto-Medium";
@@ -33,11 +33,11 @@
 
       >li,
       >li a {
-        color: #ccc;
+        color: var(--silver);
         margin-bottom: 8px;
         font-size: 16px;
         line-height: 24px;
-        color: #ccc;
+        color: var(--silver);
         font-family: "Roboto-Light";
         font-weight: 300;
       }
@@ -45,7 +45,7 @@
       >li:last-child {
         >ul {
           >li {
-            color: #ccc;
+            color: var(--silver);
             text-transform: uppercase;
             font-family: "Roboto-Medium";
             font-size: 18px;
@@ -60,7 +60,7 @@
 
                   >li,
                   >li a {
-                    color: #ccc;
+                    color: var(--silver);
                     text-transform: capitalize;
                     margin-bottom: 8px;
                   }

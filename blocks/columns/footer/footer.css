@@ -1,52 +1,140 @@
-.columns.footer-link-wrapper > div:first-child {
-  margin-bottom: 12px;
+.columns.contacts-links-wrapper {
+  padding: 35px 0;
+  margin-bottom: 35px;
+  border-bottom: 1px solid var(--primary-white);
 }
-
-.columns.footer-link-wrapper > div:first-child > div > p {
-  color: #ccc;
-  text-transform: uppercase;
-  font-family: Roboto-Medium;
-  font-size: 18px;
-  line-height: 24px;
+.columns.contacts-links-wrapper > div > div:nth-of-type(2) {
+  display: flex;
+  justify-content: center;
+}
+.columns.contacts-links-wrapper > div > div:nth-of-type(2) p a:first-child img {
+  margin-top: 2px;
+}
+.columns.contacts-links-wrapper > div > div:nth-of-type(2) p a:nth-of-type(2) {
+  margin-right: 15px;
+}
+.columns.contacts-links-wrapper > div > div:nth-of-type(2) p a:nth-of-type(even) {
+  color: var(--primary-white);
+  font-family: "Roboto-Medium";
+  font-size: 14px;
+  line-height: 16px;
+}
+.columns.contacts-links-wrapper > div > div:nth-of-type(3) p {
+  display: flex;
+  justify-content: end;
+  -moz-column-gap: 30px;
+       column-gap: 30px;
+  align-items: center;
 }
 
 .columns.footer-link-wrapper > div {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.columns.footer-link-wrapper > div:first-child {
+  margin-bottom: 12px;
+}
+.columns.footer-link-wrapper > div:first-child > div > p {
+  color: var(--silver);
+  text-transform: uppercase;
+  font-family: "Roboto-Medium";
+  font-size: 18px;
+  line-height: 24px;
+}
+.columns.footer-link-wrapper > div {
   margin-bottom: 8px;
 }
-
 .columns.footer-link-wrapper > div .button-container > p a {
   font-size: 16px;
   line-height: 24px;
-  color: #ccc;
-  font-family: Roboto-Light;
+  color: var(--silver);
+  font-family: "Roboto-Light";
 }
 
-.columns.footer-second-part > div:nth-of-type(1) p:nth-of-type(1) {
+.columns.footer-second-part {
+  margin-top: 34px;
+}
+.columns.footer-second-part > div {
+  display: flex;
+  justify-content: space-between;
+  -moz-column-gap: 40px;
+       column-gap: 40px;
+  row-gap: unset;
+}
+.columns.footer-second-part > div div {
+  flex: unset;
+}
+.columns.footer-second-part > div > div:nth-of-type(1) {
+  align-self: baseline;
+}
+.columns.footer-second-part > div > div:nth-of-type(1) p:nth-of-type(1) {
   font-size: 18px;
   line-height: 24px;
-  color: #ccc;
+  color: var(--silver);
   text-transform: uppercase;
-  font-family: Roboto-Medium;
+  font-family: "Roboto-Medium";
   margin-bottom: 12px;
 }
-
-.columns.footer-second-part > div:nth-of-type(1) ul li {
+.columns.footer-second-part > div > div:nth-of-type(1) ul {
+  margin-left: 13px;
+  max-width: 450px;
+  width: 100%;
+}
+.columns.footer-second-part > div > div:nth-of-type(1) ul li {
   font-size: 14px;
   line-height: 24px;
-  color: #ccc;
+  color: var(--silver);
   font-family: Roboto-Light;
   padding-left: 10px;
   margin-top: 5px;
+  list-style: disc;
 }
-
-.columns.footer-second-part > div:nth-of-type(2) > p:nth-of-type(1) {
+.columns.footer-second-part > div > div:nth-of-type(2) {
+  align-self: baseline;
+  width: 20%;
+  position: relative;
+}
+.columns.footer-second-part > div > div:nth-of-type(2) > p:nth-of-type(1) {
   font-size: 18px;
   line-height: 24px;
-  color: #ccc;
+  color: var(--silver);
   text-transform: uppercase;
-  font-family: Roboto-Medium;
+  font-family: "Roboto-Medium";
+  margin-bottom: 12px;
 }
-
-.columns.footer-second-part > div:nth-of-type(2) > p:nth-of-type(2) picture img {
+.columns.footer-second-part > div > div:nth-of-type(2) > p:nth-of-type(2) picture img {
   width: 112px;
 }
+.columns.footer-second-part > div > div:nth-of-type(2) > p:nth-of-type(3) {
+  position: absolute;
+  top: 36px;
+  right: 20px;
+}
+.columns.footer-second-part > div > div:nth-of-type(2) > p:nth-of-type(3) picture img {
+  width: 112px;
+}
+
+.section.columns-container > div:nth-of-type(4) {
+  display: flex;
+  justify-content: space-between;
+  padding: 14px 0;
+}
+.section.columns-container > div:nth-of-type(4) ul {
+  display: flex;
+  align-items: center;
+  -moz-column-gap: 24px;
+       column-gap: 24px;
+}
+.section.columns-container > div:nth-of-type(4) ul li {
+  font-size: 16px;
+  line-height: 24px;
+  color: var(--primary-white);
+  font-family: "Roboto-Medium";
+}
+.section.columns-container > div:nth-of-type(4) p {
+  font-size: 16px;
+  line-height: 24px;
+  color: var(--primary-white);
+  font-family: "Roboto-Medium";
+}/*# sourceMappingURL=footer.css.map */

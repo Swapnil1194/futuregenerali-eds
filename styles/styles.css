@@ -21,6 +21,7 @@
   --primary-black: black;
   --light-blue: #f3f9ff;
   --dim-gray: #6f7072;
+  --silver:#ccc
 
 
   /* fonts */
@@ -130,6 +131,7 @@ a {
 }
 
 @media (width >=576px) {
+
   .fg-container,
   .section>div {
     max-width: 540px
@@ -137,6 +139,7 @@ a {
 }
 
 @media (width >=768px) {
+
   .fg-container,
   .section>div {
     max-width: 720px
@@ -144,6 +147,7 @@ a {
 }
 
 @media (width >=992px) {
+
   .fg-container,
   .section>div {
     max-width: 960px
@@ -151,6 +155,7 @@ a {
 }
 
 @media (width >=1200px) {
+
   .fg-container,
   .section>div {
     max-width: 1140px
@@ -158,6 +163,7 @@ a {
 }
 
 @media (width >=1400px) {
+
   .fg-container,
   .section>div {
     max-width: 1320px
@@ -176,17 +182,24 @@ a {
 
 /* Glider Common Start */
 
-.glider-dots {
-  >button {
-    background: #ccc;
-    width: 8px;
-    height: 8px;
-    margin: 4px;
-  }
+.glider-dots>button {
+  background: var(--silver);
+  width: 8px;
+  height: 8px;
+  margin: 4px;
+}
 
-  .active {
-    background: var(--primary-white);
-  }
+.glider-dots>button .active {
+  background: var(--primary-white);
+}
+
+.arrows-hide .glider-prev,
+.arrows-hide .glider-next {
+  display: none;
+}
+
+.dots-hide .glider-dots{
+  display: none;
 }
 
 .glider {

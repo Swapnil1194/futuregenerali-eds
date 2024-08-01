@@ -7,20 +7,17 @@
   z-index: 1;
   background-color: var(--primary-white);
   padding: 12px 0 14px;
-  box-shadow: 0 0 10px 0 rgb(0 0 0 / 7.06%);
+  box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.0705882353);
   transition: all 0.3s linear;
 }
-
 .block.header > div:first-child {
   display: none;
 }
-
 .block.header > div > div {
   display: flex;
   justify-content: space-between;
   align-items: center;
 }
-
 .block.header > div > div > ul {
   display: contents;
-}
+}/*# sourceMappingURL=header.css.map */

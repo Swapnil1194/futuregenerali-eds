@@ -1,8 +1,9 @@
 .glider.stands-with-you {
+    padding: 50px 60px 70px;
+
     [data-cloumn-wrapper="cloumn-wrapper"] {
         display: flex;
         align-items: center;
-        padding: 50px 60px 70px 60px;
         column-gap: 30px;
 
         [data-cloumn-index="cloumn-0"] {
@@ -48,9 +49,10 @@
 
 @media screen and (max-width: 767.99px) {
     .glider.stands-with-you {
+        padding: 50px 16px 70px 16px;
+
         [data-cloumn-wrapper="cloumn-wrapper"] {
             flex-direction: column;
-            padding: 50px 16px 70px 16px;
 
             [data-cloumn-index="cloumn-0"] {
                 align-self: baseline;
