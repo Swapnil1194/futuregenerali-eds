@@ -97,7 +97,6 @@ export default async function decorate(block) {
   const fragment = await loadFragment(navPath);
 
   while (fragment.firstElementChild) block.append(fragment.firstElementChild);
-
 }
 export async function decorate0(block) {
   // load nav as fragment

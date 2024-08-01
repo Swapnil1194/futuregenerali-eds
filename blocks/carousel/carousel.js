@@ -1,9 +1,9 @@
-import { renderHelper, getProps } from "../../scripts/scripts.js";
-import Glider from "../../common/carousel/glider.min.js";
+import { renderHelper, getProps } from '../../scripts/scripts.js';
+import Glider from '../../common/carousel/glider.min.js';
 
 export default function decorate(block) {
   const data = [];
-  Array.from(block.children).forEach(function (child, index) {
+  Array.from(block.children).forEach((child, index) => {
     const childProps = getProps(child, {
       index: [0, 1, 2],
     });
@@ -18,8 +18,8 @@ export default function decorate(block) {
     <div class="glider-contain">
         <div class="glider">
           ${renderHelper(
-            data,
-            ` <div class="forName">
+    data,
+    ` <div class="forName">
                 <div class="banner-wrapper">
                   <div class="banner">
                   <div class="fg-container">
@@ -33,8 +33,8 @@ export default function decorate(block) {
                     <a href="{0.2.children.0.href}" class="banner__button de-d">{0.2.innerText}</a>
                   </div>
                 </div>
-              </div>`
-          )}
+              </div>`,
+  )}
         </div>
        <div role="tablist" class="glider-dots"></div>
     </div>`;
@@ -56,12 +56,12 @@ export default function decorate(block) {
       if (entry.isIntersecting) {
         new Glider(block.children[0].children[0], {
           slidesToShow: 1,
-          dots: ".glider-dots",
+          dots: '.glider-dots',
           slidesToScroll: 1,
           draggable: true,
           arrows: {
-            prev: ".glider-prev",
-            next: ".glider-next",
+            prev: '.glider-prev',
+            next: '.glider-next',
           },
         });
       }

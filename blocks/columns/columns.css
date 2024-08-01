@@ -1,4 +1,5 @@
-@import url(./footer/footer.css);
+@import url("./footer/footer.css");
+
 .columns > div {
   display: flex;
   flex-direction: column;
