@@ -20,27 +20,27 @@
 .glider.future-generali-social-media-photos [data-glider-container=glider-container] > div > div {
   width: 31.1% !important;
 }
-.glider.future-generali-social-media-photos [data-glider-container=glider-container] > div > div [data-cloumn-wrapper=cloumn-wrapper] {
+.glider.future-generali-social-media-photos [data-glider-container=glider-container] > div > div [data-column-wrapper=column-wrapper] {
   background-color: var(--primary-white);
   border-radius: 6px;
   overflow: hidden;
   padding: 16px;
   height: 100%;
 }
-.glider.future-generali-social-media-photos [data-glider-container=glider-container] > div > div [data-cloumn-wrapper=cloumn-wrapper] [data-cloumn-index=cloumn-0] > p {
+.glider.future-generali-social-media-photos [data-glider-container=glider-container] > div > div [data-column-wrapper=column-wrapper] [data-column-index=column-0] > p {
   display: flex;
   justify-content: space-between;
   align-items: center;
 }
-.glider.future-generali-social-media-photos [data-glider-container=glider-container] > div > div [data-cloumn-wrapper=cloumn-wrapper] [data-cloumn-index=cloumn-1] img {
+.glider.future-generali-social-media-photos [data-glider-container=glider-container] > div > div [data-column-wrapper=column-wrapper] [data-column-index=column-1] img {
   -o-object-fit: fill;
      object-fit: fill;
   width: 100%;
 }
-.glider.future-generali-social-media-photos [data-glider-container=glider-container] > div > div [data-cloumn-wrapper=cloumn-wrapper] [data-cloumn-index=cloumn-2] {
+.glider.future-generali-social-media-photos [data-glider-container=glider-container] > div > div [data-column-wrapper=column-wrapper] [data-column-index=column-2] {
   padding-top: 4px;
 }
-.glider.future-generali-social-media-photos [data-glider-container=glider-container] > div > div [data-cloumn-wrapper=cloumn-wrapper] [data-cloumn-index=cloumn-2] > p {
+.glider.future-generali-social-media-photos [data-glider-container=glider-container] > div > div [data-column-wrapper=column-wrapper] [data-column-index=column-2] > p {
   color: #20252b;
   font-size: 10px;
   line-height: 16px;

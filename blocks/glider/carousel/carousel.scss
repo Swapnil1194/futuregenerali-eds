@@ -22,7 +22,7 @@
                         height: 423px !important;
                         width: 100% !important;
 
-                        [data-cloumn-wrapper="cloumn-wrapper"] {
+                        [data-column-wrapper="column-wrapper"] {
                             // position: relative;
                             width: 100%;
                             padding-right: 15px;
@@ -54,7 +54,7 @@
                                 max-width: 1320px
                             }
 
-                            [data-cloumn-index="cloumn-0"] {
+                            [data-column-index="column-0"] {
                                 width: 47.3%;
                                 position: absolute;
                                 z-index: 1;
@@ -86,7 +86,7 @@
                                 }
                             }
 
-                            [data-cloumn-index="cloumn-1"] {
+                            [data-column-index="column-1"] {
                                 position: absolute;
                                 bottom: -2px;
                                 height: 100%;
@@ -100,11 +100,11 @@
                                 }
                             }
 
-                            [data-cloumn-index="cloumn-2"] {
+                            [data-column-index="column-2"] {
                                 display: none;
                             }
 
-                            [data-cloumn-index="cloumn-3"] {
+                            [data-column-index="column-3"] {
                                 position: absolute;
                                 bottom: 22%;
                                 max-width: 220px;
@@ -160,8 +160,8 @@
                             height: 100% !important;
                             height: 100%;
 
-                            [data-cloumn-wrapper="cloumn-wrapper"] {
-                                [data-cloumn-index="cloumn-0"] {
+                            [data-column-wrapper="column-wrapper"] {
+                                [data-column-index="column-0"] {
                                     margin-top: 25px;
                                     width: 100%;
                                     position: unset;
@@ -176,11 +176,11 @@
                                     }
                                 }
 
-                                [data-cloumn-index="cloumn-1"] {
+                                [data-column-index="column-1"] {
                                     display: none;
                                 }
 
-                                [data-cloumn-index="cloumn-2"] {
+                                [data-column-index="column-2"] {
                                     display: block;
 
                                     img {
@@ -189,7 +189,7 @@
                                     }
                                 }
 
-                                [data-cloumn-index="cloumn-3"] {
+                                [data-column-index="column-3"] {
                                     max-width: unset;
                                     margin-top: 24px;
                                     padding: 12px 0;

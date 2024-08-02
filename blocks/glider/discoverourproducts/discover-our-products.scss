@@ -32,7 +32,7 @@
         .glider-slide {
             padding-bottom: 25px;
 
-            [data-cloumn-wrapper="cloumn-wrapper"] {
+            [data-column-wrapper="column-wrapper"] {
                 width: 90%;
                 border-radius: 5px;
                 margin: 20px 12px 0 12px;
@@ -42,13 +42,13 @@
                 text-align: center;
                 padding: 16px 20px 20px;
 
-                [data-cloumn-index="cloumn-0"] {
+                [data-column-index="column-0"] {
                     text-align: end;
                 }
 
-                [data-cloumn-index="cloumn-1"] {}
+                [data-column-index="column-1"] {}
 
-                [data-cloumn-index="cloumn-2"] {
+                [data-column-index="column-2"] {
                     >h3 {
                         font-family: "robotoregular";
                         font-size: 22px;

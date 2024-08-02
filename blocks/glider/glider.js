@@ -19,9 +19,9 @@ export default function decorate(block) {
     } else {
       item.dataset.rowIndex = `row-${index}`;
       const childwrap = document.createElement('div');
-      childwrap.dataset.cloumnWrapper = 'cloumn-wrapper';
+      childwrap.dataset.columnWrapper = 'column-wrapper';
       Array.from(item.children).forEach((el, index) => {
-        el.dataset.cloumnIndex = `cloumn-${index}`;
+        el.dataset.columnIndex = `column-${index}`;
         childwrap.append(el);
       });
       item.append(childwrap);
