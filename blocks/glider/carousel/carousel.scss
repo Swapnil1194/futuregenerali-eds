@@ -149,19 +149,20 @@
     .hero-banner {
         .glider-wrapper {
             >div {
+                height: 550px;
                 .glider-dots {
                     transform: translate(137%, -50%);
-                    left: 0;
+                    left: -22px;
                 }
 
                 >div:first-child {
                     .glider-track {
                         .glider-slide {
                             height: 100% !important;
-                            height: 100%;
 
                             [data-column-wrapper="column-wrapper"] {
                                 [data-column-index="column-0"] {
+                                    height: 150px;
                                     margin-top: 25px;
                                     width: 100%;
                                     position: unset;
@@ -181,6 +182,7 @@
                                 }
 
                                 [data-column-index="column-2"] {
+                                    margin-right: -14px;
                                     display: block;
 
                                     img {
@@ -190,8 +192,8 @@
                                 }
 
                                 [data-column-index="column-3"] {
-                                    max-width: unset;
                                     margin-top: 24px;
+                                    max-width: unset;
                                     padding: 12px 0;
                                     position: unset;
 
