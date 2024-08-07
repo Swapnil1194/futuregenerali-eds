@@ -1,5 +1,6 @@
 .block.header {
     height: 64px;
+
     .nav-wrapper {
         padding: 12px;
         background-color: var(--primary-white);
@@ -13,7 +14,7 @@
                     column-gap: 40px;
 
                     >ul {
-                        >li {
+                        >li a {
                             &::after {
                                 content: '';
                                 display: inline-block;
@@ -29,11 +30,11 @@
                             }
                         }
 
-                        >li[aria-expanded='true'] {
+                        >li[aria-expanded='true'] a {
                             color: var(--brand-primary);
                         }
 
-                        >li[aria-expanded='true']::after {
+                        >li[aria-expanded='true'] a::after {
                             top: unset;
                             bottom: 0.2em;
                             transform: rotate(315deg);
@@ -41,16 +42,23 @@
                         }
 
 
-                        >li[aria-expanded='true']::before {
-                            position: absolute;
-                            content: '';
-                            width: 100%;
-                            bottom: -26px;
-                            height: 2px;
-                            left: 50%;
-                            transform: translateX(-50%);
-                            background-color: var(--brand-primary);
+                        >li[aria-expanded='true'] a {
+                            &::before {
+                                position: absolute;
+                                content: '';
+                                width: 150%;
+                                bottom: -26px;
+                                height: 2px;
+                                left: 50%;
+                                transform: translateX(-50%);
+                                background-color: var(--brand-primary);
+                            }
+
                         }
+                    }
+
+                    >ul:last-child{
+                        display: none;
                     }
                 }
             }

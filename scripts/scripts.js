@@ -185,3 +185,20 @@ export function getProps(block, config) {
       : el.innerText.trim();
   });
 }
+
+
+export async function fetchData(url) {
+  try {
+    let response = await fetch(url);
+    if (!response.ok) {
+      throw new Error("Network response was not ok " + response.statusText);
+    }
+    let html = await response.text();
+
+    return html
+  
+  } catch (error) {
+    console.error("Fetch error: ", error);
+  }
+}
+/* fetchData("https://general.futuregenerali.in/content/experience-fragments/futuregeneraliindiainsurancecoltd/us/en/site/navigation-popup-content/product-xf.html") */
