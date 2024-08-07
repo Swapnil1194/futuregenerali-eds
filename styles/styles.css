@@ -210,11 +210,31 @@ a {
   top: 40%
 }
 
+.des-none {
+  display: none;
+}
+
 @media screen and (max-width: 767.99px) {
+
   .glider-prev,
   .glider-next {
+    display: none;
+  }
+
+  .des-none {
+    display: block;
+  }
+
+  .md-none {
     display: none;
   }
 }
 
 /* Glider Common End */
+.navfragment-container{
+  display: none;
+}
+
+.swiper-container{
+  display: none;
+}

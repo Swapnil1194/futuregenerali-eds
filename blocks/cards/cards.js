@@ -15,4 +15,50 @@ export default function decorate(block) {
   ul.querySelectorAll('img').forEach((img) => img.closest('picture').replaceWith(createOptimizedPicture(img.src, img.alt, false, [{ width: '750' }])));
   block.textContent = '';
   block.append(ul);
+
+  /* Card Click */
+ const sections = [
+   "self",
+   "couple",
+   "smallfamily",
+   "seniorcitizen",
+   "jointfamily",
+ ];
+ const ulItems = Array.from(block.querySelectorAll("li"));
+ const btn = document.querySelector(
+   ".health-priority-card .button-container a"
+ );
+ const buttonContainer = document.querySelector(
+   ".health-priority-card .button-container"
+ );
+
+ ulItems.forEach((el, index) => {
+   const section = sections[index % sections.length]; // Use modulus to handle cases where there are more lis than sections
+   el.setAttribute("data-section", section);
+
+   // Add onclick event to toggle 'active' class
+   el.addEventListener("click", () => {
+     // Remove 'active' class from all li elements
+     ulItems.forEach((item) => item.classList.remove("active"));
+
+     // Add 'active' class to the clicked li element
+     el.classList.add("active");
+
+     // Log the current data-section attribute
+     console.log(el.getAttribute("data-section"));
+
+     // Update the href attribute of the button
+     btn.setAttribute(
+       "href",
+       "https://general.futuregenerali.in/need-analysis/select-gender"
+     );
+
+     // Remove opacity from button-container
+     buttonContainer.style.opacity = "1";
+     buttonContainer.style.pointerEvents = "auto"; // Ensure the button is clickable
+     buttonContainer.style.cursor = "pointer"; 
+   });
+ });
+
+
 }

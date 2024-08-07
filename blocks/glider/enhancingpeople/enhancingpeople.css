@@ -12,10 +12,10 @@
 .glider.enhancing-people [data-glider-container=glider-container] > div {
   -moz-column-gap: 24px;
        column-gap: 24px;
-  justify-content: space-between;
+  justify-content: space-evenly;
 }
 .glider.enhancing-people [data-glider-container=glider-container] > div > div {
-  width: 23.6% !important;
+  width: 10.7% !important;
 }
 .glider.enhancing-people [data-column-wrapper=column-wrapper] {
   position: relative;
@@ -23,7 +23,7 @@
   background: var(--primary-white);
   border-radius: 5px;
   box-shadow: 0 0 20.41px 0 rgba(0, 0, 0, 0.1);
-  height: 380px;
+  height: 320px;
   border: 1px solid transparent;
 }
 .glider.enhancing-people [data-column-index=column-0] {
