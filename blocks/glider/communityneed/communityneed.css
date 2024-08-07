@@ -12,6 +12,20 @@
 .communities-in-need .default-content-wrapper p strong {
   color: #c21b17;
 }
+@media screen and (max-width: 768px) {
+  .communities-in-need .default-content-wrapper p {
+    font-family: "robotolight";
+    font-size: 28px;
+    font-weight: 300;
+    line-height: 36px;
+    letter-spacing: -0.02em;
+    text-align: center;
+    padding-bottom: 24px;
+  }
+}
+.communities-in-need .glider-wrapper .glider.our-promise .glider .glider-track .glider-slide {
+  margin-bottom: 28px;
+}
 .communities-in-need .glider-wrapper .glider.our-promise .glider .glider-track .glider-slide img {
   width: 250px;
   height: -moz-fit-content;

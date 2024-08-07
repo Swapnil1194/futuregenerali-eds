@@ -14,6 +14,16 @@
             strong {
                 color: #c21b17;
             }
+
+            @media screen and (max-width:768px){
+                font-family: "robotolight";
+                font-size: 28px;
+                font-weight: 300;
+                line-height: 36px;
+                letter-spacing: -0.02em;
+                text-align: center;
+                padding-bottom: 24px;
+            }
         }
     }
 
@@ -27,6 +37,9 @@
                                 width: 250px;
                                 height: fit-content;
                             }
+                            // @media screen and (max-width:768px) {
+                                margin-bottom: 28px;
+                            // }
 
                             // max-width: 310px !important;
                             [data-column-wrapper="column-wrapper"] {

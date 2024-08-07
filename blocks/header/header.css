@@ -90,28 +90,37 @@ header nav .nav-hamburger-icon::after {
     background: currentcolor;
 }
 
-header nav[aria-expanded='false'] .nav-hamburger-icon,
-header nav[aria-expanded='false'] .nav-hamburger-icon::before,
-header nav[aria-expanded='false'] .nav-hamburger-icon::after {
+header nav .nav-hamburger-icon,
+header nav .nav-hamburger-icon::before,
+header nav .nav-hamburger-icon::after {
     height: 2px;
     border-radius: 2px;
-    background: currentcolor;
+    /* background: currentColor; */
 }
 
-header nav[aria-expanded='false'] .nav-hamburger-icon::before {
+
+header nav.expaded .nav-hamburger-icon,
+header nav.expaded .nav-hamburger-icon::before,
+header nav.expaded .nav-hamburger-icon::after {
+    height: 2px;
+    border-radius: 2px;
+    /* background: unset; */
+}
+
+header nav .nav-hamburger-icon::before {
     top: -6px;
 }
 
-header nav[aria-expanded='false'] .nav-hamburger-icon::after {
+header nav .nav-hamburger-icon::after {
     top: 6px;
 }
 
-header nav[aria-expanded='true'] .nav-hamburger-icon {
+header nav.expanded .nav-hamburger-icon {
     height: 22px;
 }
 
-header nav[aria-expanded='true'] .nav-hamburger-icon::before,
-header nav[aria-expanded='true'] .nav-hamburger-icon::after {
+header nav.expanded .nav-hamburger-icon::before,
+header nav.expanded .nav-hamburger-icon::after {
     top: 3px;
     left: 1px;
     transform: rotate(45deg);
@@ -121,7 +130,7 @@ header nav[aria-expanded='true'] .nav-hamburger-icon::after {
     border-radius: 2px;
 }
 
-header nav[aria-expanded='true'] .nav-hamburger-icon::after {
+header nav.expanded .nav-hamburger-icon::after {
     top: unset;
     bottom: 3px;
     transform: rotate(-45deg);
@@ -275,5 +284,93 @@ header nav .nav-tools {
         .nav-brand {
             
         }
+    }
+}
+
+/* .header-menu{
+    animation: navout;
+    animation-duration: 1s;
+    animation-fill-mode: backwards;
+    display: none;
+}
+.expanded.header-menu{
+    
+    display: block;
+    background: black;
+    height: 95vh;
+    position: fixed;
+    z-index: 1;
+    width: 100%;
+    top: 61px;
+    animation: navin;
+    animation-duration: 1s;
+    animation-fill-mode: forwards;
+    transition: linear .3s ease;
+    
+}
+
+@keyframes navin{
+    0% {
+        left: -100%;
+    }
+    100% {
+        left: 0%;
+    }
+
+}
+
+@keyframes navout{
+    0% {
+        left: 0%;
+    }
+    100% {
+        left: -100%;
+    }
+
+} */
+
+
+.header-menu {
+    position: fixed;
+    top: 61px;
+    left: -100%;
+    width: 100%;
+    height: 95vh;
+    background: black;
+    z-index: 1;
+    transition: none; /* No transition initially */
+    opacity: 0; /* Initially invisible */
+}
+
+.expanded.header-menu {
+    left: 0;
+    opacity: 1;
+    transition: opacity 0.3s ease;
+    animation: navin 1s forwards; /* Slide in */
+}
+
+.header-menu.hidden {
+    animation: navout 1s forwards; /* Slide out */
+}
+
+@keyframes navin {
+    0% {
+        left: -100%;
+        /* opacity: 0; */
+    }
+    100% {
+        left: 0%;
+        /* opacity: 1; */
+    }
+}
+
+@keyframes navout {
+    0% {
+        left: 0%;
+        opacity: 1;
+    }
+    100% {
+        left: -100%;
+        /* opacity: 0; */
     }
 }
