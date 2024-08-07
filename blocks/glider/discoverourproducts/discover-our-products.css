@@ -21,64 +21,12 @@
 
 .glider.discover-our-products-card {
   margin-top: 40px;
-  /* ul {
-      display: flex;
-      column-gap: 25px;
-
-      li {
-          width: 20.9%;
-          border-radius: 5px;
-          margin: 20px 12px 0 12px;
-          box-shadow: 0 0 20.41px 0 #0000001A;
-          height: 100%;
-          cursor: pointer;
-          text-align: center;
-          padding: 16px 20px 20px;
-
-          >div:nth-of-type(1) {
-              text-align: end;
-          }
-
-          >div:nth-of-type(2) {
-              img {
-                  width: 104px;
-                  height: 100px;
-              }
-          }
-
-          >div:nth-of-type(3) {
-              margin-top: 20px;
-
-              >h3 {
-                  font-family: "robotoregular";
-                  font-size: 22px;
-                  font-weight: 400;
-                  line-height: 30.8px;
-              }
-
-              >p {
-                  font-family: "robotolight";
-                  font-size: 14px;
-                  font-weight: 300;
-                  line-height: 19.6px;
-                  text-align: center;
-                  padding-bottom: 0;
-                  color: #20252b;
-                  em {
-                      font-family: "robotomedium";
-                      font-size: 14px;
-                      font-weight: bold;
-                      line-height: 19.6px;
-                  }
-              }
-          }
-      }
-  } */
 }
 .glider.discover-our-products-card [data-glider-container=glider-container] .glider-slide {
   padding-bottom: 25px;
 }
 .glider.discover-our-products-card [data-glider-container=glider-container] .glider-slide [data-column-wrapper=column-wrapper] {
+  position: relative;
   width: 90%;
   border-radius: 5px;
   margin: 20px 12px 0 12px;
@@ -112,4 +60,83 @@
   font-weight: 500;
   line-height: 19.6px;
   text-align: center;
+}
+.glider.discover-our-products-card [data-glider-container=glider-container] .glider-slide [data-column-wrapper=column-wrapper] [data-column-index=column-2] > p:last-child a {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+}
+.glider.discover-our-products-card .glider-dots {
+  display: none;
+}
+
+@media screen and (max-width: 767.99px) {
+  .section.discover-our-products-card-container {
+    padding: 40px 0;
+  }
+  .section.discover-our-products-card-container > div > h2 {
+    font-size: 28px;
+    line-height: 36px;
+  }
+  .section.discover-our-products-card-container > div > p {
+    font-size: 14px;
+    line-height: 19px;
+  }
+  .glider.discover-our-products-card {
+    margin-top: 20px;
+  }
+  .glider.discover-our-products-card [data-glider-container=glider-container] .glider-slide {
+    padding-bottom: 25px;
+    display: flex;
+  }
+  .glider.discover-our-products-card [data-glider-container=glider-container] .glider-slide [data-column-wrapper=column-wrapper] {
+    position: relative;
+    width: 78%;
+    border-radius: 5px;
+    margin: 20px 12px 0 12px;
+    box-shadow: 0 0 20.41px 0 rgba(0, 0, 0, 0.1019607843);
+    height: 100%;
+    cursor: pointer;
+    text-align: center;
+    padding: 16px 20px 20px;
+  }
+  .glider.discover-our-products-card [data-glider-container=glider-container] .glider-slide [data-column-wrapper=column-wrapper] [data-column-index=column-0] {
+    text-align: end;
+  }
+  .glider.discover-our-products-card [data-glider-container=glider-container] .glider-slide [data-column-wrapper=column-wrapper] [data-column-index=column-2] > h3 {
+    font-family: "robotoregular";
+    font-size: 22px;
+    font-weight: 400;
+    line-height: 30.8px;
+    text-align: center;
+  }
+  .glider.discover-our-products-card [data-glider-container=glider-container] .glider-slide [data-column-wrapper=column-wrapper] [data-column-index=column-2] > p {
+    font-family: "robotolight";
+    font-size: 14px;
+    font-weight: 300;
+    line-height: 19.6px;
+    text-align: center;
+    color: #20252b;
+  }
+  .glider.discover-our-products-card [data-glider-container=glider-container] .glider-slide [data-column-wrapper=column-wrapper] [data-column-index=column-2] > p > em {
+    font-family: "robotomedium";
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 19.6px;
+    text-align: center;
+  }
+  .glider.discover-our-products-card [data-glider-container=glider-container] .glider-slide [data-column-wrapper=column-wrapper] [data-column-index=column-2] > p:last-child a {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+  }
+  .glider.discover-our-products-card .glider-dots {
+    display: block;
+  }
 }/*# sourceMappingURL=discover-our-products.css.map */

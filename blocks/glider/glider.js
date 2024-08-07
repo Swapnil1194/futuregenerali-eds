@@ -1,45 +1,42 @@
-import Glider from '../../common/carousel/glider.min.js';
-import { embedYoutube, loadEmbed } from '../embed/embed.js';
+import Glider from "../../common/carousel/glider.min.js";
+import { embedYoutube, loadEmbed } from "../embed/embed.js";
 
 export default function decorate(block) {
-  const carouselitem = Array.from(block.children);
+  const rows = Array.from(block.children);
   let config = {};
   let prev;
   let next;
-  const gliderContainer = document.createElement('div');
-  gliderContainer.dataset.gliderContainer = 'glider-container';
-  const dots = document.createElement('div');
-  carouselitem.forEach((item, index) => {
-    if (carouselitem.length === index + 1) {
-      const [configData, prevEl, nextEl] = item.children;
+  const gliderContainer = document.createElement("div");
+  gliderContainer.dataset.gliderContainer = "glider-container";
+  const dots = document.createElement("div");
+  rows.forEach((row, index) => {
+    if (rows.length === index + 1) {
+      // Last row will be configurable
+      const [configData, prevEl, nextEl] = row.children;
       config = JSON.parse(configData.innerText);
       prev = prevEl;
       next = nextEl;
-      prev.classList.add('glider-prev');
-      next.classList.add('glider-next');
+      prev.classList.add("glider-prev");
+      next.classList.add("glider-next");
     } else {
-      item.dataset.rowIndex = `row-${index}`;
-      const childwrap = document.createElement('div');
-      childwrap.dataset.columnWrapper = 'column-wrapper';
-      Array.from(item.children).forEach((el, index) => {
-        el.dataset.columnIndex = `column-${index}`;
-        if(block.classList.contains('embed')){
-          const link = el.innerText.trim();
-  // const url = new URL(link);
-
-  //         const div = document.createElement('div');
-  //         div.innerHTML = embedYoutube(url);;
-  //         childwrap.append(div);
-          childwrap.append(loadEmbed(el, link));
-        }else{
-          childwrap.append(el);
+      row.dataset.rowIndex = `row-${index}`;
+      const columnWrapper = document.createElement("div");
+      columnWrapper.dataset.columnWrapper = "column-wrapper";
+      Array.from(row.children).forEach((cloumn, index) => {
+        cloumn.dataset.columnIndex = `column-${index}`;
+        if (block.classList.contains("embed") && !index) {
+          const link = cloumn.innerText.trim();
+          loadEmbed(cloumn, link , true);
+          columnWrapper.append(cloumn);
+        } else {
+          columnWrapper.append(cloumn);
         }
       });
-      item.append(childwrap);
-      gliderContainer.append(item);
+      row.append(columnWrapper);
+      gliderContainer.append(row);
     }
   });
-  block.innerHTML = '';
+  block.innerHTML = "";
   block.appendChild(gliderContainer);
   block.append(dots);
   block.append(prev);
