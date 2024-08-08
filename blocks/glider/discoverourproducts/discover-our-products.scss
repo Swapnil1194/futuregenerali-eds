@@ -44,7 +44,8 @@
                 padding: 16px 20px 20px;
 
                 [data-column-index="column-0"] {
-                    text-align: end;
+                    display: flex;
+                    justify-content: end;
                 }
 
                 [data-column-index="column-2"] {
@@ -90,7 +91,7 @@
 
     }
 
-    .glider-dots{
+    .glider-dots {
         display: none;
     }
 }
@@ -180,8 +181,8 @@
 
         }
 
-        .glider-dots{
-            display: block;
+        .glider-dots {
+            display: flex;
         }
     }
 }

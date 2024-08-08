@@ -4,6 +4,7 @@
 .block.header .nav-wrapper {
   padding: 12px;
   background-color: var(--primary-white);
+  position: relative;
 }
 .block.header .nav-wrapper nav > div:nth-of-type(3) > div {
   display: flex;
@@ -12,7 +13,7 @@
   -moz-column-gap: 40px;
        column-gap: 40px;
 }
-.block.header .nav-wrapper nav > div:nth-of-type(3) > div > ul > li::after {
+.block.header .nav-wrapper nav > div:nth-of-type(3) > div > ul > li a::after {
   content: "";
   display: inline-block;
   position: absolute;
@@ -25,20 +26,20 @@
   border-radius: 0 1px 0 0;
   border-width: 2px 2px 0 0;
 }
-.block.header .nav-wrapper nav > div:nth-of-type(3) > div > ul > li[aria-expanded=true] {
+.block.header .nav-wrapper nav > div:nth-of-type(3) > div > ul > li[aria-expanded=true] a {
   color: var(--brand-primary);
 }
-.block.header .nav-wrapper nav > div:nth-of-type(3) > div > ul > li[aria-expanded=true]::after {
+.block.header .nav-wrapper nav > div:nth-of-type(3) > div > ul > li[aria-expanded=true] a::after {
   top: unset;
   bottom: 0.2em;
   transform: rotate(315deg);
   color: black;
 }
-.block.header .nav-wrapper nav > div:nth-of-type(3) > div > ul > li[aria-expanded=true]::before {
+.block.header .nav-wrapper nav > div:nth-of-type(3) > div > ul > li[aria-expanded=true] a::before {
   position: absolute;
   content: "";
-  width: 100%;
-  bottom: -26px;
+  width: 150%;
+  bottom: -24px;
   height: 2px;
   left: 50%;
   transform: translateX(-50%);
@@ -50,11 +51,31 @@
   -moz-column-gap: 50px;
        column-gap: 50px;
 }
-.block.header .nav-wrapper nav > div:nth-of-type(4) > div > p:last-child {
+.block.header .nav-wrapper nav > div:nth-of-type(4) > div > p:nth-of-type(2) {
   padding: 12px 38px;
   background-color: var(--brand-primary);
   color: var(--primary-white);
   border-radius: 5px;
+}
+.block.header .nav-wrapper nav > div:nth-of-type(4) > div > p.button-container {
+  display: none;
+}
+.block.header .nav-wrapper nav .link-list {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  right: 0;
+  box-shadow: 0 0 32px 0 rgba(151, 151, 151, 0.1019607843);
+  background-color: #f6f6f6;
+  padding-bottom: 38px;
+  max-height: -moz-max-content;
+  max-height: max-content;
+}
+.block.header .nav-wrapper nav .header-nav-content {
+  display: none;
+}
+.block.header .nav-wrapper nav .header-nav-content.active {
+  display: block;
 }
 
 @media screen and (max-width: 767.99px) {

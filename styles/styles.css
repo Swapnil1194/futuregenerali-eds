@@ -60,6 +60,13 @@
   box-sizing: border-box;
 }
 
+body{
+  font-family: "robotolight", sans-serif;
+  font-family: "robotoregular", sans-serif;
+  font-family: "robotomedium", sans-serif;
+  font-family: "Roboto-Bold", sans-serif;
+}
+
 
 .light-blue-bg {
   background-color: var(--light-blue);
@@ -210,7 +217,7 @@ a {
   top: 40%
 }
 
-.des-none {
+.dsp-none {
   display: none;
 }
 
@@ -221,7 +228,7 @@ a {
     display: none;
   }
 
-  .des-none {
+  .dsp-none {
     display: block;
   }
 
@@ -231,10 +238,10 @@ a {
 }
 
 /* Glider Common End */
-.navfragment-container{
-  display: none;
+.d-block {
+  display: block;
 }
 
-.swiper-container{
+.d-none {
   display: none;
 }
