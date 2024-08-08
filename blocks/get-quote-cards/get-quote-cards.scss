@@ -1,0 +1,37 @@
+.section.get-quote-cards-container{
+        position: relative;
+    .get-quote-cards.block{
+        display: flex;
+        justify-content: center;
+        column-gap: 20px;
+        position: relative;
+        top: -40px;
+        align-items: center;
+        .multiCardsContainer{
+            display: flex;
+            column-gap: 20px;
+            .cardsContainer{
+                width: 100%;
+                display: block;
+                cursor: pointer;
+                padding: 10px;
+                background: #FFFFFFF2;
+                border: 1px solid #D9D9D999;
+                border-radius: 5px;
+                min-height: 80px;
+                // padding: 0;
+                position: relative;
+                width: 93px;
+                text-align: center;
+               
+                .img{
+                    picture{
+                        display: flex;
+                        justify-content: center;
+                    }
+    
+                }
+            }
+        }
+    }
+}

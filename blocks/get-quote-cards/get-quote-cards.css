@@ -1,0 +1,34 @@
+.section.get-quote-cards-container {
+  position: relative;
+}
+.section.get-quote-cards-container .get-quote-cards.block {
+  display: flex;
+  justify-content: center;
+  -moz-column-gap: 20px;
+       column-gap: 20px;
+  position: relative;
+  top: -40px;
+  align-items: center;
+}
+.section.get-quote-cards-container .get-quote-cards.block .multiCardsContainer {
+  display: flex;
+  -moz-column-gap: 20px;
+       column-gap: 20px;
+}
+.section.get-quote-cards-container .get-quote-cards.block .multiCardsContainer .cardsContainer {
+  width: 100%;
+  display: block;
+  cursor: pointer;
+  padding: 10px;
+  background: rgba(255, 255, 255, 0.9490196078);
+  border: 1px solid rgba(217, 217, 217, 0.6);
+  border-radius: 5px;
+  min-height: 80px;
+  position: relative;
+  width: 93px;
+  text-align: center;
+}
+.section.get-quote-cards-container .get-quote-cards.block .multiCardsContainer .cardsContainer .img picture {
+  display: flex;
+  justify-content: center;
+}/*# sourceMappingURL=get-quote-cards.css.map */
