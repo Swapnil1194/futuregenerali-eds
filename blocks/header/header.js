@@ -204,7 +204,7 @@ export default async function decorate(block) {
   div.innerHTML = resp;
   // console.log(div,"response");
   const navContent = document.createElement("div");
-  navContent.classList.add("mob-nav-wrapper", "jsMobileNavMenu","dsp-none");
+  navContent.classList.add("mob-nav-wrapper", "jsMobileNavMenu", "dsp-none");
   const mbNavContainer = div.querySelector(".mob-nav-inner");
   navContent.append(mbNavContainer);
   nav.append(navContent);
@@ -258,7 +258,7 @@ export default async function decorate(block) {
       newLink.rel = "stylesheet";
       document.head.append(newLink);
     });
-    
+
     const navContent = document.createElement("div");
     navContent.classList.add("header-nav-content", "link-list");
     navContent.setAttribute("data-value", link.innerText.toLowerCase());
@@ -310,6 +310,57 @@ export default async function decorate(block) {
           activeContent = relatedContent;
         }
       }
+    });
+
+    /*  */
+    var parentTabs = document.querySelectorAll(
+      ".custom-new-tabs > .custom-tabs-list > .tabs-item > .tab-btn"
+    );
+    var parentContents = document.querySelector(".custom-tab-content").children;
+    parentTabs.forEach((tab) => {
+      tab.addEventListener("click", function () {
+        console.log("tab click");
+        parentTabs.forEach((t) => t.classList.remove("active"));
+        Array.from(parentContents).forEach((content) =>
+          content.classList.add("d-none")
+        );
+
+        tab.classList.add("active");
+        var tabId = tab.getAttribute("data-tab");
+        var activeContent = Array.from(parentContents).find(
+          (content) => content.getAttribute("data-content") === tabId
+        );
+        if (activeContent) {
+          activeContent.classList.remove("d-none");
+        }
+      });
+    });
+
+    var nestedTabContainers = document.querySelectorAll(".horizontol-tabs");
+
+    nestedTabContainers.forEach((container) => {
+      var nestedTabs = container.querySelectorAll(".tab-btn");
+      var nestedContents = container
+        .closest(".tab-content-inner")
+        .querySelector(".tab-content-right").children;
+
+      nestedTabs.forEach((tab) => {
+        tab.addEventListener("click", function () {
+          nestedTabs.forEach((t) => t.classList.remove("active"));
+          Array.from(nestedContents).forEach((content) =>
+            content.classList.add("d-none")
+          );
+
+          tab.classList.add("active");
+          var tabId = tab.getAttribute("data-nested-tab");
+          var activeContent = Array.from(nestedContents).find(
+            (content) => content.getAttribute("data-nested-content") === tabId
+          );
+          if (activeContent) {
+            activeContent.classList.remove("d-none");
+          }
+        });
+      });
     });
   });
 }

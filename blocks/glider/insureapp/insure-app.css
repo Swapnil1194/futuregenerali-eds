@@ -28,6 +28,7 @@
   font-size: 48px;
   line-height: 60px;
   color: var(--primary-white);
+  font-family: "robotolight";
 }
 .glider.insure-app [data-glider-container=glider-container] > div [data-row-index=row-0] [data-column-wrapper=column-wrapper] [data-column-index=column-1] ul:not(:last-child),
 .glider.insure-app [data-glider-container=glider-container] > div [data-row-index=row-1] [data-column-wrapper=column-wrapper] [data-column-index=column-1] ul:not(:last-child) {
@@ -46,6 +47,7 @@
   font-size: 20px;
   font-weight: 300;
   line-height: 28px;
+  font-family: "robotolight";
   color: var(--primary-white);
 }
 .glider.insure-app [data-glider-container=glider-container] > div [data-row-index=row-0] [data-column-wrapper=column-wrapper] [data-column-index=column-1] > ul:last-child,

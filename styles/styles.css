@@ -61,10 +61,8 @@
 }
 
 body{
-  font-family: "robotolight", sans-serif;
   font-family: "robotoregular", sans-serif;
-  font-family: "robotomedium", sans-serif;
-  font-family: "Roboto-Bold", sans-serif;
+  font-weight: 400;
 }
 
 
@@ -238,10 +236,6 @@ a {
 }
 
 /* Glider Common End */
-.communities-in-need{
-  display: none;
-}
-
 .d-block {
   display: block;
 }

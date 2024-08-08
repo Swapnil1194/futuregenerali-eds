@@ -17,6 +17,10 @@
 
                     >ul {
                         >li a {
+                            font-size: 14px;
+                            line-height: 16px;
+                            font-family: robotoregular, sans-serif;
+
                             &::after {
                                 content: '';
                                 display: inline-block;
@@ -34,6 +38,9 @@
 
                         >li[aria-expanded='true'] a {
                             color: var(--brand-primary);
+                            font-weight: 800;
+                            font-size: 14px;
+                            line-height: 16px;
                         }
 
                         >li[aria-expanded='true'] a::after {
@@ -74,7 +81,7 @@
                         border-radius: 5px;
                     }
 
-                    >p.button-container{
+                    >p.button-container {
                         display: none;
                     }
                 }

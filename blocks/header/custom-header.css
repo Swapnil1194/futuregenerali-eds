@@ -13,6 +13,11 @@
   -moz-column-gap: 40px;
        column-gap: 40px;
 }
+.block.header .nav-wrapper nav > div:nth-of-type(3) > div > ul > li a {
+  font-size: 14px;
+  line-height: 16px;
+  font-family: robotoregular, sans-serif;
+}
 .block.header .nav-wrapper nav > div:nth-of-type(3) > div > ul > li a::after {
   content: "";
   display: inline-block;
@@ -28,6 +33,9 @@
 }
 .block.header .nav-wrapper nav > div:nth-of-type(3) > div > ul > li[aria-expanded=true] a {
   color: var(--brand-primary);
+  font-weight: 800;
+  font-size: 14px;
+  line-height: 16px;
 }
 .block.header .nav-wrapper nav > div:nth-of-type(3) > div > ul > li[aria-expanded=true] a::after {
   top: unset;
