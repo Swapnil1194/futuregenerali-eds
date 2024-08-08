@@ -190,37 +190,126 @@ export default async function decorate(block) {
   navWrapper.append(nav);
   block.append(navWrapper);
 
-  const navLinkContainer = block.querySelector(".nav-wrapper nav");
+  /* Custom Click */
+  /*Mobile Nav Links  */
+  const navLinkMob = block.querySelector(".nav-tools a").href;
 
+  let resp = await fetchData(navLinkMob);
+  resp = resp.replaceAll(
+    "/etc.clientlibs/",
+    "https://general.futuregenerali.in/etc.clientlibs/"
+  );
 
-  
+  const div = document.createElement("div");
+  div.innerHTML = resp;
+  // console.log(div,"response");
+  const navContent = document.createElement("div");
+  navContent.classList.add("mob-nav-wrapper", "jsMobileNavMenu","dsp-none");
+  const mbNavContainer = div.querySelector(".mob-nav-inner");
+  navContent.append(mbNavContainer);
+  nav.append(navContent);
 
-  const urls = [];
+  // Add all the stylesheets to the document head
+  div.querySelectorAll("link").forEach((link) => {
+    const newLink = document.createElement("link");
+    // console.log(newLink, "href");
+    newLink.href = link.href;
+    newLink.rel = "stylesheet";
+    document.head.append(newLink);
+  });
+
+  // Add all the scripts to the document body, except those containing "jquery" in their URL
+  /* div.querySelectorAll("script").forEach((script) => {
+    if (script.src && script.src.includes("jquery")) {
+      return; // Skip scripts containing "jquery" in their URL
+    }
+
+    const newScript = document.createElement("script");
+    console.log(newScript);
+    if (script.src) {
+      // External script
+      newScript.src = script.src;
+    }
+    document.body.append(newScript);
+  }); */
+
+  /*Desktop Nav Links  */
+  let activeContent = null;
 
   const navLinksList = block
     .querySelector(".nav-sections")
     .querySelectorAll("a");
-  navLinksList.forEach((link, ind) => {
+  navLinksList.forEach(async (link, ind) => {
+    link.setAttribute("data-value", link.innerText.toLowerCase());
+
+    const href = link.href;
+
+    let resp = await fetchData(href);
+    resp = resp.replaceAll(
+      "/etc.clientlibs/",
+      "https://general.futuregenerali.in/etc.clientlibs/"
+    );
+
+    const div = document.createElement("div");
+    div.innerHTML = resp;
+    div.querySelectorAll("link").forEach((link) => {
+      const newLink = document.createElement("link");
+      newLink.href = link.href;
+      newLink.rel = "stylesheet";
+      document.head.append(newLink);
+    });
+    
+    const navContent = document.createElement("div");
+    navContent.classList.add("header-nav-content", "link-list");
+    navContent.setAttribute("data-value", link.innerText.toLowerCase());
+    const fgContainer = div.querySelector(".fg-container");
+    navContent.append(fgContainer);
+    nav.append(navContent);
+
+    document.addEventListener("click", (e) => {
+      // Hide the active content when clicking outside
+      if (
+        activeContent &&
+        !e.target.closest(".nav-sections") &&
+        !e.target.closest(".header-nav-content")
+      ) {
+        activeContent.classList.remove("active");
+        activeContent = null;
+        const listItems = block.querySelectorAll(".nav-sections li");
+
+        listItems.forEach((li) => {
+          // Check if aria-expanded is true, then set it to false
+          if (li.getAttribute("aria-expanded") === "true") {
+            li.setAttribute("aria-expanded", "false");
+          }
+        });
+      }
+    });
+
     link.addEventListener("click", (e) => {
       e.preventDefault();
+
+      // Hide all content
+      const navLinkContainer = block.querySelectorAll(".header-nav-content");
+      const value = link.getAttribute("data-value");
+      const relatedContent = document.querySelector(
+        `.header-nav-content[data-value="${value}"]`
+      );
+
+      if (relatedContent) {
+        if (activeContent === relatedContent) {
+          // If the clicked link corresponds to the already active content, hide it
+          relatedContent.classList.remove("active");
+          activeContent = null;
+        } else {
+          // Otherwise, show the related content and hide others
+          navLinkContainer.forEach((content) =>
+            content.classList.remove("active")
+          );
+          relatedContent.classList.add("active");
+          activeContent = relatedContent;
+        }
+      }
     });
-    link.setAttribute("data-value", link.innerText.toLowerCase());
-    const href = link.href;
-    urls.push(href);
   });
-
-  const urlData = urls.map((url) => fetchData(url));
-  Promise.all(urlData).then((data) => {
-    let parser = new DOMParser();
-    let doc = parser.parseFromString(data, "text/html");
-    let bodyContent = doc.body.innerHTML;
-    // navLinkContainer.append(bodyContent);
-    // console.log(bodyContent, "urlData");
-  });
-}
-
-function createWrapper() {
-  const navContent = document.createElement("div");
-  navContent.classList.add("nav-content" ,"des-none");
-  return navContent;
 }

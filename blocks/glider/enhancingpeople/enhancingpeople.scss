@@ -71,6 +71,11 @@
         padding-top: 11px;
         position: absolute;
         bottom: 18%;
+
+        p{
+            display: flex;
+            margin-bottom: 13px;
+        }
     }
 
     [data-column-index="column-3"] {

@@ -37,7 +37,8 @@
   padding: 16px 20px 20px;
 }
 .glider.discover-our-products-card [data-glider-container=glider-container] .glider-slide [data-column-wrapper=column-wrapper] [data-column-index=column-0] {
-  text-align: end;
+  display: flex;
+  justify-content: end;
 }
 .glider.discover-our-products-card [data-glider-container=glider-container] .glider-slide [data-column-wrapper=column-wrapper] [data-column-index=column-2] > h3 {
   font-family: "robotoregular";
@@ -137,6 +138,6 @@
     opacity: 0;
   }
   .glider.discover-our-products-card .glider-dots {
-    display: block;
+    display: flex;
   }
 }/*# sourceMappingURL=discover-our-products.css.map */

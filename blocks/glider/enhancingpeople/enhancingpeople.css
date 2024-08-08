@@ -55,6 +55,10 @@
   position: absolute;
   bottom: 18%;
 }
+.glider.enhancing-people [data-column-index=column-2] p {
+  display: flex;
+  margin-bottom: 13px;
+}
 .glider.enhancing-people [data-column-index=column-3] {
   position: absolute;
   bottom: 30px;
