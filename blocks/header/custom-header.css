@@ -64,6 +64,8 @@
   background-color: var(--brand-primary);
   color: var(--primary-white);
   border-radius: 5px;
+  font-family: "robotoregular", sans-serif;
+  font-weight: 800;
 }
 .block.header .nav-wrapper nav > div:nth-of-type(4) > div > p.button-container {
   display: none;
@@ -88,7 +90,7 @@
 
 @media screen and (max-width: 767.99px) {
   .block.header .nav-wrapper nav > div:nth-of-type(2) {
-    margin-left: -60px;
+    margin-left: -80px;
   }
   .block.header .nav-wrapper nav > div:nth-of-type(2) > div {
     padding-left: unset;
@@ -104,7 +106,7 @@
     padding-left: unset;
     padding-right: unset;
   }
-  .block.header .nav-wrapper nav > div:nth-of-type(4) > div > p:last-child {
+  .block.header .nav-wrapper nav > div:nth-of-type(4) > div > p:nth-of-type(2) {
     padding: 9px 15px;
     font-size: 12px;
     line-height: 14px;

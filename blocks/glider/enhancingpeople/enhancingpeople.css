@@ -86,6 +86,9 @@
 }
 
 @media screen and (max-width: 767.99px) {
+  .section.enhancing-people-container {
+    padding: 40px 0;
+  }
   .section.enhancing-people-container > div > p {
     font-size: 28px;
     line-height: 36px;

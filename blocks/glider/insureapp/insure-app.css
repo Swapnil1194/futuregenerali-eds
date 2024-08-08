@@ -1,6 +1,5 @@
 .glider.insure-app {
-  padding-top: 50px;
-  padding-bottom: 70px;
+  padding: 60px 0;
 }
 .glider.insure-app [data-glider-container=glider-container] > div [data-row-index=row-0] [data-column-wrapper=column-wrapper],
 .glider.insure-app [data-glider-container=glider-container] > div [data-row-index=row-1] [data-column-wrapper=column-wrapper] {

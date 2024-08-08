@@ -149,10 +149,13 @@
     .hero-banner {
         .glider-wrapper {
             >div {
-                height: 550px;
+                // height: 84vh;
+                min-height: 570px;
+                // height: 100%;
                 .glider-dots {
-                    transform: translate(137%, -50%);
-                    left: -22px;
+                    justify-content: center;
+                    left: unset;
+                    width: 100%;
                 }
 
                 >div:first-child {

@@ -177,7 +177,7 @@ export default async function decorate(block) {
       <span class="nav-hamburger-icon"></span>
     </button>`;
   // if(isDesktop){
-    // hamburger.addEventListener('click', () => toggleMenu(nav, navSections));
+  // hamburger.addEventListener('click', () => toggleMenu(nav, navSections));
   // }
   // hamburger.addEventListener("click", () => toggleMenu(nav, navSections));
   nav.prepend(hamburger);
@@ -192,24 +192,23 @@ export default async function decorate(block) {
   navWrapper.className = "nav-wrapper";
   navWrapper.append(nav);
   block.append(navWrapper);
-let isHeaderMenuPresent=false;
-  document.querySelector('.nav-hamburger').addEventListener('click',function(ele) {
-    if(!isHeaderMenuPresent){
-      let popup=document.createElement('div');
-      popup.classList.add('header-menu');
-      Array.from(block.children)[0].children[0].append(popup);
-      isHeaderMenuPresent=true;
+
+  let isHeaderMenuPresent = false;
+
+  const navHamburger = block.querySelector(".nav-hamburger");
+  let popup = document.createElement("div");
+  popup.classList.add("header-menu");
+  Array.from(block.children)[0].children[0].append(popup);
+
+  navHamburger.addEventListener("click", function (ele) {
+    if (!isHeaderMenuPresent) {
+      isHeaderMenuPresent = true;
     }
-    this.parentElement.classList.toggle('expanded');
-    this.closest('.header ').querySelector('.header-menu').classList.toggle('expanded');
-
-  //   if (isHeaderMenuPresent) {
-  //     hideMenu(document.querySelector('.header-menu'));
-  // } else {
-  //     showMenu(document.querySelector('.header-menu'));
-  // }
-
-})
+    this.parentElement.classList.toggle("expanded");
+    this.closest(".header ")
+      .querySelector(".header-menu")
+      .classList.toggle("expanded");
+  });
 
   /* Custom Click */
   /*Mobile Nav Links  */
@@ -223,36 +222,95 @@ let isHeaderMenuPresent=false;
 
   const div = document.createElement("div");
   div.innerHTML = resp;
-  // console.log(div,"response");
   const navContent = document.createElement("div");
   navContent.classList.add("mob-nav-wrapper", "jsMobileNavMenu", "dsp-none");
   const mbNavContainer = div.querySelector(".mob-nav-inner");
   navContent.append(mbNavContainer);
-  nav.append(navContent);
+  popup.append(navContent);
 
   // Add all the stylesheets to the document head
   div.querySelectorAll("link").forEach((link) => {
     const newLink = document.createElement("link");
-    // console.log(newLink, "href");
     newLink.href = link.href;
     newLink.rel = "stylesheet";
     document.head.append(newLink);
   });
 
-  // Add all the scripts to the document body, except those containing "jquery" in their URL
-  /* div.querySelectorAll("script").forEach((script) => {
-    if (script.src && script.src.includes("jquery")) {
-      return; // Skip scripts containing "jquery" in their URL
-    }
+  var mainLinks = document.querySelectorAll(".jsMobNavLinks");
+  var nestedLinks = document.querySelectorAll(".jsNestedAccordLink");
+  // Function to handle clicks on main navigation links
+  mainLinks.forEach((link) => {
+    link.addEventListener("click", function () {
+      var nestedContent = this.nextElementSibling; // Assumes nested content directly follows the link
+      var parentContainer = this.closest(".jsMobNavContents");
+      if (!this.classList.contains("active")) {
+        // Close all other main contents
+        mainLinks.forEach((otherLink) => {
+          otherLink.classList.remove("active");
+          var otherContent = otherLink.nextElementSibling;
+          var otherParentContainer = otherLink.closest(".jsMobNavContents");
+          if (otherContent) {
+            otherContent.classList.add("d-none");
+          }
+          if (otherParentContainer) {
+            otherParentContainer.classList.remove("accord-open");
+          }
+        });
 
-    const newScript = document.createElement("script");
-    console.log(newScript);
-    if (script.src) {
-      // External script
-      newScript.src = script.src;
-    }
-    document.body.append(newScript);
-  }); */
+        // Open this link's content
+        this.classList.add("active");
+        if (nestedContent) {
+          nestedContent.classList.remove("d-none");
+        }
+        if (parentContainer) {
+          parentContainer.classList.add("accord-open");
+        }
+      } else {
+        // Optional: toggle current item off
+        this.classList.remove("active");
+        if (nestedContent) {
+          nestedContent.classList.add("d-none");
+        }
+        if (parentContainer) {
+          parentContainer.classList.remove("accord-open");
+        }
+      }
+    });
+  });
+
+  nestedLinks.forEach((link) => {
+    link.addEventListener("click", function () {
+      var detailsContent = this.nextElementSibling; // Assumes details content directly follows the link
+      var parentNestedContent = this.closest(".nested-accord-content");
+      if (!this.classList.contains("nested-accord-open")) {
+        // Close all other nested contents within the same parent
+        var parentNestedLinks = parentNestedContent.querySelectorAll(
+          ".jsNestedAccordLink"
+        );
+        parentNestedLinks.forEach((otherLink) => {
+          otherLink.classList.remove("nested-accord-open");
+          var otherContent = otherLink.nextElementSibling;
+          if (otherContent) {
+            otherContent.classList.add("d-none");
+          }
+        });
+
+        // Open this link's nested content
+        this.classList.add("nested-accord-open");
+        if (detailsContent) {
+          detailsContent.classList.remove("d-none");
+        }
+      } else {
+        // Optional: toggle current nested item off
+        this.classList.remove("nested-accord-open");
+        if (detailsContent) {
+          detailsContent.classList.add("d-none");
+        }
+      }
+    });
+  });
+
+  /*Mobile Nav Links Close */
 
   /*Desktop Nav Links  */
   let activeContent = null;
@@ -266,10 +324,16 @@ let isHeaderMenuPresent=false;
     const href = link.href;
 
     let resp = await fetchData(href);
-    resp = resp.replaceAll(
-      "/etc.clientlibs/",
-      "https://general.futuregenerali.in/etc.clientlibs/"
-    );
+    resp = resp.replaceAll("/etc.clientlibs/","https://general.futuregenerali.in/etc.clientlibs/");
+   
+    const tempDiv = document.createElement("div");
+    tempDiv.innerHTML = resp;
+    const lozadImages = tempDiv.querySelectorAll("[data-src]");
+    lozadImages.forEach((img) => {
+      img.setAttribute("src", img.getAttribute("data-src")); 
+      img.removeAttribute("data-src"); 
+    });
+    resp = tempDiv.innerHTML;
 
     const div = document.createElement("div");
     div.innerHTML = resp;
@@ -386,9 +450,6 @@ let isHeaderMenuPresent=false;
   });
 }
 
-
-
-
 // let isMenuVisible = false;
 
 // function showMenu(menu) {
@@ -411,9 +472,4 @@ let isHeaderMenuPresent=false;
 //     }, { once: true });
 // }
 
-
-
-
-
-// Mobile View 
-
+// Mobile View

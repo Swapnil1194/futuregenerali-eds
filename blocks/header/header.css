@@ -1,5 +1,6 @@
 /* header and nav layout */
 @import url("./custom-header.css");
+
 header .nav-wrapper {
     background-color: var(--background-color);
     width: 100%;
@@ -281,96 +282,5 @@ header nav .nav-tools {
         align-items: center;
         gap: 0;
         padding: 0;
-        .nav-brand {
-            
-        }
-    }
-}
-
-/* .header-menu{
-    animation: navout;
-    animation-duration: 1s;
-    animation-fill-mode: backwards;
-    display: none;
-}
-.expanded.header-menu{
-    
-    display: block;
-    background: black;
-    height: 95vh;
-    position: fixed;
-    z-index: 1;
-    width: 100%;
-    top: 61px;
-    animation: navin;
-    animation-duration: 1s;
-    animation-fill-mode: forwards;
-    transition: linear .3s ease;
-    
-}
-
-@keyframes navin{
-    0% {
-        left: -100%;
-    }
-    100% {
-        left: 0%;
-    }
-
-}
-
-@keyframes navout{
-    0% {
-        left: 0%;
-    }
-    100% {
-        left: -100%;
-    }
-
-} */
-
-
-.header-menu {
-    position: fixed;
-    top: 61px;
-    left: -100%;
-    width: 100%;
-    height: 95vh;
-    background: black;
-    z-index: 1;
-    transition: none; /* No transition initially */
-    opacity: 0; /* Initially invisible */
-}
-
-.expanded.header-menu {
-    left: 0;
-    opacity: 1;
-    transition: opacity 0.3s ease;
-    animation: navin 1s forwards; /* Slide in */
-}
-
-.header-menu.hidden {
-    animation: navout 1s forwards; /* Slide out */
-}
-
-@keyframes navin {
-    0% {
-        left: -100%;
-        /* opacity: 0; */
-    }
-    100% {
-        left: 0%;
-        /* opacity: 1; */
-    }
-}
-
-@keyframes navout {
-    0% {
-        left: 0%;
-        opacity: 1;
-    }
-    100% {
-        left: -100%;
-        /* opacity: 0; */
     }
 }

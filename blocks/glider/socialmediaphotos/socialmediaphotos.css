@@ -1,7 +1,7 @@
 .section.social-media-photos-container {
   padding: 40px 0 70px;
 }
-.section.social-media-photos-container > div {
+.section.social-media-photos-container > div:first-child {
   padding-bottom: 40px;
 }
 .section.social-media-photos-container > div > p {
