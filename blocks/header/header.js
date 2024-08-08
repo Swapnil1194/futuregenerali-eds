@@ -176,7 +176,10 @@ export default async function decorate(block) {
   hamburger.innerHTML = `<button type="button" aria-controls="nav" aria-label="Open navigation">
       <span class="nav-hamburger-icon"></span>
     </button>`;
-  hamburger.addEventListener("click", () => toggleMenu(nav, navSections));
+  // if(isDesktop){
+    // hamburger.addEventListener('click', () => toggleMenu(nav, navSections));
+  // }
+  // hamburger.addEventListener("click", () => toggleMenu(nav, navSections));
   nav.prepend(hamburger);
   nav.setAttribute("aria-expanded", "false");
   // prevent mobile nav behavior on window resize
@@ -189,6 +192,24 @@ export default async function decorate(block) {
   navWrapper.className = "nav-wrapper";
   navWrapper.append(nav);
   block.append(navWrapper);
+let isHeaderMenuPresent=false;
+  document.querySelector('.nav-hamburger').addEventListener('click',function(ele) {
+    if(!isHeaderMenuPresent){
+      let popup=document.createElement('div');
+      popup.classList.add('header-menu');
+      Array.from(block.children)[0].children[0].append(popup);
+      isHeaderMenuPresent=true;
+    }
+    this.parentElement.classList.toggle('expanded');
+    this.closest('.header ').querySelector('.header-menu').classList.toggle('expanded');
+
+  //   if (isHeaderMenuPresent) {
+  //     hideMenu(document.querySelector('.header-menu'));
+  // } else {
+  //     showMenu(document.querySelector('.header-menu'));
+  // }
+
+})
 
   /* Custom Click */
   /*Mobile Nav Links  */
@@ -364,3 +385,35 @@ export default async function decorate(block) {
     });
   });
 }
+
+
+
+
+// let isMenuVisible = false;
+
+// function showMenu(menu) {
+//     menu.style.display = 'block'; // Make the menu visible
+//     menu.classList.remove('hide');
+//     menu.classList.add('show');
+//     isMenuVisible = true;
+// }
+
+// function hideMenu(menu) {
+//     menu.classList.remove('show');
+//     menu.classList.add('hide');
+//     isMenuVisible = false;
+
+//     // Once the animation ends, hide the menu and set display to 'none'
+//     menu.addEventListener('animationend', () => {
+//         if (!isMenuVisible) {
+//             menu.style.display = 'none';
+//         }
+//     }, { once: true });
+// }
+
+
+
+
+
+// Mobile View 
+

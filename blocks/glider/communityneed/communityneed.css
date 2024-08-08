@@ -1,0 +1,87 @@
+.communities-in-need .default-content-wrapper p {
+  font-family: "robotolight";
+  font-size: 48px;
+  font-weight: 300;
+  line-height: 60px;
+  text-align: center;
+  margin-bottom: 0;
+  color: black;
+  padding-bottom: 40px;
+  padding-top: 60px;
+}
+.communities-in-need .default-content-wrapper p strong {
+  color: #c21b17;
+}
+@media screen and (max-width: 768px) {
+  .communities-in-need .default-content-wrapper p {
+    font-family: "robotolight";
+    font-size: 28px;
+    font-weight: 300;
+    line-height: 36px;
+    letter-spacing: -0.02em;
+    text-align: center;
+    padding-bottom: 24px;
+  }
+}
+.communities-in-need .glider-wrapper .glider.our-promise .glider .glider-track .glider-slide {
+  margin-bottom: 28px;
+}
+.communities-in-need .glider-wrapper .glider.our-promise .glider .glider-track .glider-slide img {
+  width: 250px;
+  height: -moz-fit-content;
+  height: fit-content;
+}
+.communities-in-need .glider-wrapper .glider.our-promise .glider .glider-track .glider-slide [data-column-wrapper=column-wrapper] {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  height: 100%;
+}
+.communities-in-need .glider-wrapper .glider.our-promise .glider .glider-track .glider-slide [data-column-wrapper=column-wrapper] [data-column-index=column-1] {
+  box-shadow: 0 0 20.41px 0 rgba(0, 0, 0, 0.1);
+  padding: 12px;
+  margin-bottom: 20px;
+  height: 100%;
+}
+.communities-in-need .glider-wrapper .glider.our-promise .glider .glider-track .glider-slide [data-column-wrapper=column-wrapper] [data-column-index=column-1] p {
+  text-align: center;
+}
+.communities-in-need .glider-wrapper .glider.our-promise .glider .glider-track .glider-slide [data-column-wrapper=column-wrapper] [data-column-index=column-1] p picture {
+  padding-bottom: 15px;
+  display: block;
+}
+.communities-in-need .glider-wrapper .glider.our-promise .glider .glider-track .glider-slide [data-column-wrapper=column-wrapper] [data-column-index=column-2] p {
+  margin: unset;
+  font-family: "robotoregular";
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 20.8px;
+  text-align: center;
+  text-align: center;
+}
+.communities-in-need .glider-wrapper .glider.our-promise .glider .glider-track .glider-slide [data-column-wrapper=column-wrapper] [data-column-index=column-2] p picture {
+  padding-bottom: 15px;
+  display: block;
+}
+.communities-in-need .glider-wrapper .glider.our-promise .glider .glider-track .glider-slide [data-column-wrapper=column-wrapper] [data-column-index=column-2] p strong,
+.communities-in-need .glider-wrapper .glider.our-promise .glider .glider-track .glider-slide [data-column-wrapper=column-wrapper] [data-column-index=column-2] p b {
+  font-weight: bold;
+}
+.communities-in-need .glider-wrapper .glider.our-promise .glider .glider-track .glider-slide [data-column-wrapper=column-wrapper] [data-column-index=column-2] p a {
+  width: 100%;
+  max-width: 162px;
+  margin: auto;
+  padding: 12px 0;
+  border: 1px solid #c21b17;
+  border-radius: 5px;
+  text-decoration: none;
+  font-family: "robotobold";
+  font-size: 14px;
+  font-weight: 800;
+  line-height: 16.41px;
+  text-align: center;
+  color: #c21b17;
+  display: block;
+  padding-bottom: 20px;
+}/*# sourceMappingURL=communityneed.css.map */
