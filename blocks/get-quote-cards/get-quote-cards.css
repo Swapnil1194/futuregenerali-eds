@@ -119,6 +119,7 @@
   display: flex;
   justify-content: center;
   padding-bottom: 32px;
+  flex-wrap: wrap;
 }
 .section.get-quote-cards-container .default-content-wrapper ul {
   padding: 20px 5px 0;

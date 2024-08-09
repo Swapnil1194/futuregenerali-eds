@@ -127,10 +127,13 @@
             display: flex;
             justify-content: center;
             padding-bottom: 32px;
+            flex-wrap: wrap;
             ul{
+                // display: flex;
                 padding: 20px 5px 0;
                 min-width: 200px;
                 text-align: center;
+                
 
                 li{
                     &:first-child{
