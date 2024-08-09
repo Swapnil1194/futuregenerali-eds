@@ -60,11 +60,9 @@
   box-sizing: border-box;
 }
 
-body{
-  font-family: "robotolight", sans-serif;
+body {
   font-family: "robotoregular", sans-serif;
-  font-family: "robotomedium", sans-serif;
-  font-family: "Roboto-Bold", sans-serif;
+  font-weight: 400;
 }
 
 
@@ -244,4 +242,138 @@ a {
 
 .d-none {
   display: none;
+}
+
+@media (max-width:991px) {
+
+  .header-menu {
+    position: fixed;
+    top: 61px;
+    left: -100%;
+    width: 100%;
+    height: 95vh;
+    background: var(--primary-white);
+    z-index: 1;
+    transition: none;
+    opacity: 0;
+  }
+
+  .expanded.header-menu {
+    left: 0;
+    opacity: 1;
+    transition: opacity 0.3s ease;
+    animation: navin 1s forwards;
+  }
+
+  .header-menu.hidden {
+    transform: translateX(0%);
+    transition: opacity 0.3s ease;
+    animation: navout 0.5s forwards;
+  }
+
+  @keyframes navin {
+    0% {
+      left: -100%;
+    }
+
+    100% {
+      left: 0%;
+    }
+  }
+
+  @keyframes navout {
+    0% {
+      left: 0%;
+      opacity: 1;
+    }
+
+    100% {
+      left: -100%;
+    }
+  }
+
+  .mob-nav-wrapper {
+    display: block;
+    position: absolute;
+    /* top: 100%; */
+    left: 0;
+    right: 0;
+    /* transform: translateX(-100%); */
+    background-color: #fff;
+    transition: all .3s linear;
+    height: calc(100vh - 100px);
+    overflow-y: auto
+  }
+
+  .mob-nav-wrapper.toggled {
+    transform: translateX(0%);
+  }
+
+  .mob-nav-wrapper .mob-nav-item {
+    padding: 16px 0;
+    border-top: 1px solid rgba(132, 149, 204, .2)
+  }
+
+  .mob-nav-wrapper .mob-nav-item:first-child {
+    padding-top: 0;
+    border-top: 0
+  }
+
+  .mob-nav-wrapper .mob-nav-item:last-child {
+    padding-bottom: 0
+  }
+
+  .mob-nav-wrapper .mob-nav-top {
+    padding: 16px
+  }
+
+  .mob-nav-wrapper .mob-nav-bottom {
+    padding: 20px 16px;
+    background-color: #f6f6f6
+  }
+
+  .mob-nav-wrapper .bottom-nav-item {
+    padding: 18px 0;
+    border-top: 1px solid #e0e0e0
+  }
+
+  .mob-nav-wrapper .bottom-nav-item:first-child {
+    padding-top: 0;
+    border-top: 0
+  }
+
+  .mob-nav-wrapper .bottom-nav-item:last-child {
+    padding-bottom: 0
+  }
+
+  .mob-nav-wrapper .mob-nav-link {
+    font-size: 16px;
+    line-height: 19px;
+    color: #4f4f4f;
+    display: block;
+    position: relative;
+    padding-left: 18px;
+    padding-right: 18px;
+    font-family: robotoregular, sans-serif
+  }
+
+  .mob-nav-wrapper .mob-nav-link::before {
+    content: '';
+    position: absolute;
+    height: 10px;
+    width: 10px;
+    background-image: url("../icons/accor-plus.svg");
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    right: 0;
+    top: 5px
+  }
+
+  .mob-nav-wrapper .mob-nav-link.active::before {
+    background-image: url("../icons/accor-minus.svg");
+  }
+
+  .mob-nav-wrapper .mob-nav-link.no-accords::before {
+    content: none
+  }
 }

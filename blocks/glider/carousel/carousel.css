@@ -128,11 +128,12 @@
 }
 @media screen and (max-width: 767.99px) {
   .hero-banner .glider-wrapper > div {
-    height: 550px;
+    min-height: 570px;
   }
   .hero-banner .glider-wrapper > div .glider-dots {
-    transform: translate(137%, -50%);
-    left: -22px;
+    justify-content: center;
+    left: unset;
+    width: 100%;
   }
   .hero-banner .glider-wrapper > div > div:first-child .glider-track .glider-slide {
     height: 100% !important;

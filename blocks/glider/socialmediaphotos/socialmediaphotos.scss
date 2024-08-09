@@ -1,6 +1,10 @@
 .section.social-media-photos-container {
     padding: 40px 0 70px;
 
+    >div:first-child {
+        padding-bottom: 40px
+    }
+
     >div {
         >p {
             font-family: "robotolight";
@@ -10,7 +14,7 @@
             line-height: 60px;
         }
 
-        padding-bottom: 40px
+
     }
 }
 
