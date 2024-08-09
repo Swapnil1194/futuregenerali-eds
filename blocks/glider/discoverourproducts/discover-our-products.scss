@@ -48,6 +48,11 @@
                     justify-content: end;
                 }
 
+                [data-column-index="column-1"] {
+                    display: flex;
+                    justify-content: center;
+                }
+
                 [data-column-index="column-2"] {
                     >h3 {
                         font-family: "robotoregular";
