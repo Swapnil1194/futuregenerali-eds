@@ -10,33 +10,31 @@
  * governing permissions and limitations under the License.
  */
 
-
-@import url('./reset.css');
-
+@import url("./reset.css");
 
 :root {
   /* colors */
-  --primary-white: #FFF;
-  --brand-primary: #C21B17;
+  --primary-white: #fff;
+  --brand-primary: #c21b17;
   --primary-black: black;
   --light-blue: #f3f9ff;
   --dim-gray: #6f7072;
-  --silver: #ccc
-    /* fonts */
+  --silver: #ccc;
+  /* fonts */
 
-    /*   --body-font-family: roboto, roboto-fallback;
+  /*   --body-font-family: roboto, roboto-fallback;
   --heading-font-family: var(--body-font-family);
   --fixed-font-family: 'Roboto Mono', menlo, consolas, 'Liberation Mono', monospace; */
 
-    /* body sizes */
+  /* body sizes */
 
-    /*   --body-font-size-m: 22px;
+  /*   --body-font-size-m: 22px;
   --body-font-size-s: 18px;
   --body-font-size-xs: 16px; */
 
-    /* heading sizes */
+  /* heading sizes */
 
-    /*  --heading-font-size-xxl: 48px;
+  /*  --heading-font-size-xxl: 48px;
   --heading-font-size-xl: 40px;
   --heading-font-size-l: 32px;
   --heading-font-size-m: 24px;
@@ -52,7 +50,6 @@
 }
  */
 
-
 /* Common CSS Start */
 * {
   margin: 0;
@@ -60,11 +57,9 @@
   box-sizing: border-box;
 }
 
-
 .light-blue-bg {
   background-color: var(--light-blue);
 }
-
 
 .section.red-btn .button-container,
 .section.red-tertiary-btn .button-container,
@@ -73,7 +68,6 @@
   padding: 12px 38px;
   border-radius: 5px;
 }
-
 
 .section.red-btn .button-container {
   background: var(--brand-primary);
@@ -110,7 +104,7 @@
 }
 
 .section.text-white .button-container {
-  color: var(--primary-white)
+  color: var(--primary-white);
 }
 
 a {
@@ -120,56 +114,51 @@ a {
 }
 
 .fg-container,
-.section>div {
+.section > div {
   width: 100%;
   padding-right: 15px;
   padding-left: 15px;
   margin-right: auto;
-  margin-left: auto
+  margin-left: auto;
 }
 
 @media (width >=576px) {
-
   .fg-container,
-  .section>div {
-    max-width: 540px
+  .section > div {
+    max-width: 540px;
   }
 }
 
 @media (width >=768px) {
-
   .fg-container,
-  .section>div {
-    max-width: 720px
+  .section > div {
+    max-width: 720px;
   }
 }
 
 @media (width >=992px) {
-
   .fg-container,
-  .section>div {
-    max-width: 960px
+  .section > div {
+    max-width: 960px;
   }
 }
 
 @media (width >=1200px) {
-
   .fg-container,
-  .section>div {
-    max-width: 1140px
+  .section > div {
+    max-width: 1140px;
   }
 }
 
 @media (width >=1400px) {
-
   .fg-container,
-  .section>div {
-    max-width: 1320px
+  .section > div {
+    max-width: 1320px;
   }
 }
 
 .red-linear-gradient {
-  background: linear-gradient(90deg, #ae1d32 0, #c2271e 100%)
+  background: linear-gradient(90deg, #ae1d32 0, #c2271e 100%);
 }
 
 .black-linear-gradient {
@@ -180,14 +169,14 @@ a {
 
 /* Glider Common Start */
 
-.glider-dots>button {
+.glider-dots > button {
   background: var(--silver);
   width: 8px;
   height: 8px;
   margin: 4px;
 }
 
-.glider-dots>button .active {
+.glider-dots > button .active {
   background: var(--primary-white);
 }
 
@@ -202,12 +191,12 @@ a {
 
 .glider .glider-prev {
   left: 0;
-  top: 40%
+  top: 40%;
 }
 
 .glider .glider-next {
   right: 0;
-  top: 40%
+  top: 40%;
 }
 
 @media screen and (max-width: 767.99px) {
@@ -218,3 +207,6 @@ a {
 }
 
 /* Glider Common End */
+.dp-none {
+  display: none;
+}

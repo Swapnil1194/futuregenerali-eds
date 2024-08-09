@@ -23,15 +23,15 @@ export default function decorate(block) {
       childwrap.dataset.columnWrapper = 'column-wrapper';
       Array.from(item.children).forEach((el, index) => {
         el.dataset.columnIndex = `column-${index}`;
-        if(block.classList.contains('embed')){
+        if (block.classList.contains('embed')) {
           const link = el.innerText.trim();
-  // const url = new URL(link);
+          // const url = new URL(link);
 
-  //         const div = document.createElement('div');
-  //         div.innerHTML = embedYoutube(url);;
-  //         childwrap.append(div);
+          //         const div = document.createElement('div');
+          //         div.innerHTML = embedYoutube(url);;
+          //         childwrap.append(div);
           childwrap.append(loadEmbed(el, link));
-        }else{
+        } else {
           childwrap.append(el);
         }
       });
