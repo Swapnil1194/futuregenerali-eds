@@ -1,10 +1,15 @@
 .getquoteform-container{
     .getquoteform-wrapper{
+        max-width: 50%;
+        background-color: #404040;
+        margin: auto;
+        border-radius: 0 0 40px 40px;
+        @media screen and (max-width:1080px ) {
+            max-width: 92%;
+            padding: 0px 20px 20px;
+        }
         .getquoteform.block{
-            background-color: #404040;
-            max-width: 760px;
-            margin: auto;
-            border-radius: 0 0 40px 40px;
+            
         
             form{
                 display: flex;
@@ -13,11 +18,18 @@
                 padding-top: 18px;
                 padding-bottom: 8px;
                 align-items: center;
+                @media screen and (max-width:1080px ) {
+                   flex-direction: column;
+                }
                 .field-wrapper{
                     display: flex;
                     flex-direction: column;
                     max-width: 147.5px;
                     row-gap: 10px;
+                    @media screen and (max-width:1080px ) {
+                        max-width: 100%;
+                        width: 100%;
+                     }
 
                     label{
                         color: #fff ;
