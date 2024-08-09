@@ -59,6 +59,14 @@
 .glider.insure-app [data-glider-container=glider-container] > div [data-row-index=row-1] [data-column-wrapper=column-wrapper] [data-column-index=column-1] > ul:last-child li span {
   display: block;
 }
+.glider.insure-app [data-glider-container=glider-container] > div [data-row-index=row-0] [data-column-wrapper=column-wrapper] [data-column-index=column-1] > p:last-child a,
+.glider.insure-app [data-glider-container=glider-container] > div [data-row-index=row-1] [data-column-wrapper=column-wrapper] [data-column-index=column-1] > p:last-child a {
+  text-transform: uppercase;
+  font-size: 14px;
+  font-family: robotoregular, sans-serif;
+  font-weight: 800;
+  text-align: center;
+}
 .glider.insure-app [data-glider-container=glider-container] > div [data-row-index=row-1] [data-column-wrapper=column-wrapper] [data-column-index=column-1] > p:not(:last-child) {
   margin-bottom: 16px;
 }

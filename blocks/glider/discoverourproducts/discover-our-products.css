@@ -40,6 +40,10 @@
   display: flex;
   justify-content: end;
 }
+.glider.discover-our-products-card [data-glider-container=glider-container] .glider-slide [data-column-wrapper=column-wrapper] [data-column-index=column-1] {
+  display: flex;
+  justify-content: center;
+}
 .glider.discover-our-products-card [data-glider-container=glider-container] .glider-slide [data-column-wrapper=column-wrapper] [data-column-index=column-2] > h3 {
   font-family: "robotoregular";
   font-size: 22px;
