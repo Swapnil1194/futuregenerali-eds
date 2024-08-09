@@ -1,0 +1,141 @@
+.section.get-quote-cards-container {
+  position: relative;
+}
+.section.get-quote-cards-container .get-quote-cards-wrapper {
+  background-color: #404040;
+  max-width: 50%;
+  margin: auto;
+  position: relative;
+  /* border-radius: 0 0 40px 40px; */
+}
+.section.get-quote-cards-container .get-quote-cards-wrapper::before, .section.get-quote-cards-container .get-quote-cards-wrapper::after {
+  content: "";
+  height: 39px;
+  width: 19px;
+  background-repeat: no-repeat;
+  background-position: left top;
+  background-size: 100% 100%;
+  position: absolute;
+  top: 0;
+}
+.section.get-quote-cards-container .get-quote-cards-wrapper::before {
+  background: url("../../icons/left-corner.png");
+  left: -18px;
+}
+.section.get-quote-cards-container .get-quote-cards-wrapper::after {
+  background: url("../../icons/right-corner.png");
+  right: -18px;
+}
+@media screen and (max-width: 1080px) {
+  .section.get-quote-cards-container .get-quote-cards-wrapper {
+    max-width: 92%;
+    padding: 0px 20px;
+  }
+}
+.section.get-quote-cards-container .get-quote-cards-wrapper .get-quote-cards.block {
+  display: flex;
+  justify-content: center;
+  -moz-column-gap: 20px;
+       column-gap: 20px;
+  position: relative;
+  top: -25px;
+  align-items: center;
+}
+.section.get-quote-cards-container .get-quote-cards-wrapper .get-quote-cards.block .multiCardsContainer {
+  display: flex;
+  -moz-column-gap: 20px;
+       column-gap: 20px;
+}
+.section.get-quote-cards-container .get-quote-cards-wrapper .get-quote-cards.block .multiCardsContainer .cardsContainer {
+  width: 100%;
+  display: block;
+  cursor: pointer;
+  padding: 10px;
+  background: rgba(255, 255, 255, 0.9490196078);
+  border: 1px solid rgba(217, 217, 217, 0.6);
+  border-radius: 5px;
+  min-height: 80px;
+  position: relative;
+  width: 93px;
+  text-align: center;
+}
+.section.get-quote-cards-container .get-quote-cards-wrapper .get-quote-cards.block .multiCardsContainer .cardsContainer .image {
+  margin-bottom: 4px;
+}
+.section.get-quote-cards-container .get-quote-cards-wrapper .get-quote-cards.block .multiCardsContainer .cardsContainer .image picture {
+  display: flex;
+  justify-content: center;
+}
+@media screen and (max-width: 1080px) {
+  .section.get-quote-cards-container .get-quote-cards-wrapper .get-quote-cards.block .multiCardsContainer .cardsContainer {
+    width: 67.5px;
+  }
+}
+.section.get-quote-cards-container .get-quote-cards-wrapper .get-quote-cards.block .multiCardsContainer .cardsContainer .text p {
+  font-size: 13.33px;
+}
+@media screen and (max-width: 1080px) {
+  .section.get-quote-cards-container .get-quote-cards-wrapper .get-quote-cards.block .multiCardsContainer {
+    -moz-column-gap: 12px;
+         column-gap: 12px;
+  }
+}
+.section.get-quote-cards-container .get-quote-cards-wrapper .get-quote-cards.block .looking-for-label {
+  margin-top: 20px;
+}
+.section.get-quote-cards-container .get-quote-cards-wrapper .get-quote-cards.block .looking-for-label p {
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 16px;
+  color: #fff;
+  padding: 0;
+  font-family: "robotoregular";
+}
+@media screen and (max-width: 1080px) {
+  .section.get-quote-cards-container .get-quote-cards-wrapper .get-quote-cards.block .looking-for-label {
+    display: none;
+  }
+}
+.section.get-quote-cards-container .get-quote-cards-wrapper .get-quote-cards.block .more {
+  cursor: pointer;
+  padding: 10px;
+  background: rgba(255, 255, 255, 0.9490196078);
+  border: 1px solid rgba(217, 217, 217, 0.6);
+  border-radius: 5px;
+  min-height: 80px;
+  position: relative;
+  width: 93px;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+@media screen and (max-width: 1080px) {
+  .section.get-quote-cards-container .get-quote-cards-wrapper .get-quote-cards.block .more {
+    display: none;
+  }
+}
+.section.get-quote-cards-container .default-content-wrapper {
+  display: flex;
+  justify-content: center;
+  padding-bottom: 32px;
+}
+.section.get-quote-cards-container .default-content-wrapper ul {
+  padding: 20px 5px 0;
+  min-width: 200px;
+  text-align: center;
+}
+.section.get-quote-cards-container .default-content-wrapper ul li:first-child {
+  font-size: 32px;
+  line-height: 42px;
+  color: #c21b17;
+  font-family: "Roboto-Bold";
+  font-weight: 800;
+}
+.section.get-quote-cards-container .default-content-wrapper ul li:last-child {
+  color: #20252b;
+  margin-top: 5px;
+  font-size: 16px;
+  line-height: 24px;
+  font-family: "Roboto-Bold";
+}/*# sourceMappingURL=get-quote-cards.css.map */
