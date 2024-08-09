@@ -1,5 +1,5 @@
 import Glider from "../../common/carousel/glider.min.js";
-import { embedYoutube, loadEmbed } from "../embed/embed.js";
+import { generateEmbed } from "../embed/embed.js";
 
 export default function decorate(block) {
   const rows = Array.from(block.children);
@@ -26,8 +26,8 @@ export default function decorate(block) {
         cloumn.dataset.columnIndex = `column-${index}`;
         if (block.classList.contains("embed") && !index) {
           const link = cloumn.innerText.trim();
-          loadEmbed(cloumn, link , true);
-          columnWrapper.append(cloumn);
+          cloumn.innerHTML = '';
+          columnWrapper.append(generateEmbed(cloumn, link));
         } else {
           columnWrapper.append(cloumn);
         }
