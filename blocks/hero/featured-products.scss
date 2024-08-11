@@ -48,8 +48,32 @@
                 margin-bottom: 38px;
             }
 
-            .button-container {
+            >p:nth-of-type(4) {
                 display: inline-block;
+
+                >a {
+                    font-family: "robotobold";
+                    font-size: 14px;
+                    font-weight: 800;
+                    line-height: 16.41px;
+                    text-align: center;
+                    color: #c21b17;
+                    text-decoration: none;
+                }
+            }
+
+
+            >p:nth-of-type(5) {
+                display: inline-block;
+
+                >a {
+                    font-family: "robotobold";
+                    font-size: 14px;
+                    font-weight: 800;
+                    line-height: 16.41px;
+                    text-align: center;
+                    text-decoration: none;
+                }
             }
 
             p:last-child {
@@ -77,6 +101,7 @@
 
 .section.featured-product-container {
     padding: 60px 0;
+
     >div:first-child {
         padding-bottom: 40px;
 
@@ -129,7 +154,8 @@
                     line-height: 18.75px;
                 }
 
-                .button-container {
+                p:nth-of-type(4),
+                p:nth-of-type(5) {
                     display: none;
                 }
             }
@@ -161,6 +187,7 @@
         >div:nth-of-type(2)>div {
             >div:last-child {
                 display: block;
+
                 >div {
                     display: flex;
                     flex-direction: column;
@@ -175,6 +202,13 @@
                 padding: 16px 0;
                 border-radius: 5px;
                 text-align: center;
+
+                a {
+                    font-family: "robotobold";
+                    font-size: 14px;
+                    font-weight: 800;
+                    line-height: 16.41px;
+                }
             }
 
             .button-container:last-child {
@@ -183,38 +217,14 @@
                 padding: 24px 0;
 
                 a {
+                    font-family: "robotobold";
+                    font-size: 14px;
+                    font-weight: 800;
+                    line-height: 16.41px;
                     text-align: center;
                     color: var(--primary-white);
                 }
             }
         }
-
-        /* >div:nth-of-type(2)>div {
-            >div:last-child>div {
-                display: flex;
-                flex-direction: column;
-                justify-content: center;
-                align-items: center;
-            }
-
-            .button-container:first-child {
-                max-width: 296PX;
-                width: 100%;
-                padding: 16px 0;
-                border-radius: 5px;
-                text-align: center;
-            }
-
-            .button-container:last-child {
-                background-color: transparent;
-                text-align: center;
-                padding: 24px 0;
-
-                a {
-                    text-align: center;
-                    color: var(--primary-white);
-                }
-            }
-        } */
     }
 }

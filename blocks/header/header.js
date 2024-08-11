@@ -4,6 +4,8 @@ import { loadFragment } from "../fragment/fragment.js";
 
 // media query match that indicates mobile/tablet width
 const isDesktop = window.matchMedia("(min-width: 900px)");
+const overLay = document.createElement("div");
+overLay.classList.add("overlay");
 
 function closeOnEscape(e) {
   if (e.code === "Escape") {
@@ -13,7 +15,6 @@ function closeOnEscape(e) {
       '[aria-expanded="true"]'
     );
     if (navSectionExpanded && isDesktop.matches) {
-      // eslint-disable-next-line no-use-before-define
       toggleAllNavSections(navSections);
       navSectionExpanded.focus();
     } else if (!isDesktop.matches) {
@@ -204,15 +205,29 @@ export default async function decorate(block) {
     if (!isHeaderMenuPresent) {
       isHeaderMenuPresent = true;
     }
+
     this.parentElement.classList.toggle("expanded");
     this.closest(".header ")
       .querySelector(".header-menu")
       .classList.toggle("expanded");
+    if (
+      navHamburger
+        .closest(".header ")
+        .querySelector(".header-menu")
+        .classList.contains("expanded")
+    ) {
+      document.querySelector(".mob-bottom-navigation").style.opacity = "0";
+    } else {
+      document.querySelector(".mob-bottom-navigation").style.opacity = "unset";
+    }
+    closeAllAccordions();
   });
 
   /* Custom Click */
   /*Mobile Nav Links  */
-  const navLinkMob = block.querySelector(".nav-tools a").href;
+  const navLinkMob = block.querySelector(
+    ".nav-tools >div >p:last-child a"
+  ).href;
 
   let resp = await fetchData(navLinkMob);
   resp = resp.replaceAll(
@@ -228,7 +243,7 @@ export default async function decorate(block) {
   navContent.append(mbNavContainer);
   popup.append(navContent);
 
-  // Add all the stylesheets to the document head
+  // Add all the stylesh1eets to the document head
   div.querySelectorAll("link").forEach((link) => {
     const newLink = document.createElement("link");
     newLink.href = link.href;
@@ -310,6 +325,71 @@ export default async function decorate(block) {
     });
   });
 
+  function closeAllAccordions() {
+    var mainLinks = document.querySelectorAll(".jsMobNavLinks");
+    var nestedLinks = document.querySelectorAll(".jsNestedAccordLink");
+
+    // Close all main link accordions
+    mainLinks.forEach((link) => {
+      link.classList.remove("active");
+      var nestedContent = link.nextElementSibling;
+      var parentContainer = link.closest(".jsMobNavContents"); // Corrected to find the nearest parent container
+      if (nestedContent) {
+        nestedContent.classList.add("d-none");
+      }
+      if (parentContainer) {
+        parentContainer.classList.remove("accord-open");
+      }
+    });
+
+    // Close all nested link accordions
+    nestedLinks.forEach((link) => {
+      link.classList.remove("nested-accord-open");
+      var detailsContent = link.nextElementSibling;
+      if (detailsContent) {
+        detailsContent.classList.add("d-none");
+      }
+    });
+  }
+
+  var navigationContents = document.querySelectorAll(".navigation-content");
+  navigationContents.forEach(function (element) {
+    element.addEventListener("click", function () {
+      eventHandler();
+      var targetName = this.getAttribute("data-target");
+      var nestedAccordLinks = document.querySelectorAll(".nested-accord-link");
+      nestedAccordLinks.forEach(function (nestedLink) {
+        var nestedContentName = nestedLink.getAttribute("data-target");
+        if (nestedContentName && nestedContentName.trim() === targetName) {
+          var nestedContent = nestedLink.closest(".nested-accord-content");
+          if (nestedContent) {
+            nestedContent.classList.remove("d-none");
+            nestedContent.previousElementSibling.classList.add("active");
+            nestedLink.classList.add("nested-accord-open");
+            var nestedContentDetails = nestedContent.querySelector(
+              ".jsNestedContentDetails"
+            );
+            if (nestedContentDetails) {
+              nestedContentDetails.classList.remove("d-none");
+            }
+          }
+        }
+      });
+    });
+  });
+
+  function eventHandler() {
+    if (!isHeaderMenuPresent) {
+      isHeaderMenuPresent = true;
+    }
+    navHamburger.parentElement.classList.toggle("expanded");
+    navHamburger
+      .closest(".header ")
+      .querySelector(".header-menu")
+      .classList.toggle("expanded");
+    document.querySelector(".mob-bottom-navigation").style.opacity = "0";
+  }
+
   /*Mobile Nav Links Close */
 
   /*Desktop Nav Links  */
@@ -324,14 +404,17 @@ export default async function decorate(block) {
     const href = link.href;
 
     let resp = await fetchData(href);
-    resp = resp.replaceAll("/etc.clientlibs/","https://general.futuregenerali.in/etc.clientlibs/");
-   
+    resp = resp.replaceAll(
+      "/etc.clientlibs/",
+      "https://general.futuregenerali.in/etc.clientlibs/"
+    );
+
     const tempDiv = document.createElement("div");
     tempDiv.innerHTML = resp;
     const lozadImages = tempDiv.querySelectorAll("[data-src]");
     lozadImages.forEach((img) => {
-      img.setAttribute("src", img.getAttribute("data-src")); 
-      img.removeAttribute("data-src"); 
+      img.setAttribute("src", img.getAttribute("data-src"));
+      img.removeAttribute("data-src");
     });
     resp = tempDiv.innerHTML;
 
@@ -361,7 +444,8 @@ export default async function decorate(block) {
         activeContent.classList.remove("active");
         activeContent = null;
         const listItems = block.querySelectorAll(".nav-sections li");
-
+        document.body.style.overflow = "scroll";
+        overLay.remove();
         listItems.forEach((li) => {
           // Check if aria-expanded is true, then set it to false
           if (li.getAttribute("aria-expanded") === "true") {
@@ -385,12 +469,16 @@ export default async function decorate(block) {
         if (activeContent === relatedContent) {
           // If the clicked link corresponds to the already active content, hide it
           relatedContent.classList.remove("active");
+          document.body.style.overflow = "scroll";
+          overLay.remove();
           activeContent = null;
         } else {
           // Otherwise, show the related content and hide others
           navLinkContainer.forEach((content) =>
             content.classList.remove("active")
           );
+          document.body.style.overflow = "hidden";
+          document.body.appendChild(overLay);
           relatedContent.classList.add("active");
           activeContent = relatedContent;
         }
@@ -449,27 +537,3 @@ export default async function decorate(block) {
     });
   });
 }
-
-// let isMenuVisible = false;
-
-// function showMenu(menu) {
-//     menu.style.display = 'block'; // Make the menu visible
-//     menu.classList.remove('hide');
-//     menu.classList.add('show');
-//     isMenuVisible = true;
-// }
-
-// function hideMenu(menu) {
-//     menu.classList.remove('show');
-//     menu.classList.add('hide');
-//     isMenuVisible = false;
-
-//     // Once the animation ends, hide the menu and set display to 'none'
-//     menu.addEventListener('animationend', () => {
-//         if (!isMenuVisible) {
-//             menu.style.display = 'none';
-//         }
-//     }, { once: true });
-// }
-
-// Mobile View

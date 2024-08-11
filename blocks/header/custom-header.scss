@@ -4,7 +4,6 @@
     .nav-wrapper {
         padding: 12px;
         background-color: var(--primary-white);
-        position: relative;
 
         nav {
 
@@ -74,6 +73,18 @@
                     align-items: center;
                     column-gap: 50px;
 
+
+                    >p:first-child {
+                        span {
+                            img {
+                                width: 20px;
+                                height: 20px;
+                                max-width: unset;
+                            }
+                        }
+
+                    }
+
                     >p:nth-of-type(2) {
                         position: relative;
                         padding: 12px 38px;
@@ -84,22 +95,23 @@
                         font-weight: 800;
                         font-size: 12px;
                         line-height: 14px;
-                        max-width: 110px;
-                        width: 100%;
+                        // max-width: 110px;
+                        width: 129px;
+                        // width: 100%;
 
-                        /* &::after {
+                        &::after {
                             content: "";
                             display: inline-block;
                             position: absolute;
                             top: 1.2em;
-                            right: 25px;
+                            right: 40px;
                             transform: rotate(135deg);
                             width: 5px;
                             height: 5px;
                             border: 2px solid currentcolor;
                             border-radius: 0 1px 0 0;
                             border-width: 2px 2px 0 0;
-                        } */
+                        }
                     }
 
                     >p:nth-of-type(2).active {
@@ -110,7 +122,7 @@
                         }
                     }
 
-                    >p.button-container {
+                    >p:last-child.button-container {
                         display: none;
                     }
                 }
@@ -143,8 +155,12 @@
         .nav-wrapper {
             nav {
 
+                .nav-tools {
+                    width: 33%;
+                }
+
                 >div:nth-of-type(2) {
-                    margin-left: -80px;
+                    margin-left: -50px;
 
                     >div {
                         padding-left: unset;
@@ -167,6 +183,17 @@
                             padding: 9px 15px;
                             font-size: 12px;
                             line-height: 14px;
+
+                            &::after {
+                                top: 1em;
+                                right: 25px;
+                            }
+                        }
+
+                        >p:nth-of-type(2).active {
+                            &::after {
+                                bottom: 1em;
+                            }
                         }
 
                     }

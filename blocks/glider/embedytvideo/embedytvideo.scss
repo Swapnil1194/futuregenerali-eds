@@ -28,8 +28,12 @@
 
                 [data-column-index="column-1"] {
                     padding: 20px 0;
+                    display: flex;
+                    justify-content: center;
 
                     >p {
+                        max-width: 370px;
+                        width: 100%;
                         font-family: "robotoregular", sans-serif;
                         font-size: 16px;
                         font-weight: 400;
@@ -42,6 +46,14 @@
                 }
             }
 
+
+
+        }
+
+        .glider-dots {
+            .glider-dot.active {
+                background: var(--brand-primary);
+            }
         }
     }
 }
@@ -49,8 +61,6 @@
 
 @media screen and (max-width: 767.99px) {
     .section.embed-yt-video-container {
-        padding: 40px;
-
         >div:first-child {
             margin-bottom: 22px;
 

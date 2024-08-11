@@ -1,6 +1,6 @@
 /* stylelint-disable max-line-length */
 @font-face {
-  font-family: robotolight;
+  font-family: "robotolight";
   font-style: normal;
   font-weight: 300;
   font-display: swap;
@@ -8,8 +8,18 @@
   unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
 }
 
+
 @font-face {
-  font-family: robotoregular;
+  font-family: "Roboto-Light";
+  font-weight: 300;
+  font-style: normal;
+  font-display: swap;
+  src: url("../fonts/roboto-light.woff2") format("woff2");
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+
+@font-face {
+  font-family: "robotoregular";
   font-style: normal;
   font-weight: 400;
   font-display: swap;
@@ -17,9 +27,27 @@
   unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
 }
 
+@font-face {
+  font-family: 'Roboto-Regular';
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+  src: url("../fonts/roboto-regular.woff2") format("woff2");
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+
 
 @font-face {
-  font-family: robotomedium;
+  font-family: 'Roboto-Medium';
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+  src: url("../fonts/roboto-medium.woff2") format("woff2");
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+
+@font-face {
+  font-family: 'robotomedium';
   font-style: normal;
   font-weight: 500;
   font-display: swap;
@@ -29,10 +57,20 @@
 
 
 @font-face {
-  font-family: Roboto-Bold;
+  font-family: 'robotobold';
   font-style: normal;
-  font-weight: 800;
+  font-weight: bold;
   font-display: swap;
   src: url('../fonts/roboto-bold.woff2') format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+
+
+@font-face {
+  font-family: 'Roboto-Bold';
+  font-weight: bold;
+  font-style: normal;
+  font-display: swap;
+  src: url("../fonts/roboto-bold.woff2") format("woff2");
   unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
 }

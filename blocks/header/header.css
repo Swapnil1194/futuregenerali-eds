@@ -61,7 +61,6 @@ header nav .nav-hamburger {
     display: flex;
     align-items: center;
 }
-
 header nav .nav-hamburger button {
     height: 22px;
     margin: 0;
@@ -82,6 +81,7 @@ header nav .nav-hamburger-icon::after {
     display: block;
     position: relative;
     width: 20px;
+    color: var(--brand-primary);
 }
 
 header nav .nav-hamburger-icon::before,
@@ -89,14 +89,15 @@ header nav .nav-hamburger-icon::after {
     content: '';
     position: absolute;
     background: currentcolor;
+    color: var(--brand-primary);
 }
 
 header nav .nav-hamburger-icon,
 header nav .nav-hamburger-icon::before,
 header nav .nav-hamburger-icon::after {
-    height: 2px;
+    height: 1.5px;
     border-radius: 2px;
-    /* background: currentColor; */
+    background: currentColor;
 }
 
 
@@ -118,6 +119,7 @@ header nav .nav-hamburger-icon::after {
 
 header nav.expanded .nav-hamburger-icon {
     height: 22px;
+    background: unset;
 }
 
 header nav.expanded .nav-hamburger-icon::before,

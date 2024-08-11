@@ -12,23 +12,23 @@ import {
   loadSections,
   loadCSS,
   sampleRUM,
-} from './aem.js';
+} from "./aem.js";
 
 /**
  * Builds hero block and prepends to main in a new section.
  * @param {Element} main The container element
  */
 function buildHeroBlock(main) {
-  const h1 = main.querySelector('h1');
-  const picture = main.querySelector('picture');
+  const h1 = main.querySelector("h1");
+  const picture = main.querySelector("picture");
   // eslint-disable-next-line no-bitwise
   if (
-    h1
-    && picture
-    && h1.compareDocumentPosition(picture) & Node.DOCUMENT_POSITION_PRECEDING
+    h1 &&
+    picture &&
+    h1.compareDocumentPosition(picture) & Node.DOCUMENT_POSITION_PRECEDING
   ) {
-    const section = document.createElement('div');
-    section.append(buildBlock('hero', { elems: [picture, h1] }));
+    const section = document.createElement("div");
+    section.append(buildBlock("hero", { elems: [picture, h1] }));
     main.prepend(section);
   }
 }
@@ -39,10 +39,26 @@ function buildHeroBlock(main) {
 async function loadFonts() {
   await loadCSS(`${window.hlx.codeBasePath}/styles/fonts.css`);
   try {
-    if (!window.location.hostname.includes('localhost')) { sessionStorage.setItem('fonts-loaded', 'true'); }
+    if (!window.location.hostname.includes("localhost")) {
+      sessionStorage.setItem("fonts-loaded", "true");
+    }
   } catch (e) {
     // do nothing
   }
+}
+
+function autolinkModals(element) {
+  element.addEventListener("click", async (e) => {
+    const origin = e.target.closest("a");
+
+    if (origin && origin.href && origin.href.includes("/modals/")) {
+      e.preventDefault();
+      const { openModal } = await import(
+        `${window.hlx.codeBasePath}/blocks/modal/modal.js`
+      );
+      openModal(origin.href);
+    }
+  });
 }
 
 /**
@@ -54,7 +70,7 @@ function buildAutoBlocks(main) {
     buildHeroBlock(main);
   } catch (error) {
     // eslint-disable-next-line no-console
-    console.error('Auto Blocking failed', error);
+    console.error("Auto Blocking failed", error);
   }
 }
 
@@ -77,20 +93,20 @@ export function decorateMain(main) {
  * @param {Element} doc The container element
  */
 async function loadEager(doc) {
-  document.documentElement.lang = 'en';
+  document.documentElement.lang = "en";
   decorateTemplateAndTheme();
-  const main = doc.querySelector('main');
+  const main = doc.querySelector("main");
   if (main) {
     decorateMain(main);
-    document.body.classList.add('appear');
-    await loadSection(main.querySelector('.section'), waitForFirstImage);
+    document.body.classList.add("appear");
+    await loadSection(main.querySelector(".section"), waitForFirstImage);
   }
 
   sampleRUM.enhance();
 
   try {
     /* if desktop (proxy for fast connection) or fonts already loaded, load fonts.css */
-    if (window.innerWidth >= 900 || sessionStorage.getItem('fonts-loaded')) {
+    if (window.innerWidth >= 900 || sessionStorage.getItem("fonts-loaded")) {
       loadFonts();
     }
   } catch (e) {
@@ -103,15 +119,16 @@ async function loadEager(doc) {
  * @param {Element} doc The container element
  */
 async function loadLazy(doc) {
-  const main = doc.querySelector('main');
+  autolinkModals(doc);
+  const main = doc.querySelector("main");
   await loadSections(main);
 
   const { hash } = window.location;
   const element = hash ? doc.getElementById(hash.substring(1)) : false;
   if (hash && element) element.scrollIntoView();
 
-  loadHeader(doc.querySelector('header'));
-  loadFooter(doc.querySelector('footer'));
+  loadHeader(doc.querySelector("header"));
+  loadFooter(doc.querySelector("footer"));
 
   loadCSS(`${window.hlx.codeBasePath}/styles/lazy-styles.css`);
   loadFonts();
@@ -123,7 +140,7 @@ async function loadLazy(doc) {
  */
 function loadDelayed() {
   // eslint-disable-next-line import/no-cycle
-  window.setTimeout(() => import('./delayed.js'), 3000);
+  window.setTimeout(() => import("./delayed.js"), 3000);
   // load anything that can be postponed to the latest here
 }
 
@@ -136,11 +153,11 @@ async function loadPage() {
 loadPage();
 
 export function renderHelper(data, template, callBack) {
-  const dom = document.createElement('div');
+  const dom = document.createElement("div");
   dom.innerHTML = template;
-  const loopEl = dom.getElementsByClassName('forName');
+  const loopEl = dom.getElementsByClassName("forName");
   Array.prototype.slice.call(loopEl).forEach((eachLoop) => {
-    let templates = '';
+    let templates = "";
     const localtemplate = eachLoop.innerHTML;
     for (const key in data) {
       if (Object.hasOwnProperty.call(data, key)) {
@@ -149,15 +166,15 @@ export function renderHelper(data, template, callBack) {
         var dataItem = callBack ? callBack(element, key) : element;
         const keys = Object.keys(dataItem);
         var copyTemplate = localtemplate;
-        copyTemplate.split('{').forEach((ecahKey) => {
-          const key = ecahKey.split('}')[0];
-          const keys = key.split('.');
+        copyTemplate.split("{").forEach((ecahKey) => {
+          const key = ecahKey.split("}")[0];
+          const keys = key.split(".");
           let value = dataItem;
           keys.forEach((key) => {
             if (value && value[key]) {
               value = value[key];
             } else {
-              value = '';
+              value = "";
             }
           });
           copyTemplate = copyTemplate.replace(`{${key}}`, value);
@@ -174,18 +191,18 @@ export function renderHelper(data, template, callBack) {
 export function getProps(block, config) {
   return Array.from(block.children).map((el, index) => {
     if (config?.picture) {
-      return el.innerHTML.includes('picture')
-        ? el.querySelector('picture')
+      return el.innerHTML.includes("picture")
+        ? el.querySelector("picture")
         : el.innerText.trim();
-    } if (config?.index && config?.index.includes(index)) {
+    }
+    if (config?.index && config?.index.includes(index)) {
       return el;
     }
-    return el.innerHTML.includes('picture')
-      ? el.querySelector('img').src.trim()
+    return el.innerHTML.includes("picture")
+      ? el.querySelector("img").src.trim()
       : el.innerText.trim();
   });
 }
-
 
 export async function fetchData(url) {
   try {
@@ -195,8 +212,7 @@ export async function fetchData(url) {
     }
     let html = await response.text();
 
-    return html
-  
+    return html;
   } catch (error) {
     console.error("Fetch error: ", error);
   }

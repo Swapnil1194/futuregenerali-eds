@@ -144,4 +144,7 @@
   .glider.discover-our-products-card .glider-dots {
     display: flex;
   }
+  .glider.discover-our-products-card .glider-dots .glider-dot.active {
+    background: var(--brand-primary);
+  }
 }/*# sourceMappingURL=discover-our-products.css.map */
