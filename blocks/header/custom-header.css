@@ -139,10 +139,11 @@
     padding: 9px 15px;
     font-size: 12px;
     line-height: 14px;
+    width: 89px;
   }
   .block.header .nav-wrapper nav > div:nth-of-type(4) > div > p:nth-of-type(2)::after {
     top: 1em;
-    right: 25px;
+    right: 20px;
   }
   .block.header .nav-wrapper nav > div:nth-of-type(4) > div > p:nth-of-type(2).active::after {
     bottom: 1em;
