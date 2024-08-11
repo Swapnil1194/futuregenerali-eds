@@ -91,24 +91,28 @@ export default function decorate(block) {
   const placeholder = block.querySelector('picture');
   const link = block.querySelector('a').href;
   block.textContent = '';
+  return generateEmbed(block, link, placeholder);
+}
 
-  if (placeholder) {
+
+export function generateEmbed(el, url, picture) {
+  if (picture) {
     const wrapper = document.createElement('div');
     wrapper.className = 'embed-placeholder';
     wrapper.innerHTML = '<div class="embed-placeholder-play"><button type="button" title="Play"></button></div>';
-    wrapper.prepend(placeholder);
+    wrapper.prepend(picture);
     wrapper.addEventListener('click', () => {
-      loadEmbed(block, link, true);
+      loadEmbed(el, url, true);
     });
-    block.append(wrapper);
+    el.append(wrapper);
   } else {
     const observer = new IntersectionObserver((entries) => {
       if (entries.some((e) => e.isIntersecting)) {
         observer.disconnect();
-        loadEmbed(block, link);
+        loadEmbed(el, url);
       }
     });
-    observer.observe(block);
+    observer.observe(el);
   }
-  return block;
+  return el;
 }
