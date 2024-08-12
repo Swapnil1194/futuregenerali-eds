@@ -391,6 +391,7 @@ a {
 }
 
 .scroll-top {
+  display: none;
   position: fixed;
   right: 22px;
   bottom: 10%;

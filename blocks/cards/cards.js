@@ -100,10 +100,10 @@ export default function decorate(block) {
     entries.forEach((entry) => {
       if (entry.isIntersecting) {
         block.closest(".bottom-navigation-box")?.classList.remove("scrolled");
-        scrollTop.style.opacity = "0";
+        // scrollTop.style.opacity = "0";
       } else {
         block.closest(".bottom-navigation-box")?.classList.add("scrolled");
-        scrollTop.style.opacity = "1";
+        // scrollTop.style.opacity = "1";
       }
     });
   });

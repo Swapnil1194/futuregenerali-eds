@@ -53,16 +53,16 @@
   font-size: 18px;
   line-height: 24px;
 }
-.block.footer .footer-link-container > div:nth-of-type(3).accordion-wrapper .accordion.footer-link-wrapper details .accordion-item-body ul li a,
-.block.footer .footer-link-container > div:nth-of-type(3).accordion-wrapper .accordion.footer-link-wrapper details .accordion-item-body ul li {
+.block.footer .footer-link-container > div:nth-of-type(3).accordion-wrapper .accordion.footer-link-wrapper details .accordion-item-body > ul > li a,
+.block.footer .footer-link-container > div:nth-of-type(3).accordion-wrapper .accordion.footer-link-wrapper details .accordion-item-body > ul > li {
   font-size: 16px;
   line-height: 24px;
   color: var(--silver);
   font-family: "Roboto-Light";
   margin-bottom: 8px;
 }
-.block.footer .footer-link-container > div:nth-of-type(3).accordion-wrapper .accordion.footer-link-wrapper details .accordion-item-body ul li a ul li,
-.block.footer .footer-link-container > div:nth-of-type(3).accordion-wrapper .accordion.footer-link-wrapper details .accordion-item-body ul li ul li {
+.block.footer .footer-link-container > div:nth-of-type(3).accordion-wrapper .accordion.footer-link-wrapper details .accordion-item-body > ul > li a > ul > li,
+.block.footer .footer-link-container > div:nth-of-type(3).accordion-wrapper .accordion.footer-link-wrapper details .accordion-item-body > ul > li > ul > li {
   margin-top: 14px;
   color: var(--silver);
   text-transform: capitalize;
@@ -168,7 +168,7 @@
 
 @media screen and (max-width: 767.99px) {
   .footer-wrapper {
-    margin-bottom: 43%;
+    margin-bottom: 40%;
   }
   .footer-wrapper .block.footer .footer-link-container > div:nth-of-type(2) .columns.download-app-links > div {
     padding-top: 30px;
@@ -218,29 +218,20 @@
     font-size: 18px;
     line-height: 24px;
   }
-  .footer-wrapper .block.footer .footer-link-container > div:nth-of-type(3).accordion-wrapper .accordion.footer-link-wrapper details .accordion-item-body ul a li,
-  .footer-wrapper .block.footer .footer-link-container > div:nth-of-type(3).accordion-wrapper .accordion.footer-link-wrapper details .accordion-item-body ul li {
+  .footer-wrapper .block.footer .footer-link-container > div:nth-of-type(3).accordion-wrapper .accordion.footer-link-wrapper details .accordion-item-body > ul > li a,
+  .footer-wrapper .block.footer .footer-link-container > div:nth-of-type(3).accordion-wrapper .accordion.footer-link-wrapper details .accordion-item-body > ul > li {
     font-size: 16px;
     line-height: 24px;
     color: var(--silver);
     font-family: "Roboto-Light";
     margin-bottom: 8px;
   }
-  .footer-wrapper .block.footer .footer-link-container > div:nth-of-type(3).accordion-wrapper .accordion.footer-link-wrapper details .accordion-item-body ul li:last-child ul li:first-child {
-    margin-top: 14px;
-    color: var(--silver);
-    text-transform: uppercase;
-    font-family: "Roboto-Medium";
+  .footer-wrapper .block.footer .footer-link-container > div:nth-of-type(3).accordion-wrapper .accordion.footer-link-wrapper details .accordion-item-body > ul > li a > ul > li,
+  .footer-wrapper .block.footer .footer-link-container > div:nth-of-type(3).accordion-wrapper .accordion.footer-link-wrapper details .accordion-item-body > ul > li > ul > li {
     font-size: 18px;
     line-height: 24px;
-    margin-bottom: 12px;
-  }
-  .footer-wrapper .block.footer .footer-link-container > div:nth-of-type(3).accordion-wrapper .accordion.footer-link-wrapper details .accordion-item-body ul li:last-child ul li:first-child ul a li,
-  .footer-wrapper .block.footer .footer-link-container > div:nth-of-type(3).accordion-wrapper .accordion.footer-link-wrapper details .accordion-item-body ul li:last-child ul li:first-child ul li {
-    font-size: 16px;
-    line-height: 24px;
     color: var(--silver);
-    font-family: "Roboto-Light";
+    font-family: "Roboto-Medium";
     margin-bottom: 8px;
     text-transform: capitalize;
   }

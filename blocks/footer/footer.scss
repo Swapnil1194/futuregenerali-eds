@@ -68,18 +68,18 @@
           }
 
           .accordion-item-body {
-            ul {
+            >ul {
 
-              li a,
-              li {
+              >li a,
+              >li {
                 font-size: 16px;
                 line-height: 24px;
                 color: var(--silver);
                 font-family: "Roboto-Light";
                 margin-bottom: 8px;
 
-                ul {
-                  li {
+                >ul {
+                  >li {
                     margin-top: 14px;
                     color: var(--silver);
                     text-transform: capitalize;
@@ -222,7 +222,7 @@
 @media screen and (max-width: 767.99px) {
 
   .footer-wrapper {
-    margin-bottom: 43%;
+    margin-bottom: 40%;
 
     .block.footer {
 
@@ -288,43 +288,28 @@
               }
 
               .accordion-item-body {
-                ul {
+                >ul {
 
-                  a li,
-                  li {
+                  >li a,
+                  >li {
                     font-size: 16px;
                     line-height: 24px;
                     color: var(--silver);
                     font-family: "Roboto-Light";
                     margin-bottom: 8px;
-                  }
 
-                  li:last-child {
-                    ul {
-                      li:first-child {
-                        margin-top: 14px;
-                        color: var(--silver);
-                        text-transform: uppercase;
-                        font-family: "Roboto-Medium";
+                    >ul {
+                      >li {
                         font-size: 18px;
                         line-height: 24px;
-                        margin-bottom: 12px;
-
-                        ul {
-
-                          a li,
-                          li {
-                            font-size: 16px;
-                            line-height: 24px;
-                            color: var(--silver);
-                            font-family: "Roboto-Light";
-                            margin-bottom: 8px;
-                            text-transform: capitalize;
-                          }
-                        }
+                        color: var(--silver);
+                        font-family: "Roboto-Medium";
+                        margin-bottom: 8px;
+                        text-transform: capitalize;
                       }
                     }
                   }
+
                 }
               }
             }
