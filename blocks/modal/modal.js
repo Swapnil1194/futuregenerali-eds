@@ -15,9 +15,9 @@ import {
 export async function createModal(contentNodes) {
   await loadCSS(`${window.hlx.codeBasePath}/blocks/modal/modal.css`);
   const dialog = document.createElement("dialog");
-  dialog.classList.add("dialog","login", "search");
+  dialog.classList.add("dialog");
   const dialogContent = document.createElement("div");
-  dialogContent.classList.add("modal-content", "login", "search");
+  dialogContent.classList.add("modal-content");
   dialogContent.append(...contentNodes);
   dialog.append(dialogContent);
 
@@ -33,12 +33,11 @@ export async function createModal(contentNodes) {
   document.querySelector("main").append(block);
   decorateBlock(block);
   await loadBlock(block);
-  
+
   const arrow = document.querySelector(".nav-tools >div >p:nth-of-type(2)");
   const overLay = document.createElement("div");
   overLay.classList.add("overlay");
-
-
+  
   // close on click outside the dialog
   dialog.addEventListener("click", (e) => {
     const { left, right, top, bottom } = dialog.getBoundingClientRect();
@@ -49,7 +48,9 @@ export async function createModal(contentNodes) {
       clientY < top ||
       clientY > bottom
     ) {
-      arrow.classList.toggle("active");
+      if (sectionElement) {
+        arrow.classList.toggle("active");
+      }
       document.body.style.overflow = "scroll";
       overLay.remove();
       dialog.close();
@@ -64,17 +65,25 @@ export async function createModal(contentNodes) {
   block.innerHTML = "";
   block.append(dialog);
 
+  let sectionElement = block.querySelector("div .modal-content .section").classList.contains("login-modal");
+
+
   return {
     block,
     showModal: () => {
       dialog.showModal();
+      if (sectionElement) {
+        arrow.classList.toggle("active");
+      }
       document.body.style.overflow = "hidden";
       document.body.appendChild(overLay);
-      arrow.classList.toggle("active");
       // reset scroll position
       // setTimeout(() => {
-        dialogContent.scrollTop = 0;
+      dialogContent.scrollTop = 0;
       // }, 0);
+      dialog.querySelector(".section")?.classList.forEach(function (eachClass) {
+        block.classList.add(eachClass);
+      });
       document.body.classList.add("modal-open");
     },
   };
