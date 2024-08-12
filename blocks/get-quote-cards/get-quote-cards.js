@@ -16,10 +16,16 @@ export default function decorate(block) {
       //  }) 
     } else {
       let column = Array.from(element.children);
-      column[0].classList.add('image');
-      column[1].classList.add('text');
+      if(column.length>=3){
+        column[0].classList.add('new-plan');
+        column[1].classList.add('image');
+        column[2].classList.add('text');
+      }else{
+        column[0].classList.add('image');
+        column[1].classList.add('text');
+       
+      }
       element.classList.add("cardsContainer");
-
       cardsWrapper.classList.add('multiCardsContainer');
       cardsWrapper.append(element);
     }
