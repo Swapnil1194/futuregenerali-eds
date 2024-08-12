@@ -1,3 +1,4 @@
+import { loadFragment } from "../blocks/fragment/fragment.js";
 import {
   buildBlock,
   loadHeader,
@@ -61,6 +62,22 @@ function autolinkModals(element) {
   });
 }
 
+function autolinkFragements(element) {
+  element.querySelectorAll('a').forEach(async function (link) {
+    if (link.href.includes('fragements')) {
+      const path = link ? link.getAttribute('href') : link.textContent.trim();
+      const fragment = await loadFragment(path);
+      if (fragment) {
+        const fragmentSection = fragment.querySelector(':scope .section');
+        if (fragmentSection) {
+          link.classList.add(...fragmentSection.classList);
+          link.replaceWith(...fragment.childNodes);
+        }
+      }
+    }
+  })
+}
+
 /**
  * Builds all synthetic blocks in a container element.
  * @param {Element} main The container element
@@ -120,6 +137,7 @@ async function loadEager(doc) {
  */
 async function loadLazy(doc) {
   autolinkModals(doc);
+  autolinkFragements(doc);
   const main = doc.querySelector("main");
   await loadSections(main);
 
