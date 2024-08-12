@@ -99,4 +99,86 @@ export default async function decorate(block) {
       }
     }
   });
+  document.querySelector('.getquoteform-wrapper').classList.add('dp-none');
 }
+
+
+document.querySelectorAll('.multiCardsContainer .cardsContainer').forEach(function (ele, ind) {
+  ele.classList.remove("active");
+  ele.classList.remove()
+  ele.addEventListener('click', function () {
+    if( document.querySelector('.getquoteform-wrapper').classList.contains("dp-none")){
+      document.querySelector('.getquoteform-wrapper').classList.remove("dp-none")
+      document.querySelector('.get-quote-cards-wrapper').style.borderRadius="unset";
+      document.querySelector('.get-quote-cards-container .default-content-wrapper p').style.display='block';
+    }
+
+
+    document.querySelectorAll('.multiCardsContainer .cardsContainer').forEach(function (ele, ind) {
+      ele.classList.remove("active");
+    })
+
+    let clickedItem = this.querySelector('.text').innerText.trim().toLowerCase();
+    this.classList.add("active");
+    if (clickedItem === "health") {
+      document.querySelectorAll('.getquoteform.block form .field-wrapper').forEach(function (ele) {
+        if (ele.classList.contains('dp-flex')) {
+          ele.classList.remove('dp-flex');
+        }
+        ele.classList.add('dp-none');
+        if (ele.classList.contains('name-wrapper') || ele.classList.contains('pin-code-wrapper') || ele.classList.contains('mobile-number-wrapper')) {
+          ele.classList.add('dp-flex');
+          ele.classList.remove('dp-none');
+
+        }
+      })
+    } else if (clickedItem === "travel") {
+      document.querySelectorAll('.getquoteform.block form .field-wrapper').forEach(function (ele) {
+        if (ele.classList.contains('dp-flex')) {
+          ele.classList.remove('dp-flex');
+        }
+        ele.classList.add('dp-none');
+        if (ele.classList.contains('name-wrapper') || ele.classList.contains('country-wrapper') || ele.classList.contains('mobile-number-wrapper')) {
+          ele.classList.add('dp-flex');
+          ele.classList.remove('dp-none');
+        }
+      })
+
+    } else if (clickedItem === "dog") {
+      document.querySelectorAll('.getquoteform.block form .field-wrapper').forEach(function (ele) {
+        if (ele.classList.contains('dp-flex')) {
+          ele.classList.remove('dp-flex');
+        }
+        ele.classList.add('dp-none');
+        if (ele.classList.contains('name-wrapper') || ele.classList.contains('email-wrapper') || ele.classList.contains('mobile-number-wrapper')) {
+          ele.classList.add('dp-flex');
+          ele.classList.remove('dp-none');
+        }
+      })
+
+    } else if (clickedItem === "car") {
+      document.querySelectorAll('.getquoteform.block form .field-wrapper').forEach(function (ele) {
+        if (ele.classList.contains('dp-flex')) {
+          ele.classList.remove('dp-flex');
+        }
+        ele.classList.add('dp-none');
+        if (ele.classList.contains('registration-number-wrapper') || ele.classList.contains('email-wrapper') || ele.classList.contains('mobile-number-wrapper')) {
+          ele.classList.add('dp-flex');
+          ele.classList.remove('dp-none');
+        }
+      })
+    }
+    document.querySelector('.-wrapper').classList.remove('dp-none');
+    document.querySelector('.-wrapper').classList.add('dp-flex');
+
+  })
+})
+
+
+document.querySelector('.get-quote-cards-container .default-content-wrapper p').addEventListener('click',function(){
+  document.querySelector('.getquoteform-wrapper').classList.add("dp-none")
+  document.querySelector('.get-quote-cards-wrapper').style.borderRadius="0 0 40px 40px";
+  document.querySelector('.get-quote-cards-container .default-content-wrapper p').style.display='none';
+  document.querySelector('.multiCardsContainer .cardsContainer.active').classList.remove('active');
+   
+})

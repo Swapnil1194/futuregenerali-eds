@@ -6,6 +6,7 @@
   max-width: 50%;
   margin: auto;
   position: relative;
+  border-radius: 0 0 40px 40px;
   /* border-radius: 0 0 40px 40px; */
 }
 .section.get-quote-cards-container .get-quote-cards-wrapper::before, .section.get-quote-cards-container .get-quote-cards-wrapper::after {
@@ -59,6 +60,42 @@
   width: 93px;
   text-align: center;
 }
+.section.get-quote-cards-container .get-quote-cards-wrapper .get-quote-cards.block .multiCardsContainer .cardsContainer .new-plan {
+  position: absolute;
+  top: -30px;
+  transform: translateX(-50%);
+  left: 50%;
+  bottom: calc(100% + 6px);
+  width: 90%;
+}
+.section.get-quote-cards-container .get-quote-cards-wrapper .get-quote-cards.block .multiCardsContainer .cardsContainer .new-plan p {
+  display: flex;
+  align-items: center;
+  background: #ffeccc;
+  padding: 4px 6px;
+  color: #707070;
+  font-size: 10px;
+  line-height: 12px;
+  border-radius: 5px;
+  white-space: nowrap;
+  text-align: left;
+  min-height: 24px;
+  justify-content: space-evenly;
+  font-size: 10px;
+  font-family: "robotolight";
+}
+@media screen and (max-width: 768px) {
+  .section.get-quote-cards-container .get-quote-cards-wrapper .get-quote-cards.block .multiCardsContainer .cardsContainer .new-plan p {
+    font-size: 8px;
+  }
+}
+@media screen and (max-width: 768px) {
+  .section.get-quote-cards-container .get-quote-cards-wrapper .get-quote-cards.block .multiCardsContainer .cardsContainer .new-plan p img {
+    height: -moz-fit-content;
+    height: fit-content;
+    margin-bottom: 2px;
+  }
+}
 .section.get-quote-cards-container .get-quote-cards-wrapper .get-quote-cards.block .multiCardsContainer .cardsContainer .image {
   margin-bottom: 4px;
 }
@@ -73,6 +110,9 @@
 }
 .section.get-quote-cards-container .get-quote-cards-wrapper .get-quote-cards.block .multiCardsContainer .cardsContainer .text p {
   font-size: 13.33px;
+}
+.section.get-quote-cards-container .get-quote-cards-wrapper .get-quote-cards.block .multiCardsContainer .cardsContainer.active {
+  background-color: #ffdcd7;
 }
 @media screen and (max-width: 1080px) {
   .section.get-quote-cards-container .get-quote-cards-wrapper .get-quote-cards.block .multiCardsContainer {
@@ -119,6 +159,14 @@
   display: flex;
   justify-content: center;
   padding-bottom: 32px;
+  flex-wrap: wrap;
+}
+.section.get-quote-cards-container .default-content-wrapper p {
+  position: absolute;
+  top: 130px;
+  right: 411px;
+  cursor: pointer;
+  display: none;
 }
 .section.get-quote-cards-container .default-content-wrapper ul {
   padding: 20px 5px 0;

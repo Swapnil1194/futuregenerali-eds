@@ -1,0 +1,95 @@
+.insure-app {
+    .glider-slide {
+        .button-container {
+            background: transparent;
+            margin: unset;
+            padding: unset;
+            border-radius: unset;
+
+            .section.form-container {
+                .form-wrapper {
+                    padding-left: unset;
+                    padding-right: unset;
+
+                    .form.get-in-touch.block {
+                        form {
+                            display: flex;
+                            margin-bottom: 24px;
+                            column-gap: 30px;
+
+                            @media screen and (max-width:768px) {
+                                flex-direction: column;
+                            }
+
+                            .field-wrapper {
+                                &.number-wrapper {
+                                    @media screen and (max-width:768px) {
+                                        display: flex;
+                                    }
+                                }
+                            }
+
+                            input {
+                                font-size: 20px;
+                                line-height: 23px;
+                                background: 0;
+                                border: 0;
+                                outline: 0;
+                                border-bottom: 1px solid #ccc;
+                                color: #20252b;
+                                font-family: Roboto-Light;
+                                padding: 0px 0px 7px 0px;
+                                width: 100%;
+                                border-radius: 0;
+                                color: #fff;
+
+                                @media screen and (max-width:768px) {
+                                    width: 45% ;
+                                }
+                            }
+
+                            label {
+                                font-family: "robotoregular";
+                                font-weight: 500;
+                                font-size: 20px;
+                                line-height: 32px;
+                                margin-bottom: unset;
+
+                                @media screen and (max-width:768px) {
+                                    font-size: 16px;
+                                }
+                            }
+
+                            .field-wrapper {
+                                .button {
+                                    padding: 16px 39px;
+                                    background-color: transparent;
+                                    border: 1px solid #fff;
+                                    color: #fff;
+                                    border-radius: 5px;
+                                    outline: 0;
+                                    /* border: 0; */
+                                    text-transform: uppercase;
+                                    font-size: 14px;
+                                    line-height: 17px;
+                                    font-family: "robotoregular";
+                                    font-weight: 800;
+                                    text-align: center;
+
+                                    @media screen and (max-width:768px) {
+                                        background-color: #fff;
+                                        color: #c21b17 ;
+                                        width: 100%;
+                                        max-width: 100%;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+
+
+        }
+    }
+}

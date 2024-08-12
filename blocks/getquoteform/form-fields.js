@@ -3,12 +3,12 @@ import { toClassName } from '../../scripts/aem.js';
 function createFieldWrapper(fd) {
   const fieldWrapper = document.createElement('div');
   if (fd.Style) fieldWrapper.className = fd.Style;
-  fieldWrapper.classList.add('field-wrapper', `${fd.Type}-wrapper`);
-
-  fieldWrapper.dataset.fieldset = fd.Fieldset;
-
+  let fieldName=fd.Label.trim().toLocaleLowerCase().replace(" ","-");
+  fieldWrapper.classList.add('field-wrapper', `${fieldName}-wrapper`);
   return fieldWrapper;
 }
+
+
 
 const ids = [];
 function generateFieldId(fd, suffix = '') {
