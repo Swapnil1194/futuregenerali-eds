@@ -4,12 +4,24 @@
 .section.social-media-photos-container > div:first-child {
   padding-bottom: 40px;
 }
-.section.social-media-photos-container > div > p {
+.section.social-media-photos-container > div:first-child > p {
   font-family: "robotolight";
   text-align: center;
   color: var(--primary-white);
   font-size: 48px;
   line-height: 60px;
+}
+.section.social-media-photos-container > div:last-child {
+  margin-top: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.section.social-media-photos-container > div:last-child > p {
+  padding: 0 25px;
+}
+.section.social-media-photos-container > div:last-child > p a span img {
+  height: 30px;
 }
 
 .glider.future-generali-social-media-photos [data-glider-container=glider-container] > div {
@@ -27,15 +39,22 @@
   padding: 16px;
   height: 100%;
 }
+.glider.future-generali-social-media-photos [data-glider-container=glider-container] > div > div [data-column-wrapper=column-wrapper] [data-column-index=column-0] {
+  margin-bottom: 24px;
+}
 .glider.future-generali-social-media-photos [data-glider-container=glider-container] > div > div [data-column-wrapper=column-wrapper] [data-column-index=column-0] > p {
   display: flex;
   justify-content: space-between;
   align-items: center;
 }
-.glider.future-generali-social-media-photos [data-glider-container=glider-container] > div > div [data-column-wrapper=column-wrapper] [data-column-index=column-1] img {
+.glider.future-generali-social-media-photos [data-glider-container=glider-container] > div > div [data-column-wrapper=column-wrapper] [data-column-index=column-1] {
+  width: 100%;
   -o-object-fit: fill;
      object-fit: fill;
-  width: 100%;
+}
+.glider.future-generali-social-media-photos [data-glider-container=glider-container] > div > div [data-column-wrapper=column-wrapper] [data-column-index=column-1] img {
+  width: 382px;
+  height: 330px;
 }
 .glider.future-generali-social-media-photos [data-glider-container=glider-container] > div > div [data-column-wrapper=column-wrapper] [data-column-index=column-2] {
   padding-top: 4px;
@@ -47,5 +66,11 @@
   font-family: "Roboto-Light";
 }
 .glider.future-generali-social-media-photos .glider-dots {
+  display: none;
   margin-top: 20px;
+}
+@media screen and (max-width: 767.99px) {
+  .glider.future-generali-social-media-photos .glider-dots {
+    display: flex;
+  }
 }/*# sourceMappingURL=socialmediaphotos.css.map */

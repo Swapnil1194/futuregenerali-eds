@@ -87,4 +87,7 @@
   color: #c21b17;
   display: block;
   padding-bottom: 20px;
+}
+.communities-in-need .glider-wrapper .glider .glider-dots .glider-dot.active {
+  background: var(--brand-primary);
 }/*# sourceMappingURL=communityneed.css.map */

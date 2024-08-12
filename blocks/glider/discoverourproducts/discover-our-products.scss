@@ -188,6 +188,10 @@
 
         .glider-dots {
             display: flex;
+
+            .glider-dot.active {
+                background: var(--brand-primary);
+            }
         }
     }
 }

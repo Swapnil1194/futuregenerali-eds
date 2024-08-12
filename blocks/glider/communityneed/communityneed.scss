@@ -1,5 +1,6 @@
 .communities-in-need {
     padding-bottom: 40px;
+
     .default-content-wrapper {
         p {
             font-family: "robotolight";
@@ -16,7 +17,7 @@
                 color: #c21b17;
             }
 
-            @media screen and (max-width:768px){
+            @media screen and (max-width:768px) {
                 font-family: "robotolight";
                 font-size: 28px;
                 font-weight: 300;
@@ -38,8 +39,9 @@
                                 width: 250px;
                                 height: fit-content;
                             }
+
                             // @media screen and (max-width:768px) {
-                                margin-bottom: 28px;
+                            margin-bottom: 28px;
                             // }
 
                             // max-width: 310px !important;
@@ -77,6 +79,7 @@
                                         line-height: 20.8px;
                                         text-align: center;
                                         text-align: center;
+
                                         picture {
                                             padding-bottom: 15px;
                                             display: block;
@@ -113,8 +116,12 @@
                     }
                 }
             }
+
+            .glider-dots {
+                .glider-dot.active {
+                    background: var(--brand-primary);
+                }
+            }
         }
     }
 }
-
-

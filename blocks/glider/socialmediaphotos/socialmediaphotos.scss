@@ -2,10 +2,8 @@
     padding: 40px 0 70px;
 
     >div:first-child {
-        padding-bottom: 40px
-    }
+        padding-bottom: 40px;
 
-    >div {
         >p {
             font-family: "robotolight";
             text-align: center;
@@ -13,8 +11,21 @@
             font-size: 48px;
             line-height: 60px;
         }
+    }
 
+    >div:last-child {
+        margin-top: 20px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
 
+        >p {
+            padding: 0 25px;
+
+            a span img {
+                height: 30px;
+            }
+        }
     }
 }
 
@@ -42,13 +53,17 @@
                             justify-content: space-between;
                             align-items: center;
                         }
+                        margin-bottom: 24px;
                     }
 
 
                     [data-column-index="column-1"] {
+                        width: 100%;
+                        object-fit: fill;
+
                         img {
-                            object-fit: fill;
-                            width: 100%;
+                            width: 382px;
+                            height: 330px;
                         }
                     }
 
@@ -69,6 +84,11 @@
     }
 
     .glider-dots {
+        display: none;
         margin-top: 20px;
+
+        @media screen and (max-width: 767.99px) {
+            display: flex;
+        }
     }
 }

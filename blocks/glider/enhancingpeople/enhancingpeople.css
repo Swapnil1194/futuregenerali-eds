@@ -7,6 +7,7 @@
   color: var(--primary-white);
   text-align: center;
   padding-bottom: 40px;
+  font-family: "robotolight";
 }
 
 .glider.enhancing-people [data-glider-container=glider-container] > div {

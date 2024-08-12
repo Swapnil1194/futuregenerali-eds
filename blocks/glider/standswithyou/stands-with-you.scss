@@ -42,7 +42,18 @@
                 width: 100%;
                 padding: 13px 0;
                 text-align: center;
+
+                >a {
+                    font-weight: 600;
+                }
             }
+        }
+    }
+
+
+    .glider-dots {
+        .glider-dot.active {
+            background: var(--brand-primary);
         }
     }
 }

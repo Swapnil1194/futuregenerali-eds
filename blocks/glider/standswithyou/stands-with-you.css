@@ -39,6 +39,12 @@
   padding: 13px 0;
   text-align: center;
 }
+.glider.stands-with-you [data-column-wrapper=column-wrapper] [data-column-index=column-1] > p:nth-of-type(3) > a {
+  font-weight: 600;
+}
+.glider.stands-with-you .glider-dots .glider-dot.active {
+  background: var(--brand-primary);
+}
 
 @media screen and (max-width: 767.99px) {
   .glider.stands-with-you {
