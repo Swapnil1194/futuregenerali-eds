@@ -110,8 +110,10 @@
 .get-call-back-container .getcallbackform.block form .field-wrapper:last-child fieldset .field-wrapper {
   width: 100%;
 }
-.get-call-back-container .getcallbackform.block form .field-wrapper:last-child fieldset .field-wrapper:nth-child(2) {
-  margin-top: 20px;
+@media screen and (max-width: 768px) {
+  .get-call-back-container .getcallbackform.block form .field-wrapper:last-child fieldset .field-wrapper:nth-child(2) {
+    margin-top: 20px;
+  }
 }
 @media screen and (max-width: 1080px) {
   .get-call-back-container .getcallbackform.block {

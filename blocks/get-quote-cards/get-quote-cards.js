@@ -31,6 +31,7 @@ export default function decorate(block) {
     }
     let more = document.querySelector('.more');
     parentEl.insertBefore(cardsWrapper, more);
+    // document.querySelector('.get-quote-cards-wrapper').classList.add('dp-none');
     // block.append(cardsWrapper);
   });
 

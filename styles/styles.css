@@ -219,6 +219,14 @@ a {
   display: none;
 }
 
+.dp-none{
+display: none !important;
+}
+
+.dp-flex{
+  display: flex !important;
+}
+
 @media screen and (max-width: 767.99px) {
 
   .glider-prev,

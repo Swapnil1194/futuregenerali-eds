@@ -8,6 +8,7 @@
             max-width: 50%;
             margin: auto;
             position: relative;
+            border-radius: 0 0 40px 40px;
             &::before,&::after{
                 content: '';
                 height: 39px;
@@ -118,6 +119,11 @@
                                 font-size: 13.33px;
                             }
                         }
+
+
+                        &.active{
+                            background-color: #ffdcd7;  
+                        }
                     }
 
                     @media screen and (max-width:1080px ) {
@@ -165,6 +171,14 @@
             justify-content: center;
             padding-bottom: 32px;
             flex-wrap: wrap;
+
+            p{
+                position: absolute;
+                top: 130px;
+                right: 411px;
+                cursor: pointer;
+                display: none;
+            }
             ul{
                 // display: flex;
                 padding: 20px 5px 0;

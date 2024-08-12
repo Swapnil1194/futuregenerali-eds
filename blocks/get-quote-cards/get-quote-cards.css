@@ -6,6 +6,7 @@
   max-width: 50%;
   margin: auto;
   position: relative;
+  border-radius: 0 0 40px 40px;
   /* border-radius: 0 0 40px 40px; */
 }
 .section.get-quote-cards-container .get-quote-cards-wrapper::before, .section.get-quote-cards-container .get-quote-cards-wrapper::after {
@@ -110,6 +111,9 @@
 .section.get-quote-cards-container .get-quote-cards-wrapper .get-quote-cards.block .multiCardsContainer .cardsContainer .text p {
   font-size: 13.33px;
 }
+.section.get-quote-cards-container .get-quote-cards-wrapper .get-quote-cards.block .multiCardsContainer .cardsContainer.active {
+  background-color: #ffdcd7;
+}
 @media screen and (max-width: 1080px) {
   .section.get-quote-cards-container .get-quote-cards-wrapper .get-quote-cards.block .multiCardsContainer {
     -moz-column-gap: 12px;
@@ -156,6 +160,13 @@
   justify-content: center;
   padding-bottom: 32px;
   flex-wrap: wrap;
+}
+.section.get-quote-cards-container .default-content-wrapper p {
+  position: absolute;
+  top: 130px;
+  right: 411px;
+  cursor: pointer;
+  display: none;
 }
 .section.get-quote-cards-container .default-content-wrapper ul {
   padding: 20px 5px 0;
