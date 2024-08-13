@@ -99,9 +99,12 @@
 .section.get-quote-cards-container .get-quote-cards-wrapper .get-quote-cards.block .multiCardsContainer .cardsContainer .image {
   margin-bottom: 4px;
 }
-.section.get-quote-cards-container .get-quote-cards-wrapper .get-quote-cards.block .multiCardsContainer .cardsContainer .image picture {
+.section.get-quote-cards-container .get-quote-cards-wrapper .get-quote-cards.block .multiCardsContainer .cardsContainer .image span {
   display: flex;
   justify-content: center;
+}
+.section.get-quote-cards-container .get-quote-cards-wrapper .get-quote-cards.block .multiCardsContainer .cardsContainer .image span img {
+  width: 40px;
 }
 @media screen and (max-width: 1080px) {
   .section.get-quote-cards-container .get-quote-cards-wrapper .get-quote-cards.block .multiCardsContainer .cardsContainer {
@@ -164,9 +167,18 @@
 .section.get-quote-cards-container .default-content-wrapper p {
   position: absolute;
   top: 130px;
-  right: 411px;
+  right: 420px;
   cursor: pointer;
   display: none;
+}
+.section.get-quote-cards-container .default-content-wrapper p span img {
+  width: 14px;
+}
+@media screen and (max-width: 768px) {
+  .section.get-quote-cards-container .default-content-wrapper p {
+    top: 65px;
+    right: 33px;
+  }
 }
 .section.get-quote-cards-container .default-content-wrapper ul {
   padding: 20px 5px 0;
