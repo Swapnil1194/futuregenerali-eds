@@ -1,0 +1,98 @@
+.section.more-product-container.moreproduct-container .dialog {
+  position: relative;
+  width: 100%;
+  pointer-events: auto;
+  outline: 0;
+  padding: 16px 40px 24px;
+  box-shadow: 0 0 32px 0 rgba(151, 151, 151, 0.1019607843);
+  border-radius: 5px;
+  border: 1px solid #ebebeb;
+  margin: auto;
+  max-width: 1045px;
+  width: 100%;
+}
+@media screen and (max-width: 786px) {
+  .section.more-product-container.moreproduct-container .dialog {
+    width: 90%;
+    padding: 40px 16px 24px;
+    overflow-y: auto;
+  }
+}
+.section.more-product-container.moreproduct-container .dialog .close-button .icon-close::before, .section.more-product-container.moreproduct-container .dialog .close-button .icon-close::after {
+  height: 1px;
+  width: 20px;
+}
+.section.more-product-container.moreproduct-container .dialog .default-content-wrapper {
+  border-bottom: 1px dashed #ebebeb;
+  padding-bottom: 18px;
+  font-family: "robotomedium";
+  font-size: 16px;
+  padding-left: unset;
+  padding-right: unset;
+}
+.section.more-product-container.moreproduct-container .dialog .moreproduct-wrapper {
+  padding-left: unset;
+  padding-right: unset;
+}
+.section.more-product-container.moreproduct-container .dialog .moreproduct-wrapper .moreproduct.block {
+  display: flex;
+  flex-wrap: wrap;
+}
+@media screen and (max-width: 768px) {
+  .section.more-product-container.moreproduct-container .dialog .moreproduct-wrapper .moreproduct.block {
+    flex-direction: column;
+  }
+}
+.section.more-product-container.moreproduct-container .dialog .moreproduct-wrapper .moreproduct.block .more-product-inner {
+  width: 25%;
+  padding: 20px 24px 14px 26px;
+}
+@media screen and (max-width: 768px) {
+  .section.more-product-container.moreproduct-container .dialog .moreproduct-wrapper .moreproduct.block .more-product-inner {
+    padding: 0px 0px 20px 0px;
+    width: 100%;
+  }
+}
+.section.more-product-container.moreproduct-container .dialog .moreproduct-wrapper .moreproduct.block .more-product-inner:first-child {
+  padding-left: 0;
+}
+.section.more-product-container.moreproduct-container .dialog .moreproduct-wrapper .moreproduct.block .more-product-inner:nth-child(even) {
+  background-color: #f6f6f6;
+}
+.section.more-product-container.moreproduct-container .dialog .moreproduct-wrapper .moreproduct.block .more-product-inner .more-product-list .list-heads {
+  color: #c21b17;
+  font-family: "robotobold";
+  text-transform: capitalize;
+  margin-bottom: 16px;
+  font-size: 16px;
+  line-height: 24px;
+}
+.section.more-product-container.moreproduct-container .dialog .moreproduct-wrapper .moreproduct.block .more-product-inner .more-product-list .insurance-details-list li {
+  padding-top: 16px;
+  position: relative;
+}
+.section.more-product-container.moreproduct-container .dialog .moreproduct-wrapper .moreproduct.block .more-product-inner .more-product-list .insurance-details-list li:first-child {
+  padding-top: unset;
+}
+.section.more-product-container.moreproduct-container .dialog .moreproduct-wrapper .moreproduct.block .more-product-inner .more-product-list .insurance-details-list li a {
+  display: block;
+  font-size: 14px;
+  line-height: 16px;
+  position: relative;
+  padding-right: 15px;
+  color: #4f4f4f;
+  position: relative;
+  font-family: robotoregular, sans-serif;
+  outline: 0;
+  border: 0;
+  background: 0;
+}
+.section.more-product-container.moreproduct-container .dialog .moreproduct-wrapper .moreproduct.block .more-product-inner .more-product-list .insurance-details-list li a::after {
+  content: "";
+  background-image: url("../../icons/setIcon.svg");
+  height: 10px;
+  width: 10px;
+  position: absolute;
+  right: 0;
+  top: 2px;
+}/*# sourceMappingURL=moreproduct.css.map */

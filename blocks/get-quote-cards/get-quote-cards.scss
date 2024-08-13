@@ -100,13 +100,13 @@
                         }
                         .image{
                             margin-bottom: 4px;
-                            picture{
+                            span{
                                 display: flex;
                                 justify-content: center;
-        
                                 img{
-                                    
+                                    width: 40px;
                                 }
+                            
                             }
             
                         }
@@ -175,9 +175,19 @@
             p{
                 position: absolute;
                 top: 130px;
-                right: 411px;
+                right: 420px;
                 cursor: pointer;
                 display: none;
+                span{
+                    img{
+                        width: 14px;
+                    }
+                }
+
+                @media screen  and (max-width:768px){
+                    top: 65px;
+                    right: 33px;
+                }
             }
             ul{
                 // display: flex;

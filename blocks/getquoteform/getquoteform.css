@@ -18,6 +18,8 @@
   padding-top: 18px;
   padding-bottom: 8px;
   align-items: center;
+  padding-bottom: 20px;
+  max-width: 675px;
 }
 @media screen and (max-width: 1080px) {
   .getquoteform-container .getquoteform-wrapper .getquoteform.block form {
