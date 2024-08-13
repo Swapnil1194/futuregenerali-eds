@@ -108,11 +108,12 @@
                                 position: absolute;
                                 bottom: 22%;
                                 max-width: 220px;
-                                padding: 15px 20px;
+                                // padding: 15px 20px;
                                 width: 100%;
                                 text-align: center;
 
                                 p {
+                                    max-width: max-content;
                                     a {
                                         font-family: Roboto-Bold;
                                         font-weight: 800;
@@ -149,9 +150,8 @@
     .hero-banner {
         .glider-wrapper {
             >div {
-                // height: 84vh;
-                min-height: 570px;
-                // height: 100%;
+                height: auto;
+                padding-bottom: 40px;
                 .glider-dots {
                     justify-content: center;
                     left: unset;
@@ -201,7 +201,9 @@
                                     position: unset;
 
                                     p {
+                                        max-width: unset;
                                         a {
+                                            width: 100%;
                                             font-size: 14px;
                                             line-height: 16.41px;
                                         }

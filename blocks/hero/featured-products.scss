@@ -77,9 +77,8 @@
             }
 
             p:last-child {
-                background-color: transparent;
-
                 a {
+                    background-color: transparent;
                     color: var(--primary-white);
                 }
             }
@@ -197,13 +196,14 @@
             }
 
             .button-container:first-child {
-                max-width: 296PX;
-                width: 100%;
-                padding: 16px 0;
+                // padding: 16px 0;
                 border-radius: 5px;
+                width: 100%;
                 text-align: center;
 
                 a {
+                    max-width: 296px;
+                    width: 100%;
                     font-family: "robotobold";
                     font-size: 14px;
                     font-weight: 800;
@@ -212,11 +212,11 @@
             }
 
             .button-container:last-child {
-                background-color: transparent;
                 text-align: center;
                 padding: 24px 0;
 
                 a {
+                    background-color: transparent;
                     font-family: "robotobold";
                     font-size: 14px;
                     font-weight: 800;

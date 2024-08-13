@@ -103,9 +103,12 @@
   position: absolute;
   bottom: 22%;
   max-width: 220px;
-  padding: 15px 20px;
   width: 100%;
   text-align: center;
+}
+.hero-banner .glider-wrapper > div > div:first-child .glider-track .glider-slide [data-column-wrapper=column-wrapper] [data-column-index=column-3] p {
+  max-width: -moz-max-content;
+  max-width: max-content;
 }
 .hero-banner .glider-wrapper > div > div:first-child .glider-track .glider-slide [data-column-wrapper=column-wrapper] [data-column-index=column-3] p a {
   font-family: Roboto-Bold;
@@ -128,7 +131,8 @@
 }
 @media screen and (max-width: 767.99px) {
   .hero-banner .glider-wrapper > div {
-    min-height: 570px;
+    height: auto;
+    padding-bottom: 40px;
   }
   .hero-banner .glider-wrapper > div .glider-dots {
     justify-content: center;
@@ -169,7 +173,11 @@
     padding: 12px 0;
     position: unset;
   }
+  .hero-banner .glider-wrapper > div > div:first-child .glider-track .glider-slide [data-column-wrapper=column-wrapper] [data-column-index=column-3] p {
+    max-width: unset;
+  }
   .hero-banner .glider-wrapper > div > div:first-child .glider-track .glider-slide [data-column-wrapper=column-wrapper] [data-column-index=column-3] p a {
+    width: 100%;
     font-size: 14px;
     line-height: 16.41px;
   }

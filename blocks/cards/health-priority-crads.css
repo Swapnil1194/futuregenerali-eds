@@ -72,16 +72,16 @@
     color: var(--brand-primary);
 }
 
-.section.health-priority-card .default-content-wrapper .button-container {
+.section.health-priority-card .default-content-wrapper .button-container a{
     width: 100%;
-    max-width: 220px;
+    max-width: max-content;
     height: 40px;
-    margin: 10px;
+    /* margin: 10px; */
     border-radius: 5px;
-    background: var(--brand-primary);
+    /* background: var(--brand-primary); */
     border: none;
     cursor: no-drop;
-    padding: 12px 0;
+    /* padding: 12px 0; */
     pointer-events: none;
     opacity: 0.5;
     text-align: center;

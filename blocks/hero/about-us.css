@@ -34,7 +34,8 @@
   color: var(--dim-gray);
 }
 .hero.about-us > div > div:nth-of-type(2) .button-container {
-  max-width: 190px;
+  max-width: -moz-max-content;
+  max-width: max-content;
   width: 100%;
   margin-top: 32px;
   border-radius: 5px;

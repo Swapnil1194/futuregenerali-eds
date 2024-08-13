@@ -71,45 +71,41 @@ body {
 }
 
 
-.section.red-btn .button-container,
-.section.red-tertiary-btn .button-container,
-.section.white-btn .button-container,
-.section.white-tertiary-btn .button-container {
+.section.red-btn .button-container a,
+.section.red-tertiary-btn .button-container a,
+.section.white-btn .button-container a,
+.section.white-tertiary-btn .button-container a {
   padding: 12px 38px;
   border-radius: 5px;
 }
 
 
 .section.red-btn .button-container {
-  background: var(--brand-primary);
-
   a {
+    background: var(--brand-primary);
     color: var(--primary-white);
   }
 }
 
 .section.red-tertiary-btn .button-container {
-  background: transparent;
-  border: 1px solid var(--brand-primary);
-
   a {
+    background: transparent;
+    border: 1px solid var(--brand-primary);
     color: var(--brand-primary);
   }
 }
 
 .section.white-btn .button-container {
-  background: var(--primary-white);
-
   a {
+    background: var(--primary-white);
     color: var(--brand-primary);
   }
 }
 
 .section.white-tertiary-btn .button-container {
-  background: transparent;
-  border: 1px solid var(--primary-white);
-
   a {
+    background: transparent;
+    border: 1px solid var(--primary-white);
     color: var(--primary-white);
   }
 }
@@ -219,11 +215,11 @@ a {
   display: none;
 }
 
-.dp-none{
-display: none !important;
+.dp-none {
+  display: none !important;
 }
 
-.dp-flex{
+.dp-flex {
   display: flex !important;
 }
 
