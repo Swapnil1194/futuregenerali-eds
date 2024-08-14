@@ -23,6 +23,9 @@ export default function decorate(block) {
     details.className = "accordion-item";
     if (isDesktop()) {
       details.setAttribute("open", "");
+      details.addEventListener("click", (e) =>{
+        e.preventDefault();
+      })
     } else {
       details.removeAttribute("open");
     }

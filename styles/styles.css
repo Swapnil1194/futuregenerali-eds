@@ -24,7 +24,8 @@ body{
   --primary-black: black;
   --light-blue: #f3f9ff;
   --dim-gray: #6f7072;
-  --silver: #ccc
+  --silver: #ccc;
+  --wild-sand: #f6f6f6;
     /* fonts */
 
     /*   --body-font-family: roboto, roboto-fallback;
@@ -180,6 +181,10 @@ a {
   background: linear-gradient(270deg, #6f7072 -45.21%, #20252b 100%);
 }
 
+.wild-sand-gradient {
+  background-color: var(--wild-sand);
+}
+
 /* Common CSS End  */
 
 /* Glider Common Start */
@@ -306,7 +311,7 @@ a {
     left: 0;
     right: 0;
     /* transform: translateX(-100%); */
-    background-color: #fff;
+    background-color: var(--primary-white);
     transition: all .3s linear;
     height: calc(100vh - 100px);
     overflow-y: auto
@@ -336,7 +341,7 @@ a {
 
   .mob-nav-wrapper .mob-nav-bottom {
     padding: 20px 16px;
-    background-color: #f6f6f6
+    background-color: var(--wild-sand)
   }
 
   .mob-nav-wrapper .bottom-nav-item {
@@ -407,7 +412,7 @@ a {
   z-index: 10;
   border-radius: 50%;
   box-shadow: 0 0 25px 0 #00000040;
-  background-color: #fff;
+  background-color: var(--primary-white);
   display: flex;
   align-items: center;
   justify-content: center;
@@ -417,7 +422,7 @@ a {
 }
 
 .scroll-top .scroll-btn {
-  color: #c21b17;
+  color: var(--brand-primary);
   font-size: 16px;
   line-height: 16px;
   width: 100%;
