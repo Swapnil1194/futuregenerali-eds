@@ -1,0 +1,191 @@
+@import url('../../common/carousel/glider.min.css');
+
+/* Start  Banner */
+/* 
+.glider-slide {
+    min-width: 100%;
+}
+
+.glider-track{
+    width: unset !important;
+}
+
+
+.banner-wrapper {
+    position: relative;
+    background: #C21B17;
+    width: 100% !important;
+    height: 423px !important;
+
+    .banner {
+        &__content {
+            position: absolute;
+            z-index: 1;
+            top: 16%;
+        }
+
+        &__nudge {
+            display: inline-block;
+            width: max-content;
+            padding: 5px 10px 5px 10px;
+            border-radius: 5px;
+            background: #FFFFFF;
+            font-family: Roboto-Bold;
+            font-size: 13px;
+            font-weight: 700;
+            line-height: 15.23px;
+            letter-spacing: -0.02em;
+            color: #C21B17;
+            margin-bottom: 11px;
+        }
+
+        &__title {
+            font-family: Roboto-Light;
+            font-size: 45px;
+            font-weight: 300;
+            line-height: 60px;
+            letter-spacing: -0.02em;
+            color: #FFFF;
+        }
+
+        &__img {
+            position: absolute;
+            right: 0;
+            bottom: 0;
+            height: 100%;
+            width: 100%;
+            // z-index: -1;
+
+            img {
+                // max-width: 1440px;
+                height: 425px;
+                position: absolute;
+                right: 0;
+            }
+        }
+
+        &__button {
+            display: inline-block;
+            padding: 15px 20px;
+            max-width: 220px;
+            width: 100%;
+            background: transparent;
+            cursor: pointer;
+            border-radius: 5px;
+            border: 1px solid #FFFF;
+            text-align: center;
+            margin-top: 10px;
+            font-family: Roboto-Bold;
+            font-weight: 800;
+            font-size: 16px;
+            line-height: 18.75px;
+            color: #FFFF;
+            text-transform: uppercase;
+        }
+    }
+}
+
+@media screen and (max-width: 767.99px) {
+    .banner-wrapper {
+        padding-top: 32px;
+        padding-bottom: 90px;
+        height: unset;
+
+        .banner {
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+
+            &__content {
+                position: unset;
+            }
+
+            &__nudge {
+                display: inline-block;
+                width: max-content;
+                padding: 5px 10px 5px 10px;
+                border-radius: 5px;
+                background: #FFFFFF;
+                font-family: Roboto-Bold;
+                font-size: 13px;
+                font-weight: 700;
+                line-height: 15.23px;
+                letter-spacing: -0.02em;
+                color: #C21B17;
+                margin-bottom: 11px;
+            }
+
+            &__title {
+                font-family: Roboto-Light;
+                font-size: 45px;
+                font-weight: 300;
+                line-height: 60px;
+                letter-spacing: -0.02em;
+                color: #FFFF;
+            }
+
+            &__img-m {
+                position: unset;
+                height: 100%;
+                width: 100%;
+                display: flex;
+                justify-content: end;
+                flex-direction: column;
+                align-items: end;
+
+                img {
+                    height: unset;
+                    position: unset;
+                    width: 355px;
+                    height: 252px;
+                    margin-left: 20px;
+                }
+            }
+
+            &__button {
+                max-width: unset;
+            }
+        }
+    }
+}
+
+.section.hero-banner>div {
+    width: 100%;
+    padding: unset;
+    margin: unset;
+}
+
+@media (min-width:576px) {
+    .section.hero-banner>div {
+        max-width: unset;
+    }
+}
+
+@media (min-width:768px) {
+
+    .section.hero-banner>div {
+        max-width: unset;
+    }
+}
+
+@media (min-width:992px) {
+
+    .section.hero-banner>div {
+        max-width: unset;
+    }
+}
+
+@media (min-width:1200px) {
+    .section.hero-banner>div {
+        max-width: unset;
+    }
+}
+
+@media (min-width:1400px) {
+    .section.hero-banner>div {
+        max-width: unset;
+    }
+}
+ */
+/*End  Banner */

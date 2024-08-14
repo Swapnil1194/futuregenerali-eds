@@ -1,0 +1,157 @@
+.glider.insure-app {
+    padding: 60px 0;
+
+    [data-glider-container="glider-container"] {
+        >div {
+
+            [data-row-index="row-0"],
+            [data-row-index="row-1"] {
+                [data-column-wrapper="column-wrapper"] {
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    column-gap: 53px;
+
+                    [data-column-index="column-0"] {
+                        width: 36.5%;
+
+                        img {
+                            max-width: 294px;
+                            height: 330px;
+                        }
+
+                    }
+
+                    [data-column-index="column-1"] {
+                        width: 41.9%;
+
+                        h2 {
+                            font-size: 48px;
+                            line-height: 60px;
+                            color: var(--primary-white);
+                            font-family: "robotolight";
+                        }
+
+                        ul:not(:last-child) {
+                            margin-left: 18px;
+                            margin-bottom: 20px;
+                            margin-top: 12px;
+
+                            li {
+                                list-style: disc;
+                            }
+                        }
+
+                        >p,
+                        ul li {
+                            font-size: 20px;
+                            font-weight: 300;
+                            line-height: 28px;
+                            font-family: "robotolight";
+                            color: var(--primary-white);
+                        }
+
+                        >ul:last-child {
+                            display: flex;
+                            column-gap: 19px;
+
+                            li span {
+                                display: block;
+                            }
+                        }
+
+                        >p:last-child a {
+                            text-transform: uppercase;
+                            font-size: 14px;
+                            font-family: robotoregular, sans-serif;
+                            font-weight: 800;
+                            text-align: center;
+                        }
+
+                    }
+                }
+            }
+
+            [data-row-index="row-1"] {
+                [data-column-wrapper="column-wrapper"] {
+                    [data-column-index="column-1"] {
+                        >p:not(:last-child) {
+                            margin-bottom: 16px;
+                        }
+
+                        >p:last-child {
+                            max-width: 170px;
+                            width: 100%;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    .glider-dots {
+        margin-top: 20px;
+    }
+}
+
+
+
+@media screen and (max-width: 767.99px) {
+    .glider.insure-app {
+        padding: 40px 0;
+
+        [data-glider-container="glider-container"] {
+            >div {
+
+                [data-row-index="row-0"],
+                [data-row-index="row-1"] {
+                    [data-column-wrapper="column-wrapper"] {
+                        display: flex;
+                        flex-direction: column;
+
+                        [data-column-index="column-0"] {
+                            width: 100%;
+
+                            img {
+                                max-width: 294px;
+                                height: 330px;
+                            }
+
+                        }
+
+                        [data-column-index="column-1"] {
+                            width: 100%;
+
+                            h2 {
+                                font-size: 28px;
+                                line-height: 36px;
+                            }
+
+                            >p,
+                            ul li {
+                                font-size: 14px;
+                                line-height: 20px;
+                            }
+                        }
+                    }
+                }
+
+                [data-row-index="row-1"] {
+                    [data-column-wrapper="column-wrapper"] {
+                        [data-column-index="column-1"] {
+                            >p:not(:last-child) {
+                                margin-bottom: 16px;
+                            }
+
+                            >p:last-child {
+                                max-width: 170px;
+                                width: 100%;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+
+    }
+}

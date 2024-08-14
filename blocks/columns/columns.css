@@ -1,10 +1,8 @@
+@import url("./footer/footer.css");
+
 .columns > div {
   display: flex;
   flex-direction: column;
-}
-
-.columns img {
-  width: 100%;
 }
 
 .columns > div > div {
@@ -13,10 +11,6 @@
 
 .columns > div > .columns-img-col {
   order: 0;
-}
-
-.columns > div > .columns-img-col img {
-  display: block;
 }
 
 @media (width >= 900px) {

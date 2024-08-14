@@ -1,0 +1,230 @@
+.hero.featured-product {
+    background: linear-gradient(90deg, #AE1D32 0%, #C2271E 100%);
+    border-radius: 5px;
+
+    >div:first-child {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        >div {
+            width: 40.2%;
+
+            >p:first-child {
+                max-width: 122px;
+                width: 100%;
+                padding: 5px 0;
+                border-radius: 5px;
+                background: #FFFFFF;
+                font-family: "robotobold";
+                font-size: 13px;
+                font-weight: 700;
+                line-height: 15.23px;
+                letter-spacing: -0.02em;
+                text-align: center;
+                color: #C21B17;
+            }
+
+            p:nth-of-type(2) {
+                font-family: "robotolight";
+                font-size: 48px;
+                font-weight: 300;
+                line-height: 60px;
+                text-align: left;
+                color: #ffffff;
+                padding-bottom: 20px;
+                margin-top: 25px;
+            }
+
+            p:nth-of-type(3) {
+                font-family: "robotolight";
+                font-size: 20px;
+                font-weight: 300;
+                line-height: 23.44px;
+                text-align: left;
+                color: #FFFFFF;
+                padding-bottom: 0;
+                margin: unset;
+                margin-bottom: 38px;
+            }
+
+            >p:nth-of-type(4) {
+                display: inline-block;
+
+                >a {
+                    font-family: "robotobold";
+                    font-size: 14px;
+                    font-weight: 800;
+                    line-height: 16.41px;
+                    text-align: center;
+                    color: #c21b17;
+                    text-decoration: none;
+                }
+            }
+
+
+            >p:nth-of-type(5) {
+                display: inline-block;
+
+                >a {
+                    font-family: "robotobold";
+                    font-size: 14px;
+                    font-weight: 800;
+                    line-height: 16.41px;
+                    text-align: center;
+                    text-decoration: none;
+                }
+            }
+
+            p:last-child {
+                background-color: transparent;
+
+                a {
+                    color: var(--primary-white);
+                }
+            }
+        }
+
+        >div:nth-of-type(2) {
+            display: flex;
+            margin-bottom: 4px;
+            justify-content: end;
+
+            picture img {
+                height: 419px;
+                margin-bottom: -6px;
+            }
+        }
+    }
+}
+
+
+.section.featured-product-container {
+    padding: 60px 0;
+
+    >div:first-child {
+        padding-bottom: 40px;
+
+        >p {
+            font-family: "robotolight";
+            font-size: 48px;
+            font-weight: 300;
+            line-height: 60px;
+            text-align: center;
+            margin-bottom: 0;
+            color: var(--primary-black);
+
+            strong {
+                color: var(--brand-primary);
+            }
+        }
+    }
+
+    >div:nth-of-type(2)>div {
+        >div:last-child {
+            display: none;
+        }
+    }
+}
+
+
+@media screen and (max-width: 767.99px) {
+    .hero.featured-product {
+        >div:first-child {
+            flex-direction: column;
+
+            >div {
+                width: 100%;
+                text-align: center;
+                margin-top: 50px;
+                padding: 0 10px;
+
+                p:nth-of-type(2) {
+                    font-size: 28px;
+                    font-weight: 300;
+                    line-height: 36px;
+                    text-align: left;
+                    max-width: 296px;
+                    width: 100%;
+                }
+
+                p:nth-of-type(3) {
+                    font-size: 16px;
+                    font-weight: 300;
+                    line-height: 18.75px;
+                }
+
+                p:nth-of-type(4),
+                p:nth-of-type(5) {
+                    display: none;
+                }
+            }
+
+            >div:nth-of-type(2) {
+                justify-content: center;
+                margin: unset;
+
+                picture img {
+                    width: 241px;
+                    margin-bottom: -3;
+                    height: 238px;
+                }
+            }
+        }
+    }
+
+    .section.featured-product-container {
+        >div:first-child {
+            padding-bottom: 24px;
+            padding-top: 33px;
+
+            >p {
+                font-size: 28px;
+                line-height: 36px;
+            }
+        }
+
+        >div:nth-of-type(2)>div {
+            >div:last-child {
+                display: block;
+
+                >div {
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: center;
+                    align-items: center;
+                }
+            }
+
+            .button-container:first-child {
+                max-width: 296PX;
+                width: 100%;
+                padding: 16px 0;
+                border-radius: 5px;
+                text-align: center;
+
+                a {
+                    font-family: "robotobold";
+                    font-size: 14px;
+                    font-weight: 800;
+                    line-height: 16.41px;
+                }
+            }
+
+            .button-container:last-child {
+                background-color: transparent;
+                text-align: center;
+                padding: 24px 0;
+
+                a {
+                    font-family: "robotobold";
+                    font-size: 14px;
+                    font-weight: 800;
+                    line-height: 16.41px;
+                    text-align: center;
+                    color: var(--primary-white);
+                }
+            }
+        }
+    }
+}

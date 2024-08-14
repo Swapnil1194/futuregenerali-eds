@@ -1,0 +1,106 @@
+.section.about-us-container {
+  padding: 60px;
+}
+.section.about-us-container > div:first-child {
+  display: none;
+}
+
+.hero.about-us > div {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  -moz-column-gap: 40px;
+       column-gap: 40px;
+}
+.hero.about-us > div > div:nth-of-type(2) {
+  width: 36.2%;
+}
+.hero.about-us > div > div:nth-of-type(2) h2 {
+  font-family: "robotolight";
+  font-size: 48px;
+  font-weight: 300;
+  line-height: 60px;
+}
+.hero.about-us > div > div:nth-of-type(2) h2 strong {
+  color: var(--brand-primary);
+}
+.hero.about-us > div > div:nth-of-type(2) > p {
+  margin-top: 20px;
+  font-family: "robotolight";
+  font-size: 20px;
+  font-weight: 300;
+  line-height: 23.44px;
+  text-align: left;
+  color: var(--dim-gray);
+}
+.hero.about-us > div > div:nth-of-type(2) .button-container {
+  max-width: 190px;
+  width: 100%;
+  margin-top: 32px;
+  border-radius: 5px;
+  text-align: center;
+  border: none;
+}
+.hero.about-us > div > div:nth-of-type(2) .button-container > a {
+  font-family: "robotobold";
+  font-size: 14px;
+  font-weight: 800;
+  text-align: center;
+}
+
+@media screen and (max-width: 767.99px) {
+  .section.about-us-container {
+    padding: 40px 0;
+  }
+  .section.about-us-container > div:first-child {
+    display: block;
+  }
+  .section.about-us-container > div:first-child > h2 {
+    font-family: "robotolight";
+    font-size: 28px;
+    font-weight: 300;
+    line-height: 36px;
+    letter-spacing: -0.02em;
+    text-align: center;
+    padding-bottom: 24px;
+  }
+  .section.about-us-container > div:first-child > h2 strong {
+    color: var(--brand-primary);
+  }
+  .hero.about-us > div {
+    flex-direction: column;
+  }
+  .hero.about-us > div > div:first-child img {
+    width: 238px;
+    height: 238px;
+    margin: 0 auto;
+  }
+  .hero.about-us > div > div:nth-of-type(2) {
+    width: unset;
+  }
+  .hero.about-us > div > div:nth-of-type(2) h2 {
+    display: none;
+  }
+  .hero.about-us > div > div:nth-of-type(2) > p:nth-of-type(1) {
+    font-family: "robotoregular";
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 20.8px;
+    text-align: center;
+    padding-bottom: 20px;
+  }
+  .hero.about-us > div > div:nth-of-type(2) .button-container {
+    max-width: 190px;
+    width: 100%;
+    border-radius: 5px;
+    text-align: center;
+    margin: 0 auto;
+  }
+  .hero.about-us > div > div:nth-of-type(2) .button-container a {
+    font-family: "robotobold";
+    font-size: 14px;
+    font-weight: 800;
+    line-height: 16.41px;
+    text-align: center;
+  }
+}/*# sourceMappingURL=about-us.css.map */

@@ -1,0 +1,122 @@
+.glider.insure-app {
+  padding: 60px 0;
+}
+.glider.insure-app [data-glider-container=glider-container] > div [data-row-index=row-0] [data-column-wrapper=column-wrapper],
+.glider.insure-app [data-glider-container=glider-container] > div [data-row-index=row-1] [data-column-wrapper=column-wrapper] {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  -moz-column-gap: 53px;
+       column-gap: 53px;
+}
+.glider.insure-app [data-glider-container=glider-container] > div [data-row-index=row-0] [data-column-wrapper=column-wrapper] [data-column-index=column-0],
+.glider.insure-app [data-glider-container=glider-container] > div [data-row-index=row-1] [data-column-wrapper=column-wrapper] [data-column-index=column-0] {
+  width: 36.5%;
+}
+.glider.insure-app [data-glider-container=glider-container] > div [data-row-index=row-0] [data-column-wrapper=column-wrapper] [data-column-index=column-0] img,
+.glider.insure-app [data-glider-container=glider-container] > div [data-row-index=row-1] [data-column-wrapper=column-wrapper] [data-column-index=column-0] img {
+  max-width: 294px;
+  height: 330px;
+}
+.glider.insure-app [data-glider-container=glider-container] > div [data-row-index=row-0] [data-column-wrapper=column-wrapper] [data-column-index=column-1],
+.glider.insure-app [data-glider-container=glider-container] > div [data-row-index=row-1] [data-column-wrapper=column-wrapper] [data-column-index=column-1] {
+  width: 41.9%;
+}
+.glider.insure-app [data-glider-container=glider-container] > div [data-row-index=row-0] [data-column-wrapper=column-wrapper] [data-column-index=column-1] h2,
+.glider.insure-app [data-glider-container=glider-container] > div [data-row-index=row-1] [data-column-wrapper=column-wrapper] [data-column-index=column-1] h2 {
+  font-size: 48px;
+  line-height: 60px;
+  color: var(--primary-white);
+  font-family: "robotolight";
+}
+.glider.insure-app [data-glider-container=glider-container] > div [data-row-index=row-0] [data-column-wrapper=column-wrapper] [data-column-index=column-1] ul:not(:last-child),
+.glider.insure-app [data-glider-container=glider-container] > div [data-row-index=row-1] [data-column-wrapper=column-wrapper] [data-column-index=column-1] ul:not(:last-child) {
+  margin-left: 18px;
+  margin-bottom: 20px;
+  margin-top: 12px;
+}
+.glider.insure-app [data-glider-container=glider-container] > div [data-row-index=row-0] [data-column-wrapper=column-wrapper] [data-column-index=column-1] ul:not(:last-child) li,
+.glider.insure-app [data-glider-container=glider-container] > div [data-row-index=row-1] [data-column-wrapper=column-wrapper] [data-column-index=column-1] ul:not(:last-child) li {
+  list-style: disc;
+}
+.glider.insure-app [data-glider-container=glider-container] > div [data-row-index=row-0] [data-column-wrapper=column-wrapper] [data-column-index=column-1] > p,
+.glider.insure-app [data-glider-container=glider-container] > div [data-row-index=row-0] [data-column-wrapper=column-wrapper] [data-column-index=column-1] ul li,
+.glider.insure-app [data-glider-container=glider-container] > div [data-row-index=row-1] [data-column-wrapper=column-wrapper] [data-column-index=column-1] > p,
+.glider.insure-app [data-glider-container=glider-container] > div [data-row-index=row-1] [data-column-wrapper=column-wrapper] [data-column-index=column-1] ul li {
+  font-size: 20px;
+  font-weight: 300;
+  line-height: 28px;
+  font-family: "robotolight";
+  color: var(--primary-white);
+}
+.glider.insure-app [data-glider-container=glider-container] > div [data-row-index=row-0] [data-column-wrapper=column-wrapper] [data-column-index=column-1] > ul:last-child,
+.glider.insure-app [data-glider-container=glider-container] > div [data-row-index=row-1] [data-column-wrapper=column-wrapper] [data-column-index=column-1] > ul:last-child {
+  display: flex;
+  -moz-column-gap: 19px;
+       column-gap: 19px;
+}
+.glider.insure-app [data-glider-container=glider-container] > div [data-row-index=row-0] [data-column-wrapper=column-wrapper] [data-column-index=column-1] > ul:last-child li span,
+.glider.insure-app [data-glider-container=glider-container] > div [data-row-index=row-1] [data-column-wrapper=column-wrapper] [data-column-index=column-1] > ul:last-child li span {
+  display: block;
+}
+.glider.insure-app [data-glider-container=glider-container] > div [data-row-index=row-0] [data-column-wrapper=column-wrapper] [data-column-index=column-1] > p:last-child a,
+.glider.insure-app [data-glider-container=glider-container] > div [data-row-index=row-1] [data-column-wrapper=column-wrapper] [data-column-index=column-1] > p:last-child a {
+  text-transform: uppercase;
+  font-size: 14px;
+  font-family: robotoregular, sans-serif;
+  font-weight: 800;
+  text-align: center;
+}
+.glider.insure-app [data-glider-container=glider-container] > div [data-row-index=row-1] [data-column-wrapper=column-wrapper] [data-column-index=column-1] > p:not(:last-child) {
+  margin-bottom: 16px;
+}
+.glider.insure-app [data-glider-container=glider-container] > div [data-row-index=row-1] [data-column-wrapper=column-wrapper] [data-column-index=column-1] > p:last-child {
+  max-width: 170px;
+  width: 100%;
+}
+.glider.insure-app .glider-dots {
+  margin-top: 20px;
+}
+
+@media screen and (max-width: 767.99px) {
+  .glider.insure-app {
+    padding: 40px 0;
+  }
+  .glider.insure-app [data-glider-container=glider-container] > div [data-row-index=row-0] [data-column-wrapper=column-wrapper],
+  .glider.insure-app [data-glider-container=glider-container] > div [data-row-index=row-1] [data-column-wrapper=column-wrapper] {
+    display: flex;
+    flex-direction: column;
+  }
+  .glider.insure-app [data-glider-container=glider-container] > div [data-row-index=row-0] [data-column-wrapper=column-wrapper] [data-column-index=column-0],
+  .glider.insure-app [data-glider-container=glider-container] > div [data-row-index=row-1] [data-column-wrapper=column-wrapper] [data-column-index=column-0] {
+    width: 100%;
+  }
+  .glider.insure-app [data-glider-container=glider-container] > div [data-row-index=row-0] [data-column-wrapper=column-wrapper] [data-column-index=column-0] img,
+  .glider.insure-app [data-glider-container=glider-container] > div [data-row-index=row-1] [data-column-wrapper=column-wrapper] [data-column-index=column-0] img {
+    max-width: 294px;
+    height: 330px;
+  }
+  .glider.insure-app [data-glider-container=glider-container] > div [data-row-index=row-0] [data-column-wrapper=column-wrapper] [data-column-index=column-1],
+  .glider.insure-app [data-glider-container=glider-container] > div [data-row-index=row-1] [data-column-wrapper=column-wrapper] [data-column-index=column-1] {
+    width: 100%;
+  }
+  .glider.insure-app [data-glider-container=glider-container] > div [data-row-index=row-0] [data-column-wrapper=column-wrapper] [data-column-index=column-1] h2,
+  .glider.insure-app [data-glider-container=glider-container] > div [data-row-index=row-1] [data-column-wrapper=column-wrapper] [data-column-index=column-1] h2 {
+    font-size: 28px;
+    line-height: 36px;
+  }
+  .glider.insure-app [data-glider-container=glider-container] > div [data-row-index=row-0] [data-column-wrapper=column-wrapper] [data-column-index=column-1] > p,
+  .glider.insure-app [data-glider-container=glider-container] > div [data-row-index=row-0] [data-column-wrapper=column-wrapper] [data-column-index=column-1] ul li,
+  .glider.insure-app [data-glider-container=glider-container] > div [data-row-index=row-1] [data-column-wrapper=column-wrapper] [data-column-index=column-1] > p,
+  .glider.insure-app [data-glider-container=glider-container] > div [data-row-index=row-1] [data-column-wrapper=column-wrapper] [data-column-index=column-1] ul li {
+    font-size: 14px;
+    line-height: 20px;
+  }
+  .glider.insure-app [data-glider-container=glider-container] > div [data-row-index=row-1] [data-column-wrapper=column-wrapper] [data-column-index=column-1] > p:not(:last-child) {
+    margin-bottom: 16px;
+  }
+  .glider.insure-app [data-glider-container=glider-container] > div [data-row-index=row-1] [data-column-wrapper=column-wrapper] [data-column-index=column-1] > p:last-child {
+    max-width: 170px;
+    width: 100%;
+  }
+}/*# sourceMappingURL=insure-app.css.map */

@@ -1,0 +1,77 @@
+.getquoteform-container{
+    .getquoteform-wrapper{
+        max-width: 50%;
+        background-color: #404040;
+        margin: auto;
+        border-radius: 0 0 40px 40px;
+        @media screen and (max-width:1080px ) {
+            max-width: 92%;
+            padding: 0px 20px 20px;
+        }
+        .getquoteform.block{
+            
+        
+            form{
+                display: flex;
+                justify-content: center;
+                column-gap: 20px;
+                padding-top: 18px;
+                padding-bottom: 8px;
+                align-items: center;
+                padding-bottom: 20px;
+                max-width: 675px;
+                @media screen and (max-width:1080px ) {
+                   flex-direction: column;
+                }
+                .field-wrapper{
+                    display: flex;
+                    display: none;
+                    flex-direction: column;
+                    max-width: 147.5px;
+                    row-gap: 10px;
+                    @media screen and (max-width:1080px ) {
+                        max-width: 100%;
+                        width: 100%;
+                     }
+
+                    label{
+                        color: #fff ;
+                        font-size: 14px;
+                         font-family: "robotoregular";
+                    }
+                    input[type='text'],input[type='number'],input[type='email']{
+                         font-family: "robotoregular";
+                        line-height: 23px;
+                        background: 0;
+                        border: 0;
+                        outline: 0;
+                        border-bottom: 1px solid #ccc;
+                        color: #fff ;
+                        font-family: "robotoregular";
+                        padding-bottom: 7px;
+                        width: 100%;
+                        border-radius: 0;
+                        margin-bottom: 20px;
+                        
+                    }
+                    button{
+                        padding: 12px 20px;
+                        min-width: 135px;
+                        background-color: #c21b17;
+                        color: #fff;
+                        border-radius: 5px;
+                        outline: 0;
+                        border: 0;
+                        text-transform: uppercase;
+                        font-size: 14px;
+                        line-height: 17px;
+                        font-family: "robotoregular";
+                        font-weight: 800;
+                        text-align: center;
+                    }
+                }
+            }
+        }   
+    }
+}
+

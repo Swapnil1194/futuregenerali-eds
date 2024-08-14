@@ -1,0 +1,218 @@
+.hero-banner {
+    .glider-wrapper {
+        >div {
+            position: relative;
+            background-color: var(--brand-primary);
+
+            .glider-dots {
+                justify-content: start;
+                position: absolute;
+                bottom: 20px;
+                left: 8%;
+                .active {
+                    background: var(--primary-white);
+                }
+            }
+
+            >div:first-child {
+                .glider-track {
+                    .glider-slide {
+                        position: relative;
+                        background: var(--brand-primary);
+                        height: 423px !important;
+                        width: 100% !important;
+
+                        [data-column-wrapper="column-wrapper"] {
+                            // position: relative;
+                            width: 100%;
+                            padding-right: 15px;
+                            padding-left: 15px;
+                            margin-right: auto;
+                            margin-left: auto;
+
+                            @media (min-width:576px) {
+                                max-width: 540px
+                            }
+
+                            @media (min-width:576px) {
+                                max-width: 540px
+                            }
+
+                            @media (min-width:768px) {
+                                max-width: 720px
+                            }
+
+                            @media (min-width:992px) {
+                                max-width: 960px
+                            }
+
+                            @media (min-width:1200px) {
+                                max-width: 1140px
+                            }
+
+                            @media (min-width:1400px) {
+                                max-width: 1320px
+                            }
+
+                            [data-column-index="column-0"] {
+                                width: 47.3%;
+                                position: absolute;
+                                z-index: 1;
+                                margin-bottom: 40px;
+                                top: 20%;
+
+                                >p:nth-of-type(1) {
+                                    display: inline-block;
+                                    width: max-content;
+                                    padding: 5px 10px 5px 10px;
+                                    border-radius: 5px;
+                                    background: var(--primary-white);
+                                    font-family: Roboto-Bold;
+                                    font-size: 13px;
+                                    font-weight: 700;
+                                    line-height: 15.23px;
+                                    letter-spacing: -0.02em;
+                                    color: var(--brand-primary);
+                                    margin-bottom: 11px;
+                                }
+
+                                >p:nth-of-type(2) {
+                                    font-family: Roboto-Light;
+                                    font-size: 45px;
+                                    font-weight: 300;
+                                    line-height: 60px;
+                                    letter-spacing: -0.02em;
+                                    color: var(--primary-white);
+                                }
+                            }
+
+                            [data-column-index="column-1"] {
+                                position: absolute;
+                                bottom: -2px;
+                                height: 100%;
+                                max-width: 1920px;
+                                width: 100%;
+                                margin: 0 auto;
+
+                                img {
+                                    width: 100%;
+                                    height: 100%;
+                                }
+                            }
+
+                            [data-column-index="column-2"] {
+                                display: none;
+                            }
+
+                            [data-column-index="column-3"] {
+                                position: absolute;
+                                bottom: 22%;
+                                max-width: 220px;
+                                padding: 15px 20px;
+                                width: 100%;
+                                text-align: center;
+
+                                p {
+                                    a {
+                                        font-family: Roboto-Bold;
+                                        font-weight: 800;
+                                        font-size: 16px;
+                                        line-height: 18.75px;
+                                        text-transform: uppercase;
+                                    }
+                                }
+
+
+                            }
+                        }
+                    }
+                }
+            }
+        }
+
+    }
+}
+
+.section.hero-banner>div {
+    width: 100%;
+    padding: unset;
+    margin: unset;
+}
+
+@media (min-width:576px) {
+    .section.hero-banner>div {
+        max-width: unset;
+    }
+}
+
+@media screen and (max-width: 767.99px) {
+    .hero-banner {
+        .glider-wrapper {
+            >div {
+                // height: 84vh;
+                min-height: 570px;
+                // height: 100%;
+                .glider-dots {
+                    justify-content: center;
+                    left: unset;
+                    width: 100%;
+                }
+
+                >div:first-child {
+                    .glider-track {
+                        .glider-slide {
+                            height: 100% !important;
+
+                            [data-column-wrapper="column-wrapper"] {
+                                [data-column-index="column-0"] {
+                                    height: 150px;
+                                    margin-top: 25px;
+                                    width: 100%;
+                                    position: unset;
+                                    margin-bottom: unset;
+                                    top: unset;
+
+                                    >p:nth-of-type(2) {
+                                        max-width: 300px;
+                                        width: 100%;
+                                        font-size: 30px;
+                                        line-height: 39px;
+                                    }
+                                }
+
+                                [data-column-index="column-1"] {
+                                    display: none;
+                                }
+
+                                [data-column-index="column-2"] {
+                                    margin-right: -14px;
+                                    display: block;
+
+                                    img {
+                                        width: 100%;
+                                        height: 100%;
+                                    }
+                                }
+
+                                [data-column-index="column-3"] {
+                                    margin-top: 24px;
+                                    max-width: unset;
+                                    padding: 12px 0;
+                                    position: unset;
+
+                                    p {
+                                        a {
+                                            font-size: 14px;
+                                            line-height: 16.41px;
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+
+    }
+}

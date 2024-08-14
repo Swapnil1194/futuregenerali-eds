@@ -1,0 +1,80 @@
+.insure-app .glider-slide .button-container {
+  background: transparent;
+  margin: unset;
+  padding: unset;
+  border-radius: unset;
+}
+.insure-app .glider-slide .button-container .section.form-container .form-wrapper {
+  padding-left: unset;
+  padding-right: unset;
+}
+.insure-app .glider-slide .button-container .section.form-container .form-wrapper .form.get-in-touch.block form {
+  display: flex;
+  margin-bottom: 24px;
+  -moz-column-gap: 30px;
+       column-gap: 30px;
+}
+@media screen and (max-width: 768px) {
+  .insure-app .glider-slide .button-container .section.form-container .form-wrapper .form.get-in-touch.block form {
+    flex-direction: column;
+  }
+}
+@media screen and (max-width: 768px) {
+  .insure-app .glider-slide .button-container .section.form-container .form-wrapper .form.get-in-touch.block form .field-wrapper.number-wrapper {
+    display: flex;
+  }
+}
+.insure-app .glider-slide .button-container .section.form-container .form-wrapper .form.get-in-touch.block form input {
+  font-size: 20px;
+  line-height: 23px;
+  background: 0;
+  border: 0;
+  outline: 0;
+  border-bottom: 1px solid #ccc;
+  color: #20252b;
+  font-family: Roboto-Light;
+  padding: 0px 0px 7px 0px;
+  width: 100%;
+  border-radius: 0;
+  color: #fff;
+}
+@media screen and (max-width: 768px) {
+  .insure-app .glider-slide .button-container .section.form-container .form-wrapper .form.get-in-touch.block form input {
+    width: 45%;
+  }
+}
+.insure-app .glider-slide .button-container .section.form-container .form-wrapper .form.get-in-touch.block form label {
+  font-family: "robotoregular";
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 32px;
+  margin-bottom: unset;
+}
+@media screen and (max-width: 768px) {
+  .insure-app .glider-slide .button-container .section.form-container .form-wrapper .form.get-in-touch.block form label {
+    font-size: 16px;
+  }
+}
+.insure-app .glider-slide .button-container .section.form-container .form-wrapper .form.get-in-touch.block form .field-wrapper .button {
+  padding: 16px 39px;
+  background-color: transparent;
+  border: 1px solid #fff;
+  color: #fff;
+  border-radius: 5px;
+  outline: 0;
+  /* border: 0; */
+  text-transform: uppercase;
+  font-size: 14px;
+  line-height: 17px;
+  font-family: "robotoregular";
+  font-weight: 800;
+  text-align: center;
+}
+@media screen and (max-width: 768px) {
+  .insure-app .glider-slide .button-container .section.form-container .form-wrapper .form.get-in-touch.block form .field-wrapper .button {
+    background-color: #fff;
+    color: #c21b17;
+    width: 100%;
+    max-width: 100%;
+  }
+}/*# sourceMappingURL=getintouch.css.map */
